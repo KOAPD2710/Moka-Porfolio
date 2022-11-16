@@ -1,0 +1,18 @@
+:root{
+	--t-clr: #FFF4E6;
+	--
+}
+
+
+
+*{
+	box-sizing: border-box;
+	text-decoration: none;
+	-webkit-scroll-behavior:smooth;
+	scroll-behavior: smooth;
+}
+
+.break{
+	padding-left: calc(10%);
+	padding-right: calc(10%);
+}

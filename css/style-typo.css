@@ -1,0 +1,96 @@
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/Neutra-Text.ttf),
+			url(../fonts/Neutra-Text.otf),
+			url(../fonts/Neutra-Text.woff);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: Fontt2;
+	src:	url(../fonts/Neutra-Text-Demi.ttf),
+			url(../fonts/Neutra-Text-Demi.otf),
+			url(../fonts/Neutra-Text-Demi.woff);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/Neutra-Text-Bold.ttf),
+			url(../fonts/Neutra-Text-Bold.otf),
+			url(../fonts/Neutra-Text-Bold.woff);
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/Neutra-Text-Italic.ttf),
+			url(../fonts/Neutra-Text-Italic.otf),
+			url(../fonts/Neutra-Text-Italic.woff);
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/Neutra-Text-Bold-Italic.ttf),
+			url(../fonts/Neutra-Text-Bold-Italic.otf),
+			url(../fonts/Neutra-Text-Bold-Italic.woff);
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face{
+	font-family: Fonth;
+	src:	url(../fonts/Beastly.ttf),
+			url(../fonts/Beastly.otf),
+			url(../fonts/Beastly.woff);
+	font-weight: normal;
+	font-style:  normal;
+}
+
+
+h1{
+	font-size: calc(100rem/16);
+	letter-spacing: -1.5px;
+}
+
+h2{
+	font-size: calc(60rem/16);
+	letter-spacing: -.5px;
+}
+
+h3{
+	font-size: calc(48rem/16);
+	letter-spacing: 0px;
+}
+
+h4{
+	font-size: calc(34rem/16);
+	letter-spacing: .25px;
+}
+
+h5{
+	font-size: calc(24rem/16);
+	letter-spacing: 0px;
+}
+
+h6{
+	font-size: calc(20rem/16);
+	letter-spacing: .15px;
+}
+
+p{
+	font-size: calc(18rem/16);
+	letter-spacing: .5px;
+}
+
+body{
+	background-color: black;
+	color: var(--t-clr);
+	font-family: Fontt;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.5;
+}

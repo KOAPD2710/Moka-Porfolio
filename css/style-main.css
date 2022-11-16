@@ -1,0 +1,68 @@
+.head{
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+.navi{
+	position: relative;
+	display: flex;
+	vertical-align: bottom;
+	margin-top: 60px;
+	z-index: 100;
+}
+.navi .logo{
+	position: relative;
+	display: block;
+	width: 30%;
+	max-width: 110px;
+}
+.navi .logo img{
+	width: 100%;
+	height: auto;
+}
+.navi .navlink{
+	position: relative;
+	display: flex;
+	margin-left: auto;
+	align-items: flex-end;
+	vertical-align: bottom;
+}
+.navi .navlink a{
+	font-family: fontt2;
+	color: var(--t-clr);
+}
+.navi .navlink a:nth-child(2){
+	margin-left: 35px;
+}
+.headcontainer{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+}
+.headcontainer .firstview{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0) scale(1);
+	width: 50%;
+}
+.headcontainer .firstview img{
+	width: 100%;
+	height: auto;
+}
+.body{
+	position: relative;
+	top: 100vh;
+	width: 100%;
+	height: 2000px;
+	background-color: #367E18;
+
+}
