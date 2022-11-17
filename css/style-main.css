@@ -73,15 +73,77 @@
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-color: blueviolet;
 }
 .foot{
 	position: relative;
 	display: block;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
+	padding-top: 10vh;
 }
-
-
-
-
+.foot h1{
+	font-family: Fonth;
+}
+.foot1{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 50%;
+}
+.contactlink{
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin-top: 70px;
+}
+.contactlink a{
+	position: relative;
+	display: inline-block;
+	color: var(--t-clr);
+	text-decoration: none;
+}
+.circleicon{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.circleicon .circle{
+	position: absolute;
+	display: inline-flex;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
+.circleicon .circle svg{
+	transform-origin: center;
+	animation: spinsocks 18s linear infinite;
+}
+.circleicon .circle .textm{
+	position: absolute;
+	display: block;
+	font-family: Fontl;
+	margin: 0px;
+	font-size: 150px;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
+.foot2{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.footmail{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
+.mail{
+	font-family: Fonth;
+}

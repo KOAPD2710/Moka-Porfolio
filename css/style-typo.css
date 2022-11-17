@@ -48,6 +48,14 @@
 	font-weight: normal;
 	font-style:  normal;
 }
+@font-face{
+	font-family: Fontl;
+	src:	url(../fonts/Think-Bold.ttf),
+			url(../fonts/Think-Bold.otf),
+			url(../fonts/Think-Bold.woff);
+	font-weight: normal;
+	font-style:  normal;
+}
 
 
 h1{
