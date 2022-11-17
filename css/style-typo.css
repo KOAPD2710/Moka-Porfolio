@@ -86,8 +86,6 @@ p{
 }
 
 body{
-	background-color: black;
-	color: var(--t-clr);
 	font-family: Fontt;
 	font-weight: normal;
 	font-style: normal;

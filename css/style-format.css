@@ -1,6 +1,6 @@
 :root{
 	--t-clr: #FFF4E6;
-	--
+	--gr: #367E18;
 }
 
 
@@ -11,7 +11,11 @@
 	-webkit-scroll-behavior:smooth;
 	scroll-behavior: smooth;
 }
-
+body{
+	background-color: var(--gr);
+	color: var(--t-clr);
+	overflow-x: hidden;
+}
 .break{
 	padding-left: calc(10%);
 	padding-right: calc(10%);
