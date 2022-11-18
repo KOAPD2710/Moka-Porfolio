@@ -12,9 +12,10 @@
 	scroll-behavior: smooth;
 }
 body{
-	background-color: var(--gr);
+	height: 100%;
+	-webkit-overscroll-behavior: none;
+	overscroll-behavior: none;
 	color: var(--t-clr);
-	overflow-x: hidden;
 }
 .break{
 	padding-left: calc(10%);
