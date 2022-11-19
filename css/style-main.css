@@ -22,7 +22,7 @@
 }
 .navlink a{
 	font-family: Fontt2;
-	color: var(--t-clr);
+	color: var(--t);
 	align-self: flex-end;
 	line-height: 1;
 	text-decoration: none;
@@ -30,56 +30,63 @@
 .navlink a:nth-child(2){
 	margin-left: 35px;
 }
-
-
-
-
-.navicontainer{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.navlink a::after{
+	content: "";
+	position: relative;
 	display: block;
-	width: 100vw;
-	height: calc((var(--sum))*100vh);
-	z-index: 1000000000000;
+	bottom: 0px;
+	width: 100%;
+	height: 2px;
+	border-radius: 10000px;
+	background-color: var(--t);
+	transform: scale(0);
+	transform-origin: right;
+	transition: transform .4s ease;
 }
-.navicontainer .navisticky{
-	position: -webkit-sticky;
-	position: sticky;
-	display: block;
-	top: 50px;
+.navlink a:hover::after{
+	transform: scale(1);
+	transform-origin: left;
+	transition: transform .4s ease;
+}
+.navlinksm{
+	position: relative;
+	display: flex;
+	width: 30px;
+	margin-left: auto !important;
+	align-items: center;
+}
+.navlinksm nav{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 50%;
+	align-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.navlinksm span{
+	position: absolute;
 	display: block;
 	width: 100%;
+	height: 2.5px;
+	border-radius: 100px;
+	background-color: var(--t);
+	align-self: flex-start;
+	transform-origin: left;
+	transition: all .4s ease;
+}
+.navlinksm span:nth-child(2){
+	align-self: flex-end;
+}
+.navlinksm nav.checked span{
+	transform: rotate(45deg);
+	height: 5px;
 }
 
-.contentcontainer{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: block;
-	width: 100vw;
-	height: calc((var(--i) + 1)*100vh);
-	z-index: calc(1000 - 2 * var(--i));
-	padding: 0px;
-	margin: 0px;
-	background-color: black;
-}
-.contentcontainer .sticky{
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	display: block;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-}
-.contentcontainer:nth-last-child(1){
-	background-color: var(--gr);
-}
+
+
+
+
 
 .foot{
 	position: relative;
@@ -109,8 +116,26 @@
 .contactlink a{
 	position: relative;
 	display: inline-block;
-	color: var(--t-clr);
+	color: var(--t);
 	text-decoration: none;
+}
+.contactlink a::after{
+	content: "";
+	position: relative;
+	display: block;
+	bottom: 0px;
+	width: 100%;
+	height: 2px;
+	border-radius: 10000px;
+	background-color: var(--t);
+	transform: scale(0);
+	transform-origin: right;
+	transition: transform .4s ease;
+}
+.contactlink a:hover::after{
+	transform: scale(1);
+	transform-origin: left;
+	transition: transform .4s ease;
 }
 .circleicon{
 	position: relative;
@@ -128,6 +153,9 @@
 .circleicon .circle svg{
 	transform-origin: center;
 	animation: spinsocks 18s linear infinite;
+	fill: var(--t);
+	font-size: 65px;
+	font-family: Fonth;
 }
 .circleicon .circle .textm{
 	position: absolute;
@@ -159,10 +187,98 @@
 .mail{
 	font-family: Fonth;
 }
+.footsm{
+	padding-top: 3vh;
+}
+.footsm .contactlink{
+	margin-top: 35px;
+}
+.circleiconsm{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.circleiconsm .circle{
+	position: relative;
+	display: inline-flex;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
+.circleiconsm .circle svg{
+	transform-origin: center;
+	animation: spinsocks 18s linear infinite;
+	fill: var(--t);
+	font-size: 65px;
+	font-family: Fonth;
+	user-select: none;
+	pointer-events: none;
+}
+.circleiconsm .circle .textm{
+	position: absolute;
+	display: block;
+	font-family: Fontl;
+	margin: 0px;
+	font-size: 150px;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
 
 
 
 
+
+
+.navicontainer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	width: 100vw;
+	height: calc((var(--sum))*100vh);
+	z-index: 1000000000000;
+}
+.navicontainer .navisticky{
+	position: -webkit-sticky;
+	position: sticky;
+	display: block;
+	top: 50px;
+	display: block;
+	width: 100%;
+}
+.contentcontainer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	width: 100vw;
+	height: calc((var(--i) + 1)*100vh);
+	z-index: calc(1000 - 2 * var(--i));
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+	scroll-snap-align: center;
+
+}
+.contentcontainer .sticky{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	
+}
+.contentcontainer:nth-last-child(1){
+	background-color: var(--gr);
+}
 
 
 

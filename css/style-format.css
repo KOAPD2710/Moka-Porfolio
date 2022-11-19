@@ -1,5 +1,5 @@
 :root{
-	--t-clr: #FFF4E6;
+	--t: #FFF4E6;
 	--gr: #367E18;
 }
 
@@ -14,8 +14,11 @@
 body{
 	height: 100%;
 	-webkit-overscroll-behavior: none;
+	-moz-overscroll-behavior: none;
+	-ms-overscroll-behavior: none;
+	-o-overscroll-behavior: none;
 	overscroll-behavior: none;
-	color: var(--t-clr);
+	color: var(--t);
 }
 .break{
 	padding-left: calc(10%);
