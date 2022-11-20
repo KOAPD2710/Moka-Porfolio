@@ -17,6 +17,12 @@ $(window).scroll(function() {
     } else{
         document.body.style.backgroundColor = 'black';
     }
+
+    if ( 2 < up <=4 ) {
+        $(".welcome h1").css({
+        transform: 'translateX(-60%)'
+        });
+    }
 });
 
 $(document).ready(function(val){

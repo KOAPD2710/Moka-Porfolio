@@ -272,11 +272,10 @@
 	bottom: 0;
 	display: block;
 	width: 100vw;
-	height: calc((var(--i) + 1)*100vh);
+	height: calc((var(--i)*2)*100vh);
 	z-index: calc(1000 - 2 * var(--i));
 	padding: 0px;
 	margin: 0px;
-	background-color: black;
 	scroll-snap-align: center;
 
 }
@@ -288,17 +287,20 @@
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
+	background-color: black;
 }
 
 .foooter .sticky{
 	height: auto;
 }
 
-.contentcontainer:nth-last-child(1){
+.contentcontainer:nth-last-child(1) .sticky{
 	background-color: var(--gr);
 }
 
-
+.contentcontainer:not(.foooter) .sticky > div:nth-child(1){
+	position: absolute;
+}
 
 
 

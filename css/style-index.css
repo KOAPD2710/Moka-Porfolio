@@ -1,5 +1,4 @@
 .olipop{
-	position: absolute;
 	display: block;
 	top: 50%;
 	left: 50%;
@@ -19,4 +18,21 @@
 	display: block;
 	width: 100%;
 	height: auto;
+}
+
+.welcome{
+	display: flex;
+	width: 100%;
+}
+.welcome h1{
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 20%;
+	transform: translateX(0%);
+	font-family: Fonth;
+	font-size: 12.4vw;
+	white-space: nowrap;
+
+
 }
