@@ -48,6 +48,9 @@
 	transform-origin: left;
 	transition: transform .4s ease;
 }
+.navlink a.checked:after{
+	transform: scale(1);
+}
 .navlinksm{
 	position: relative;
 	display: flex;
@@ -242,9 +245,6 @@
 	font-size: 5.5vw;
 }
 
-
-
-
 .navicontainer{
 	position: absolute;
 	top: 0;
@@ -264,61 +264,9 @@
 	display: block;
 	width: 100%;
 }
-.contentcontainer{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: block;
-	width: 100vw;
-	height: calc((var(--i)*2)*100vh);
-	z-index: calc(1000 - 2 * var(--i));
-	padding: 0px;
-	margin: 0px;
-	scroll-snap-align: center;
-
-}
-.contentcontainer .sticky{
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	display: block;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	background-color: black;
-}
-
 .foooter .sticky{
 	height: auto;
 }
-
 .contentcontainer:nth-last-child(1) .sticky{
-	background-color: var(--gr);
+	background-color: var(--gr) !important;
 }
-
-.contentcontainer:not(.foooter) .sticky > div:nth-child(1){
-	position: absolute;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

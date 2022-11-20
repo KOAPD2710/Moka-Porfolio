@@ -4,6 +4,8 @@ $(window).scroll(function() {
     var up = scroll / height;
     var numlock = 30;
     /* Up run form 1 and up to ...*/
+    var p = $( "p" ).first();
+    $( ".textscroll p" ).text( up );
 
     $(".olipop").css({
         width: ' ' + (50 + (up)*50) + '% '
@@ -18,9 +20,9 @@ $(window).scroll(function() {
         document.body.style.backgroundColor = 'black';
     }
 
-    if ( 2 < up <=4 ) {
+    if ( 2 <= up && up <= 3 ) {
         $(".welcome h1").css({
-        transform: 'translateX(-60%)'
+            transform: 'translateX(' +(120 - up*60) + '%)'
         });
     }
 });

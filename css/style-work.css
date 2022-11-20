@@ -1,0 +1,35 @@
+.contentcontainer{
+	height: calc((2*var(--i) - 1 )*100vh);
+}
+.playground{
+	background-color: var(--gr) !important;
+}
+.playground div{
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
+.playground svg{
+	position: absolute;
+	fill: var(--t);
+	width: 5vw;
+	height: auto;
+}
+.playground svg:nth-child(2){
+	width: 4vw;
+	top: 30%;
+	left: 25%;
+	animation: starblingchilling 3s cubic-bezier(.45,0,.19,.99) infinite;
+}
+.playground svg:nth-child(3){
+	width: 5vw;
+	top: 40%;
+	left: auto;
+	right: 20%;
+	animation: starblingchilling 2s ease-in infinite;
+}
+.playground h1{
+	font-family: Fonth;
+	font-size: 11vw;
+	text-align: center;
+}
