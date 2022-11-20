@@ -35,6 +35,7 @@
 	right: 0;
 	margin: auto;
 	width: 50px;
+	cursor: pointer;
 }
 .playground h1{
 	font-family: Fonth;
