@@ -28,6 +28,14 @@
 	right: 20%;
 	animation: starblingchilling 2s ease-in infinite;
 }
+.playground svg:nth-child(4){
+	top: auto;
+	bottom: 25px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 50px;
+}
 .playground h1{
 	font-family: Fonth;
 	font-size: 11vw;
