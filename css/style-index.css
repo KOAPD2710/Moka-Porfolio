@@ -21,17 +21,104 @@
 }
 .welcome{
 	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+.mokabandroll{
+	position: relative;
+	display: inline-flex;
+	top: 0;
+	left: -10%;
+	transform: translateX(0%);
+	overflow: visible;
+	gap: 5vw;
+}
+.mokabandroll h1{
+	position: relative;
+	display: inline-block;
+	font-family: Fonth;
+	font-size: 14vw;
+	white-space: nowrap;
+}
+.mokabandroll svg{
+	position: relative;
+	display: inline-flex;
+	width: 10vw;
+	height: auto;
+	fill: #0f7c11;
+	stroke: var(--t);
+	stroke-linecap: round;
+	stroke-width: 1;
+	overflow: visible;
+	white-space: nowrap;
+	transform-origin: center;
+	transform: rotate(10deg);
+}
+.info{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	gap: 15vw;
+}
+.info .playground{
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+}
+.info .playground a{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	color: var(--t);
+	text-decoration: none;
+}
+.info .playground nav{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: visible;
+}
+.info .playground svg{
+	width: 100%;
+	height: auto;
+	fill: none;
+	stroke: var(--t);
+	stroke-linecap: round;
+	stroke-width: 3;
+	overflow: visible;
+	stroke-dasharray: 50%;
+	stroke-dashoffset: 0%;
+}
+.info .playground .starcontent{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+	text-align: center;
+	white-space: nowrap;
+	font-family: Fonth;
+}
+
+.info .infocontent{
+	position: relative;
 	width: 100%;
 }
-.welcome h1{
+.info .infocontent div{
 	position: absolute;
-	display: inline-block;
-	top: 0;
-	left: 20%;
-	transform: translateX(0%);
-	font-family: Fonth;
-	font-size: 12.4vw;
-	white-space: nowrap;
-
-
+	display: flex;
+	flex-direction: column;
+	gap: 2.5vh;
+	top: 35%;
+	transform: translateY(-50%);
+}
+.info .infocontent div h5{
+	line-height: 1.8;
 }

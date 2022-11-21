@@ -255,6 +255,7 @@
 	width: 100vw;
 	height: calc((var(--sum))*100vh);
 	z-index: 1000000000000;
+	pointer-events: none;
 }
 .navicontainer .navisticky{
 	position: -webkit-sticky;
@@ -263,10 +264,9 @@
 	top: 50px;
 	display: block;
 	width: 100%;
+	pointer-events: auto;
 }
 .foooter .sticky{
 	height: auto;
-}
-.contentcontainer:nth-last-child(1) .sticky{
 	background-color: var(--gr) !important;
 }

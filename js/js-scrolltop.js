@@ -11,18 +11,22 @@ $(window).scroll(function() {
         width: ' ' + (50 + (up)*50) + '% '
     });
 
+    $('.mokabandroll svg').css({
+        transform: 'rotate(' + (up*80) + 'deg)'
+    });
+
     if ( up >= 1) {
         $(".olipop").css({
-            transform: 'translate3d(-50%, ' + ((-50 - (numlock)) + (up)*(numlock)) + '%, 0)'
+            transform: 'translate3d(-50%, ' + (-50 + (up - 1)*(numlock)) + '%, 0)'
         });
         document.body.style.backgroundColor = 'var(--gr)';
     } else{
         document.body.style.backgroundColor = 'black';
     }
 
-    if ( 2 <= up && up <= 3 ) {
-        $(".welcome h1").css({
-            transform: 'translateX(' +(120 - up*60) + '%)'
+    if ( 1.5 <= up && up <= 4 ) {
+        $(".welcome .mokabandroll").css({
+            transform: 'translateX(' + -(up-2)*30/2 + '%)'
         });
     }
 });
