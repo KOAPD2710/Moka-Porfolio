@@ -24,13 +24,13 @@
 	<link rel="stylesheet" type="text/css" href="css/style-work.css">
 
 
-	<script type="text/javascript" src="js/js-scrollspeed.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 	<script type="text/javascript" src="js/js-scrolltop.js"></script>
 	<script type="text/javascript" src="js/js-workcontainer.js"></script>
 
 </head>
 <body>
-	<div class="navicontainer" style="--sum:8;">
+	<div class="navicontainer" style="--sum:10;">
 		<div class="navisticky">
 			<div class="d-lg-block d-none">
 				<div class="navi break">
@@ -41,8 +41,14 @@
 					</nav>
 					<div class="textscroll"><p></p></div>
 					<div class="navlink">
-						<a href="work.html" class="checked">Work</a>
-						<a href="about.html">About</a>
+						<a href="work.html" class="checked">
+							<p>Work</p>
+							<img src="img/navlink.svg" alt="navlink">
+						</a>
+						<a href="about.html" class="">
+							<p>About</p>
+							<img src="img/navlink.svg" alt="navlink">
+						</a>
 					</div>
 				</div>
 			</div>
@@ -65,6 +71,9 @@
 	</div>
 	<div class="contentcontainer" style="--i:1;">
 		<div class="sticky playground">
+			<video class="bgoverlayscrollx" autoplay loop muted>
+				<source src="img/bgoverlay.mp4" type="video/mp4">
+			</video>
 			<div>
 				<h1>Play</h1>
 				<h1>Ground</h1>
@@ -98,14 +107,16 @@
 			</svg>
 		</div>
 	</div>
-	<div class="contentcontainer" style="--i:8">
+	<div class="contentcontainer" style="--i:10">
 		<div class="sticky">
+			<video class="bgoverlayscrollx" autoplay loop muted>
+				<source src="img/bgoverlay.mp4" type="video/mp4">
+			</video>
 			<div class="workcontainer">
-
 				<div class="work domiesock">
 					<a href="">
 						<nav>
-							<img src="img/olipop.webp">
+							<img src="img/olipop.webp" alt="olipop">
 						</nav>
 						<div class="content">
 							<h4 class="workname">Domie Socks</h4>
@@ -123,10 +134,28 @@
 				<div class="work domiesock">
 					<a href="">
 						<nav>
-							<img src="img/olipop.webp">
+							<img src="img/olipop.webp" alt="olipop">
 						</nav>
 						<div class="content">
-							<h4 class="workname">Domie Socks</h4>
+							<h4 class="workname">Olipop</h4>
+							<h5 class="workcatogery">Banner</h5>
+							<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 83.713 61.664">
+								<g id="Group_23" data-name="Group 23" transform="translate(-788.956 750.832) rotate(-90)">
+									<path id="Path_1" data-name="Path 1" d="M2079.75,761.519s8.019,26.958,34.725,27.723" transform="translate(1509.242 -1244.377) rotate(90)"/>
+									<path id="Path_2" data-name="Path 2" d="M2079.75,789.241s8.019-26.958,34.725-27.723" transform="translate(1481.519 -1244.377) rotate(90)"/>
+									<line id="Line_1" data-name="Line 1" x2="76.385" transform="translate(720 791.456) rotate(90)"/>
+								</g>
+							</svg>
+						</div>
+					</a>
+				</div>
+				<div class="work domiesock">
+					<a href="">
+						<nav>
+							<img src="img/olipop.webp" alt="olipop">
+						</nav>
+						<div class="content">
+							<h4 class="workname">Skrt</h4>
 							<h5 class="workcatogery">Website</h5>
 							<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 83.713 61.664">
 								<g id="Group_23" data-name="Group 23" transform="translate(-788.956 750.832) rotate(-90)">
@@ -141,11 +170,11 @@
 				<div class="work domiesock">
 					<a href="">
 						<nav>
-							<img src="img/olipop.webp">
+							<img src="img/olipop.webp" alt="olipop">
 						</nav>
 						<div class="content">
-							<h4 class="workname">Domie Socks</h4>
-							<h5 class="workcatogery">Website</h5>
+							<h4 class="workname">Skrt</h4>
+							<h5 class="workcatogery">Banner</h5>
 							<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 83.713 61.664">
 								<g id="Group_23" data-name="Group 23" transform="translate(-788.956 750.832) rotate(-90)">
 									<path id="Path_1" data-name="Path 1" d="M2079.75,761.519s8.019,26.958,34.725,27.723" transform="translate(1509.242 -1244.377) rotate(90)"/>
@@ -159,10 +188,10 @@
 				<div class="work domiesock">
 					<a href="">
 						<nav>
-							<img src="img/olipop.webp">
+							<img src="img/olipop.webp" alt="olipop">
 						</nav>
 						<div class="content">
-							<h4 class="workname">Domie Socks</h4>
+							<h4 class="workname">Quila</h4>
 							<h5 class="workcatogery">Website</h5>
 							<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 83.713 61.664">
 								<g id="Group_23" data-name="Group 23" transform="translate(-788.956 750.832) rotate(-90)">
@@ -174,25 +203,6 @@
 						</div>
 					</a>
 				</div>
-				<div class="work domiesock">
-					<a href="">
-						<nav>
-							<img src="img/olipop.webp">
-						</nav>
-						<div class="content">
-							<h4 class="workname">Domie Socks</h4>
-							<h5 class="workcatogery">Website</h5>
-							<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 83.713 61.664">
-								<g id="Group_23" data-name="Group 23" transform="translate(-788.956 750.832) rotate(-90)">
-									<path id="Path_1" data-name="Path 1" d="M2079.75,761.519s8.019,26.958,34.725,27.723" transform="translate(1509.242 -1244.377) rotate(90)"/>
-									<path id="Path_2" data-name="Path 2" d="M2079.75,789.241s8.019-26.958,34.725-27.723" transform="translate(1481.519 -1244.377) rotate(90)"/>
-									<line id="Line_1" data-name="Line 1" x2="76.385" transform="translate(720 791.456) rotate(90)"/>
-								</g>
-							</svg>
-						</div>
-					</a>
-				</div>
-
 			</div>
 		</div>
 	</div>

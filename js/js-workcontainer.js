@@ -10,6 +10,9 @@ $(window).scroll(function() {
     var constnum = ((up-1))/(vhnum-2);
     /* Up run form 1 and up to 6*/
 
+    var p = $( "p" ).first();
+    $( ".textscroll p" ).text( up );
+
 	$('.workcontainer').css({
 		padding: '0px ' + (num) + 'vw '
 	});
@@ -20,9 +23,10 @@ $(window).scroll(function() {
 		height: ' ' + ((100 - 2*(num))*2/3) + 'vw '
 	});
 
-    if ( 1 <= up) {
+    if (0.9999994999999997 <= up) {
         $(".workcontainer").css({
             transform: 'translateX(' + -(constnum*(workcontainer)) + 'px)'
         });
-    }
+
+    };
 });

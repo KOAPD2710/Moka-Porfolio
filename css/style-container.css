@@ -23,6 +23,6 @@
 	overflow: hidden;
 	background-color: black;
 }
-.contentcontainer:not(.foooter) .sticky > div:nth-child(1){
+.contentcontainer:not(.foooter) .sticky > div{
 	position: absolute;
 }
