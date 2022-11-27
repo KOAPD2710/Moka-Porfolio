@@ -1,5 +1,4 @@
 $(document).ready(function(val){
-
 	var width = $(window).innerWidth();
 	var height = $(window).innerHeight();
 	var cirlewidth = $('.menucircle').width();
