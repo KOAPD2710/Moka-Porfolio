@@ -7,15 +7,40 @@
 .navlogo{
 	position: relative;
 	display: block;
-	width: 30%;
 	max-width: 120px;
 	min-width: 120px;
+}
+.navlogo a{
+	text-decoration: none;
+	color: var(--t);
 }
 .navlogo img{
 	position: relative;
 	display: block;
 	width: 100%;
 	height: auto;
+}
+.navlogo nav{
+	position: relative;
+	display: inline-flex;
+	width: 100%;
+	height: auto;
+}
+.navlogo nav span{
+	position: relative;
+	display: inline-flex;
+	align-self: flex-end;
+	align-items: flex-end;
+	align-content: flex-end;
+	font-family: Fontl;
+	font-size: 55px;
+	margin: 0px;
+}
+.navlogo nav span:not(:nth-child(1)){
+	margin-left: 2px;
+}
+.navlogo nav:hover span{
+	animation: logoanimation calc(.5s + var(--i)*.1s) ease-in-out calc(var(--i)*.1s);
 }
 .navlink{
 	position: relative;
@@ -28,7 +53,7 @@
 
 	font-family: Fontt;
 	color: var(--t);
-	align-self: flex-end;
+	align-self: center;
 	align-items: center;
 	align-content: center;
 	line-height: 1;

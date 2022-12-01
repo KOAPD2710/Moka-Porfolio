@@ -34,11 +34,11 @@ $(document).ready(function(){
 	$('#stickercontainer svg').hover(function(){
 		$('#stickercontainer svg').addClass('hovered');
 		$(this).addClass('hoverthis');
-		$(this).parent('nav').addClass('checked');
+		$(this).parent().parent('div').addClass('checked');
 	},function() {
 		$(this).removeClass('hoverthis');
 		$('#stickercontainer svg').removeClass('hovered');
-		$(this).parent('nav').removeClass('checked');
+		$(this).parent().parent('div').removeClass('checked');
 	});
 
 
