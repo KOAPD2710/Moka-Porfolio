@@ -19,6 +19,4 @@ $(document).ready(function(val){
 	$('.menucircle').css({
 		right: ' ' + -((cirlewidth)*.4) + 'px '
 	});
-
-
 });

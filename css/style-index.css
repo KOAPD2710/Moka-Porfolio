@@ -1,126 +1,241 @@
 .olipop{
-	display: block;
+	display: flex;
 	top: 50%;
 	left: 50%;
 	transform: translate3d(-50%, -50%, 0);
 	max-width: 100%;
 	max-height: 100%;
 }
-.olipop img{
-	position: absolute;
-	display: block;
-	width: 100%;
-	height: auto;
-}
 .olipop video{
 	position: absolute;
-	display: block;
+	display: flex;
 	top: 50%;
 	left: 50%;
 	transform: translate3d(-50%, -50%, 0px);
-	width: 100%;
-	height: auto;
 }
-.welcome{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+.bgcontent{
+	background-color: var(--t);
+	transition: background-color 1s cubic-bezier(.35,1.04,.62,.98);
 }
-.mokabandroll{
+.bgcontent .sticky{
+	background-color: transparent !important;
+}
+.digitaldesign, .workcatogery, .blankspace{
 	position: relative;
-	display: inline-flex;
+	display: block;
+	width: 100vw;
+}
+.didesign, .workcontainer{
+	display: block;
 	top: 0;
-	left: -10%;
-	transform: translateX(0%);
-	overflow: visible;
-	gap: 5vw;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 }
-.mokabandroll h1{
-	position: relative;
+.didesign h1{
+	position: absolute;
 	display: inline-block;
 	font-family: Fonth;
 	font-size: 14vw;
-	white-space: nowrap;
+	letter-spacing: 1px;
+	color: black;
 }
-.mokabandroll svg{
-	position: relative;
-	display: inline-flex;
-	width: 10vw;
-	height: auto;
-	fill: #0f7c11;
-	stroke: var(--t);
-	stroke-linecap: round;
-	stroke-width: 1;
-	overflow: visible;
-	white-space: nowrap;
+.didesign #digital{
+	right: 0;
+}
+.didesign #designer{
+	top: 14.5vw;
+	left: 0;`
+}
+.didesign .star{
+	position: absolute;
+	display: block;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: auto;
+	height: 80px;
+	fill: black;
+	transition: background-color .5s cubic-bezier(.35,1.04,.62,.98);
+}
+.workcontainer h1{
+	position: absolute;
+	display: inline;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: Fonth;
+	font-size: 14.4vw;
+	letter-spacing: 2px;
+	color: black;
 	transform-origin: center;
-	transform: rotate(10deg);
+	z-index: 9999;
 }
-.info{
-	position: relative;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	gap: 15vw;
-}
-.info .playground{
-	position: relative;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	max-width: 500px;
-	height: 100%;
-}
-.info .playground a{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100%;
-	color: var(--t);
-	text-decoration: none;
-}
-.info .playground nav{
+#stickercontainer{
 	position: relative;
 	display: block;
-	width: 100%;
-	height: auto;
-	overflow: visible;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99999;
 }
-.info .playground svg{
-	width: 100%;
-	height: auto;
-	fill: none;
-	stroke: var(--t);
-	stroke-linecap: round;
-	stroke-width: 3;
-	overflow: visible;
-	stroke-dasharray: 50%;
-	stroke-dashoffset: 0%;
-}
-.info .playground .starcontent{
+#stickercontainer nav{
 	position: absolute;
-	display: block;
 	top: 50%;
 	left: 50%;
-	transform: translate3d(-50%, -50%, 0px);
-	text-align: center;
-	white-space: nowrap;
-	font-family: Fonth;
+	pointer-events: none;
 }
-
-.info .infocontent{
+#stickercontainer svg{
 	position: relative;
 	width: 100%;
+	height: auto;
+	pointer-events: none;
+	transition: all .2s ease-in;
 }
-.info .infocontent div{
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	gap: 2.5vh;
-	top: 35%;
-	transform: translateY(-50%);
+#stickercontainer svg g{
+	cursor: pointer;
+	pointer-events: auto;
 }
-.info .infocontent div h5{
-	line-height: 1.8;
+/*#stickercontainer #graphicdesigner{
+	width: 270px;
+	transform: translate3d(10%, -50%, 0px) scale(1.2) rotate(0deg);
+	z-index: 4;
 }
+#stickercontainer #creation{
+	width: 254px;
+	transform: translate3d(-30%, -130%, 0px) scale(1.2) rotate(0deg);
+	z-index: 5;
+}
+#stickercontainer #handdrawing{
+	width: 235px;
+	transform: translate3d(-50%, -50%, 0px) scale(1.2) rotate(0deg);
+	z-index: 6;
+}
+#stickercontainer #brandidentity{
+	height: 280px;
+	transform: translate3d(0%, 10%, 0px) scale(1.2) rotate(0deg);
+	z-index: 7;
+}
+#stickercontainer #artdirection{
+	width: 380px;
+	transform: translate3d(-110%, -70%, 0px) scale(1.2) rotate(0deg);
+	z-index: 8;
+}
+#stickercontainer #uidesigner{
+	width: 340px;
+	transform: translate3d(-100%, 20%, 0px) scale(1.2) rotate(0deg);
+	z-index: 9;
+}
+#stickercontainer #uidesigner{
+	width: 340px;
+	transform: translate3d(-200%, 50%, 0px) scale(.6) rotate(-10deg);
+	z-index: 9;
+}*/
+/*#stickercontainer #graphicdesigner{
+	width: 270px;
+	transform: translate3d(200%, -50%, 0px) scale(.6) rotate(70deg);
+	z-index: 4;
+}
+#stickercontainer #creation{
+	width: 254px;
+	transform: translate3d(40%, 100%, 0px) scale(.7) rotate(270deg);
+	z-index: 5;
+}
+#stickercontainer #handdrawing{
+	width: 235px;
+	transform: translate3d(-100%, 100%, 0px) scale(.7) rotate(-27deg);
+	z-index: 6;
+}
+#stickercontainer #brandidentity{
+	height: 280px;
+	transform: translate3d(100%, 50%, 0px) scale(.5) rotate(60deg);
+	z-index: 7;
+}
+#stickercontainer #artdirection{
+	width: 380px;
+	transform: translate3d(-250%, -20%, 0px) scale(.6) rotate(60deg);
+	z-index: 8;
+}
+#stickercontainer #uidesigner{
+	width: 340px;
+	transform: translate3d(-200%, 50%, 0px) scale(.6) rotate(-10deg);
+	z-index: 9;
+}*/
+#stickercontainer #graphicdesigner{
+	width: 270px;
+	transform: translate3d(200%, 0%, 0px) scale(.6) rotate(70deg);
+	z-index: 4;
+}
+#stickercontainer #creation{
+	width: 254px;
+	transform: translate3d(40%, 100%, 0px) scale(.7) rotate(270deg);
+	z-index: 5;
+}
+#stickercontainer #handdrawing{
+	width: 235px;
+	transform: translate3d(-100%, 100%, 0px) scale(.7) rotate(-27deg);
+	z-index: 6;
+}
+#stickercontainer #brandidentity{
+	height: 280px;
+	transform: translate3d(100%, 50%, 0px) scale(.5) rotate(60deg);
+	z-index: 7;
+}
+#stickercontainer #artdirection{
+	width: 380px;
+	transform: translate3d(-250%, -20%, 0px) scale(.6) rotate(60deg);
+	z-index: 8;
+}
+#stickercontainer #uidesigner{
+	width: 340px;
+	transform: translate3d(-200%, 50%, 0px) scale(.6) rotate(-10deg);
+	z-index: 9;
+}
+#stickercontainer .checked{
+	z-index: 999999999 !important;
+}
+#stickercontainer .done{
+	transition: all .2s ease-in;
+}
+#stickercontainer .hovered{
+	scale: .9;
+	transition: all .2s ease-in;
+}
+#stickercontainer .hovered.hoverthis{
+	scale: 1.1;
+	transition: all .2s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

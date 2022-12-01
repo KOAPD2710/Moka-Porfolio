@@ -543,6 +543,7 @@
 	background-position: 50%;
 	background-size: contain;
 	opacity: .3;
+	pointer-events: none;
 	animation: noise 1s steps(3) infinite;
 }
 @keyframes noise{
