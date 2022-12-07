@@ -3,7 +3,11 @@
 	--gr: #0F7C11;
 }
 
-
+.textscroll{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 *{
 	box-sizing: border-box;

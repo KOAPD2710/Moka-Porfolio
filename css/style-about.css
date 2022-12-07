@@ -1,0 +1,145 @@
+.stickercontainer{
+	z-index: 9999999999999 !important;
+	pointer-events: none;
+}
+.stickercontainer .sticky{
+	background-color: transparent !important;
+	pointer-events: none;
+}
+.stickercontainer svg{
+	width: 100%;
+	scale: 0;
+	transition: all .5s cubic-bezier(.69,.61,.87,.1);
+}
+.stickercontainer .sticker{
+	position: absolute;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: auto;
+}
+.stickercontainer .hellosticker{
+	width: 15vw;
+	top: 15vh;
+	left: 55vw;
+	max-width: 250px;
+	min-width: 200px;
+}
+
+.stickercontainer .kid2ksticker{
+	width: 50vw;
+	top: 70vh;
+	left: 10vw;
+	max-width: 300px;
+	min-width: 200px;
+	rotate: -15deg;
+}
+.stickercontainer .lighningsticker{
+	width: 10vw;
+	top: 50vh;
+	left: 90vw;
+	max-width: 80px;
+	min-width: 60px;
+	rotate: 8deg;
+}
+.stickercontainer .screationsticker{
+	width: 50vw;
+	top: 70vh;
+	left: 70vw;
+	max-width: 170px;
+	min-width: 100px;
+	rotate: 20deg;
+}
+.hellosticker.done svg{
+	scale: 1;
+	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
+}
+
+
+
+
+
+
+
+
+
+
+
+.nameabout .thaomy{
+	display: inline-block !important;
+	width: 100%;
+	translate: 0% 50%;
+	text-align: center;
+}
+.nameabout nav{
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	translate: -50% -50% !important;
+	display: inline !important;
+	margin: 0px;
+	font-family: Fontl;
+	font-size: 30vw;
+	z-index: 999;
+	transform: none;
+	mix-blend-mode: difference;
+}
+.nameabout h1{
+	position: absolute;
+	display: inline-block;
+	transform: translate3d(-50%, 200%, 0px);
+	text-align: center;
+	margin: 0px;
+	white-space: nowrap;
+	font-family: Fonth;
+	font-size: 16vw;
+	z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

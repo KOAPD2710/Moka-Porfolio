@@ -41,6 +41,14 @@
 	font-style: italic;
 }
 @font-face{
+	font-family: Fontt2;
+	src:	url(../fonts/kobe11-regular.ttf),
+			url(../fonts/kobe11-regular.otf),
+			url(../fonts/kobe11-regular.woff);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
 	font-family: Fonth;
 	src:	url(../fonts/Beastly.ttf),
 			url(../fonts/Beastly.otf),
