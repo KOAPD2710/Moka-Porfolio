@@ -565,9 +565,9 @@
 	width: calc(100% + 42vw);
 	height: calc(100% + 42vw);
 	background: url('../img/bgoverlay.png');
-	background-position: 50%;
+	background-position: 100%;
 	background-size: contain;
-	opacity: .3;
+	opacity: .2;
 	pointer-events: none;
 	animation: noise 1s steps(3) infinite;
 }

@@ -54,6 +54,18 @@
 	scale: 1;
 	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
 }
+.kid2ksticker.done svg{
+	scale: 1;
+	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
+}
+.lighningsticker.done svg{
+	scale: 1;
+	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
+}
+.screationsticker.done svg{
+	scale: 1;
+	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
+}
 
 
 

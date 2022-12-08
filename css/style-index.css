@@ -6,6 +6,23 @@
 	max-width: 100%;
 	max-height: 100%;
 }
+.olipop{
+	background: var(--gr);
+	animation: olopopbg 2s infinite;
+}
+
+@keyframes olopopbg{
+	0%, 90%{
+		background: var(--t);
+	}
+	20%, 70%{
+		background: blueviolet;
+	}
+	40%{
+		background: greenyellow;
+	}
+}
+
 .olipop video{
 	position: absolute;
 	display: flex;
