@@ -9,7 +9,7 @@
 .stickercontainer svg{
 	width: 100%;
 	scale: 0;
-	transition: all .5s cubic-bezier(.69,.61,.87,.1);
+	transition: all .5s cubic-bezier(.69,.61,.87,.1) calc(var(--i)*.1s);
 }
 .stickercontainer .sticker{
 	position: absolute;
@@ -17,6 +17,13 @@
 	left: auto;
 	right: auto;
 	bottom: auto;
+}
+.stickercontainer .smilesticker{
+	width: 15vw;
+	top: 15vh;
+	left: 15vw;
+	max-width: 180px;
+	min-width: 150px;
 }
 .stickercontainer .hellosticker{
 	width: 15vw;
@@ -50,65 +57,96 @@
 	min-width: 100px;
 	rotate: 20deg;
 }
-.hellosticker.done svg{
+.hellosticker.done svg, .kid2ksticker.done svg, .lighningsticker.done svg, .screationsticker.done svg, .smilesticker.done svg{
 	scale: 1;
 	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
 }
-.kid2ksticker.done svg{
-	scale: 1;
-	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
+.aboutcontainer{
+	position: absolute;
+	display: flex;
+	top: 0vh;
+	left: -200vw;
+	height: 100vh;
+	align-items: center;
+	transition-property: all;
+	transform-style: ease;
 }
-.lighningsticker.done svg{
-	scale: 1;
-	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
+.aboutcontainer .aboutinfo{
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
-.screationsticker.done svg{
-	scale: 1;
-	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
-}
-
-
-
-
-
-
-
-
-
-
-
-.nameabout .thaomy{
-	display: inline-block !important;
-	width: 100%;
-	translate: 0% 50%;
-	text-align: center;
-}
-.nameabout nav{
-	position: absolute !important;
+.aboutcontainer .aboutinfo .mokatext{
+	position: absolute;
+	display: inline-flex !important;
 	top: 50% !important;
 	left: 50% !important;
-	translate: -50% -50% !important;
-	display: inline !important;
-	margin: 0px;
+	translate: -50% -50%;
 	font-family: Fontl;
 	font-size: 30vw;
-	z-index: 999;
-	transform: none;
-	mix-blend-mode: difference;
 }
-.nameabout h1{
-	position: absolute;
-	display: inline-block;
-	transform: translate3d(-50%, 200%, 0px);
-	text-align: center;
-	margin: 0px;
-	white-space: nowrap;
+.aboutcontainer .aboutinfo .mokatext span{
+	margin: 0px 1rem;
+}
+.aboutcontainer .aboutinfo .aboutme, .aboutcontainer .aboutinfo .education{
+	position: absolute !important;
+	display: block !important;
+	top: 50% !important;
+	left: 50% !important;
+	translate: -50% -50%;
 	font-family: Fonth;
-	font-size: 16vw;
-	z-index: 99;
+	max-width: 500px;
+/*	transform: rotate3d(1, 0, 0 , 90deg);*/
+}
+.aboutcontainer .aboutinfo h2{
+	margin-bottom: 50px;
+}
+.aboutcontainer .aboutinfo .aboutme p{
+	font-family: Fontt2;
+	font-size: 24px;
+	line-height: 2;
+}
+.aboutcontainer .aboutinfo .aboutme nav{
+	position: absolute;
+	width: 60px;
+	top: 0;
+	left: -100px;
+}
+.aboutcontainer .aboutinfo .aboutme nav svg{
+	width: 100%;
+}
+.aboutcontainer .aboutinfo .education p{
+	font-family: Fontt2;
+	line-height: 2;
+	font-size: 24px;
+}
+.aboutcontainer .aboutinfo .education nav{
+	margin-bottom: 50px;
+}
+.aboutcontainer .aboutinfo .time-ages{
+	display: inline-flex;
+	align-items: center;
+	align-content: center;
+}
+.aboutcontainer .aboutinfo .time-ages p{
+	font-family: Fontt2;
+	margin: 0px;
+}
+.aboutcontainer .aboutinfo .time-ages div{
+	display: inline;
+}
+.aboutcontainer .aboutinfo .time-ages svg{
+	width: 30px;
+	margin: 0 1rem;
+}
+.aboutcontainer .aboutinfo .headcontent{
+	font-weight: bold;
 }
 
-
+.aboutcontainer .aboutinfo#a-bit-about{
+}
 
 
 

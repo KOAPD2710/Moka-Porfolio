@@ -14,6 +14,7 @@
 	text-decoration: none;
 	-webkit-scroll-behavior:smooth;
 	scroll-behavior: smooth;
+	transform-style: cubic-bezier(.24,.04,.32,.08);
 }
 body{
 	height: 100%;
