@@ -19,6 +19,42 @@ $(document).ready(function(val){
 	$(".aboutcontainer").css({
 		width: ' ' + (4*(100 + gapaboutinfo) - gapaboutinfo) + 'vw '
 	});
+
+	// $('.lotsofthing').ready(function(val){
+	// 	if ( $('.lotsofthing .text1').hasClass('showt')) {
+	// 		$('.lotsofthing p').removeClass('showt');
+	// 		$('.lotsofthing p').addClass('hiddent');
+	// 		$('.lotsofthing .text1').next().removeClass('hiddent');
+	// 		$('.lotsofthing .text1').next().addClass('showt');
+	// 	}
+	// 	if ( $('.lotsofthing .text2').hasClass('showt')) {
+	// 		$('.lotsofthing p').removeClass('showt');
+	// 		$('.lotsofthing p').addClass('hiddent');
+	// 		$('.lotsofthing .text2').next().removeClass('hiddent');
+	// 		$('.lotsofthing .text2').next().addClass('showt');
+	// 	}
+	// 	if ( $('.lotsofthing .text3').hasClass('showt')) {
+	// 		$('.lotsofthing p').removeClass('showt');
+	// 		$('.lotsofthing p').addClass('hiddent');
+	// 		$('.lotsofthing .text3').prev().prev().removeClass('hiddent');
+	// 		$('.lotsofthing .text3').prev().prev().addClass('showt');
+	// 	}
+	// })
+
+
+
+	$("#hiremecircle").hover(function(){
+		$("#hiremecircle .cirle2").css({
+			scale : "1"
+		});
+		$(".hiremecircle .hiretext").text('Hire Me').delay(5000);
+	}, function(){
+		$("#hiremecircle .cirle2").css({
+			scale : "0"
+		});
+		$(".hiremecircle .hiretext").text('Have an idea?').delay(5000);
+	})
+	
 });
 
 
@@ -85,28 +121,41 @@ $(window).scroll(function(){
 
 
 	if (up >= 1) {
-		if (up <= 1.85) {
+		if (up <= 1.7) {
 			$('.aboutcontainer').css({
-				left: ' ' + ((-2000/17)*up + (2000/17)) + 'vw '
+				left: ' ' + ((-1000/7)*up + (1000/7)) + 'vw '
 			})
 			$('.aboutcontainer #mokatext').css({
-				transform: 'rotateX(' + ((90)*up + (-90)) + 'deg) skewX(' + ((-20)*up + (20)) + 'deg)'
+				transform: 'rotateX(' + ((100)*up + (-100)) + 'deg) skewX(' + ((-200/7)*up + (200/7)) + 'deg) scale(' + ((-5/7)*up + (12/7)) + ')'
 			});
 			$('.aboutcontainer #a-bit-about').css({
-				transform: 'rotateX(' + ((1400/17)*up + (-2590/17)) + 'deg) skewX(' + ((-200/17)*up + (370/17)) + 'deg)'
+				transform: 'rotateX(' + ((100)*up + (-170)) + 'deg) skewX(' + ((-200/7)*up + (340/7)) + 'deg) scale(' + ((5/7)*up + (-3/14)) + ')'
 			});
 		}
-		if (up >= 2.25) {
-			if (up <= 3.1) {
+		if (up >= 2) {
+			if (up <= 2.7) {
 				$('.aboutcontainer').css({
-					left: ' ' + ((-2000/17)*up + (2800/17)) + 'vw '
-				})
+					left: ' ' + ((-1000/7)*up + (1300/7)) + 'vw '
+				});
+				$('.aboutcontainer #a-bit-about').css({
+					transform: 'rotateX(' + ((-100)*up + (200)) + 'deg) skewX(' + ((-200/7)*up + (400/7)) + 'deg) scale(' + ((-5/7)*up + (17/7)) + ')'
+				});
+			} else {
+				$('.aboutcontainer').css({
+					left: '-200vw'
+				});
+				$('.aboutcontainer #a-bit-about').css({
+					transform: 'rotateX(0deg) skewX(0deg) scale(1)'
+				});
 			}
 		}
 	} else {
 		$('.aboutcontainer').css({
 			left: '0vw'
-		})
+		});
+		$('.aboutcontainer #mokatext').css({
+			transform: 'rotateX(0deg) skewX(0deg) scale(1)'
+		});
 	}
 });
 
