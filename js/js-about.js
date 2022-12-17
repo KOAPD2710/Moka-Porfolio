@@ -47,9 +47,15 @@ $(document).ready(function(val){
 		$("#hiremecircle .cirle2").css({
 			scale : "1"
 		});
+		$("#hiremecircle .cursor").css({
+			scale : "1"
+		});
 		$(".hiremecircle .hiretext").text('Hire Me').delay(5000);
 	}, function(){
 		$("#hiremecircle .cirle2").css({
+			scale : "0"
+		});
+		$("#hiremecircle .cursor").css({
 			scale : "0"
 		});
 		$(".hiremecircle .hiretext").text('Have an idea?').delay(5000);
@@ -70,6 +76,16 @@ $(window).scroll(function(){
 	var p = $( "p" ).first();
 	$( ".textscroll p" ).text(up);
 
+
+
+
+	if (up >= 5) {
+		if (5 <= 6) {
+			$(".foooter .foot").css({
+				translate:  '0 ' + ((50)*up + (-300)) + 'vw '
+			});
+		}
+	}
 	if (up >= constchange*.1) {
 		if (up <= constchange*.2) {
 			$('.hellosticker').addClass('done');
@@ -155,6 +171,68 @@ $(window).scroll(function(){
 		});
 		$('.aboutcontainer #mokatext').css({
 			transform: 'rotateX(0deg) skewX(0deg) scale(1)'
+		});
+	}
+
+
+	if (up >= 2.9) {
+		if (up <= 4.2) {
+			$(".hireme .scrolldown").css({
+				top: ' ' + ((150/13)*up + (-435/13)) + 'vh '
+			});
+		}
+
+		if (up > 4.2) {
+			if (up <= 4.3) {
+				$(".hireme .scrolldown").css({
+					opacity: '0'
+				});
+				$(".infotext").addClass('checked');
+			} else {
+				$(".hireme .scrolldown").css({
+					opacity: '0'
+				});
+				$(".infotext").addClass('checked');
+			}
+		} else {
+			$(".hireme .scrolldown").css({
+				opacity: '1'
+			});
+			$(".infotext").removeClass('checked');
+		}
+
+		if (up > 4.5) {
+			if (up <= 4.8) {
+				$(".hireme .infotext .lotsofthing p").removeClass('showt');
+				$(".hireme .infotext .lotsofthing p").addClass('hiddent');
+				$(".hireme .infotext .lotsofthing .text2").addClass('showt');
+				$(".hireme .infotext .lotsofthing .text2").removeClass('hiddent');
+			} else{
+				$(".hireme .infotext .lotsofthing p").removeClass('showt');
+				$(".hireme .infotext .lotsofthing p").addClass('hiddent');
+				$(".hireme .infotext .lotsofthing .text3").addClass('showt');
+				$(".hireme .infotext .lotsofthing .text3").removeClass('hiddent');
+			}
+		} else {
+			$(".hireme .infotext .lotsofthing p").removeClass('showt');
+			$(".hireme .infotext .lotsofthing p").addClass('hiddent');
+			$(".hireme .infotext .lotsofthing .text1").addClass('showt');
+			$(".hireme .infotext .lotsofthing .text1").removeClass('hiddent');
+	}
+	}
+	if (up >= 4.4) {
+		if (up <= 4.6) {
+			$("#hiremecircle").css({
+				scale: '1'
+			});
+		} else {
+			$("#hiremecircle").css({
+				scale: '1'
+			});
+		}
+	} else {
+		$("#hiremecircle").css({
+			scale: '0'
 		});
 	}
 });

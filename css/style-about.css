@@ -1,3 +1,9 @@
+.foooter{
+	z-index: 1 !important;
+}
+.contentcontainer{
+	z-index: calc(1000 - 2*var(--i));
+}
 .stickercontainer{
 	z-index: 9999999999999 !important;
 	pointer-events: none;
@@ -173,8 +179,43 @@
 }
 .hireme .infotext .lotsofthing{
 	translate: -30vw 15vh;
+	text-align: center;
 }
-
+.hireme .infotext .lotsofthing p{
+	transition: all .5s ease;
+}
+.hireme .infotext p::before{
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	transition: left .5s ease;
+}
+.hireme .infotext.checked p::before{
+	left: 100%;
+}
+.hireme .scrolldown{
+	position: absolute;
+	display: block;
+	left: 50%;
+	translate: -50% 0%;
+	transition: opacity .5s ease;
+}
+.hireme .scrolldown p{
+	font-family: Fonth;
+	font-size: 30px;
+}
+.hireme .scrolldown svg{
+	position: absolute;
+	left: 50%;
+	translate: -50%;
+	width: 40px;
+	stroke-width: 7px;
+}
 .hireme .hiremecircle{
 	position: absolute;
 	display: block;
@@ -188,6 +229,8 @@
 	max-height: 450px;
 	border-radius: 10000000000px;
 	border: 1px solid var(--t);
+	scale: 0;
+	transition: scale .5s cubic-bezier(.1,.63,.36,.57);
 }
 .hireme .hiremecircle div{
 	position: absolute !important;
@@ -217,8 +260,13 @@
 	transition: scale .3s cubic-bezier(.1,.63,.36,.57);
 	cursor: none;
 }
-.hireme .hiremecircle .idea2{
-	display: none;
+.hireme .hiremecircle .cursor{
+	font-family: Fonth;
+	font-size: 70px;
+	mix-blend-mode: difference;
+	scale: 0;
+	cursor: none;
+	transition: scale .3s cubic-bezier(.1,.63,.36,.57);
 }
 
 
