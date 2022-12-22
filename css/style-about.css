@@ -63,7 +63,7 @@
 	min-width: 100px;
 	rotate: 20deg;
 }
-.hellosticker.done svg, .kid2ksticker.done svg, .lighningsticker.done svg, .screationsticker.done svg, .smilesticker.done svg{
+.hellosticker.done svg, .kid2ksticker.done svg, .lighningsticker.done svg, .s.done svg, .smilesticker.done svg{
 	scale: 1;
 	transition: all .5s cubic-bezier(.34,1.67,.57,.81);
 }
@@ -271,11 +271,136 @@
 
 
 
+.sm{
+	position: relative;
+	display: block;
+}
+.sm .mokasm{
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+}
+.sm .mokasm p{
+	position: absolute;
+	display: inline;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	font-family: Fontl;
+	font-size: 25vw;
+}
+.sm .mokasm svg{
+	position: absolute;
+
+}
+.sm .mokasm #smilesticker{
+	width: 100px;
+	top: 30vh;
+	left: 15vw;
+}
+.sm .mokasm #hellosticker{
+	width: 150px;
+	top: 35vh;
+	left: 55vw;
+}
+.sm .mokasm #kid2ksticker{
+	width: 140px;
+	bottom: 30vh;
+	left: 10vw;
+	rotate: -15deg;
+}
+.sm .mokasm #lighningsticker{
+	width: 50px;
+	top: 40vh;
+	right: 10vw;
+	rotate: 5deg;
+}
+.sm .mokasm #screationsticker{
+	width: 110px;
+	bottom: 35vh;
+	right: 15vw;
+	rotate: 23deg;
+}
+.sm .mokasm #flowersticker{
+	width: 90px;
+	bottom: 30vh;
+	left: 40vw;
+	rotate: 23deg;
+}
 
 
 
-
-
+.infotextsm{
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: 250vh !important;
+}
+.infotextsm .sticky{
+	position: webkit-sticky;
+	position: sticky;
+	display: block;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: black;
+}
+.infotextsm .textcontainer{
+	position: relative;
+	top: 0;
+	display: flex;
+	width: 250vw;
+	left: 0;
+	gap: 50vw;
+	height: 100vh;
+}
+.infotextsm .textcontainer .content{
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+}
+.infotextsm .textcontainer .content p{
+	font-family: Fontt2;
+	font-size: 24px;
+	line-height: 2;
+}
+.a-bit-about-sm, .education-sm{
+	position: absolute;
+	display: block;
+	width: 100%;
+	padding: 0 10vw;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+.infotextsm .textcontainer .content h3{
+	font-family: Fonth;
+	font-size: 8vw;
+	margin-bottom: 5vh;
+}
+.infotextsm .textcontainer .content nav{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	margin-bottom: 20px;
+}
+.infotextsm .textcontainer .content nav p{
+	margin: 0px;
+}
+.infotextsm .textcontainer .content nav svg{
+	width: 25px;
+	margin: 0 .5rem;
+}
+.infotextsm .textcontainer .content .headcontentsm{
+	font-weight: bold;
+}
+.education-sm div{
+	margin-bottom: 4vh;
+}
 
 
 

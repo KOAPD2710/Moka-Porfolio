@@ -112,7 +112,6 @@ $(window).scroll(function(){
 		$('.screationsticker').removeClass('done');
 	}
 
-
 	// if (up >=0) {
 	// 	if (up <1) {
 	// 		$(".aboutcontainer").addClass('slide1');
@@ -235,6 +234,23 @@ $(window).scroll(function(){
 			scale: '0'
 		});
 	}
+
+	if (up >= 1.5) {
+		if (up <= 2.5) {
+			$(".sm .infotextsm .textcontainer").css({
+				left: ' ' + ((-150)*up + (225)) + '% '
+			});
+		} else {
+			$(".sm .infotextsm .textcontainer").css({
+				left: '-150vw'
+			});
+		}
+	} else {
+		$(".sm .infotextsm .textcontainer").css({
+			left: '0vw'
+		});
+	}
+
 });
 
 

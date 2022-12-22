@@ -273,6 +273,7 @@
 .menuicontainer.checked .menunavlink a{
 	opacity: 1;
 	transform: translateY(0px);
+	pointer-events: auto;
 	transition: all .5s ease-out calc(.8s + var(--i)*.2s);
 }
 .menunavlink a span{

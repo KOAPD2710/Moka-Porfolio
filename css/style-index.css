@@ -6,23 +6,6 @@
 	max-width: 100%;
 	max-height: 100%;
 }
-.olipop{
-	background: var(--gr);
-	animation: olopopbg 2s infinite;
-}
-
-@keyframes olopopbg{
-	0%, 90%{
-		background: var(--t);
-	}
-	20%, 70%{
-		background: blueviolet;
-	}
-	40%{
-		background: greenyellow;
-	}
-}
-
 .olipop video{
 	position: absolute;
 	display: flex;
@@ -37,7 +20,7 @@
 .bgcontent .sticky{
 	background-color: transparent !important;
 }
-.digitaldesign, .workcatogery, .blankspace{
+.digitaldesign, .workcatogery, .takealook{
 	position: relative;
 	display: block;
 	width: 100vw;
@@ -49,20 +32,34 @@
 	width: 100vw;
 	height: 100vh;
 }
-.didesign h1{
+.didesign nav{
 	position: absolute;
-	display: inline-block;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+.didesign nav p{
+	position: relative;
+	display: inline;
+	font-size: 15vw;
 	font-family: Fonth;
-	font-size: 14vw;
-	letter-spacing: 1px;
 	color: black;
+	margin: 0px;
 }
-.didesign #digital{
-	right: 0;
+.didesign .mokabandroll p{
+	font-family: Fontl;
 }
-.didesign #designer{
-	top: 14.5vw;
-	left: 0;`
+.didesign .mokabandroll{
+	top: 0;
+	left: -150%;
+}
+.didesign .foliobandroll{
+	top: 15vw;
+	left: -15%;
+}
+.didesign nav #flowersticker{
+	width: 150px;
 }
 .didesign .star{
 	position: absolute;

@@ -1,5 +1,6 @@
 .contentcontainer{
 	height: calc(var(--i)*100vh);
+	z-index: calc(100000 - 2*var(--i));
 }
 .playground{
 	background-color: var(--gr) !important;

@@ -70,13 +70,18 @@ $(document).ready(function(){
 		};
 
 
-		if ( up >= 1.5) {
-			$('#digital').css({
-				transform: 'translate3d( ' + (((-184/5)*up) + (276/5)) + '% , 0, 0)'
-			});
-			$('#designer').css({
-				transform: 'translate3d( ' + (((18)*up)+ (-27)) + '% , 0, 0)'
-			});
+		if ( up >= 1) {
+			if (up <= 5) {
+				$('.didesign .mokabandroll').css({
+				transform: 'translateX(' + ((60/7)*up +(-90/7)) + '%)'
+				});
+				$('.didesign .foliobandroll').css({
+					transform: 'translateX(' + ((-50/7)*up +(75/7)) + '%)'
+				});
+				$(".didesign #flowersticker").css({
+					transform: 'rotate(' + ((60)*up) + 'deg)'
+				})
+			}
 		};
 
 		if (4.5 > up) {
