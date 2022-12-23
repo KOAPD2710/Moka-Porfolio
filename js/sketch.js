@@ -1,6 +1,8 @@
 // module aliases
 var Engine = Matter.Engine,
 	// Render = Matter.Render,
+	MouseConstraint = Matter.MouseConstraint,
+	Mouse = Matter.Mouse,
 	World = Matter.World,
 	Bodies = Matter.Bodies;
 
@@ -8,11 +10,10 @@ var engine;
 var world;
 var boxes = [];
 
-var illustrator= [];
-
 var ground;
 var wallL;
 var wallR;
+
  
 function setup() {
 
@@ -34,14 +35,15 @@ function setup() {
 	World.add(world, ground);
 	World.add(world, wallL);
 	World.add(world, wallR);
+	World.add(world, illustrator);
+
+
 }
 
 
 function mouseDragged(){ 
 	// boxes.push(new Box(mouseX, mouseY, random(10,40), random(10,40)));
 	boxes.push(new Box(mouseX, mouseY, random(10,40)));
-	illustrator.push(new Illustrator(mouseX, mouseY));
-
 }
 
 
@@ -62,23 +64,3 @@ function draw() {
 	wallL.show();
 	wallR.show();
 }
-
-
-// add mouse control
-var mouse = Mouse.create(render.canvas),
-    mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.2,
-        render: {
-          visible: false
-        }
-      }
-    });
-
-World.add(world, mouseConstraint);
-// run the engine
-Engine.run(engine);
-
-// run the renderer
-Render.run(render);

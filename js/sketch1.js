@@ -1,74 +1,76 @@
 var Engine = Matter.Engine,
-		Render = Matter.Render,
-		Events = Matter.Events,
-		MouseConstraint = Matter.MouseConstraint,
-		Mouse = Matter.Mouse,
-		World = Matter.World,
-		Bodies = Matter.Bodies;
+	Render = Matter.Render,
+	Events = Matter.Events,
+	MouseConstraint = Matter.MouseConstraint,
+	Mouse = Matter.Mouse,
+	World = Matter.World,
+	Bodies = Matter.Bodies;
 
 // create an engine
 var engine = Engine.create(),
-		world = engine.world;
+	world = engine.world;
+
+var wdwidth = window.innerWidth;
+var wdheight = window.innerHeight;
+var hex = 200;
 
 // create a renderer
 var render = Render.create({
 		element: document.body,
 		engine: engine,
 		options: {
-			width: window.innerWidth,
-			height: window.innerHeight,
+			width: wdwidth,
+			height: wdheight,
 			pixelRatio: 2,
-			background: '#080808',
+			background: '#000000',
 			wireframes: false,
 		}
-});
+	}
+);
 
 
-// create bounds
-var ground = Bodies.rectangle(
-	(window.innerWidth / 2) + 160, window.innerHeight + 80, window.innerWidth + 320, 160,{render: { fillStyle: '#080808'}, isStatic: true });
-var wallLeft = Bodies.rectangle( -80, window.innerHeight / 2, 160,   window.innerHeight, { isStatic: true });
-var wallRight = Bodies.rectangle(window.innerWidth + 80, window.innerHeight / 2, 160, 1200, { isStatic: true })
-var roof = Bodies.rectangle(
-	(window.innerWidth / 2) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
 
-// object colors & variables
+var ratio = 1/2;
 
-var border = 2
-var radius = 20
-
-// create objects
-
-// art & design
-var illustration = Bodies.rectangle(70, 500, 133, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RADmiFI.png', xScale: 0.5, yScale: 0.5 }}})
-var art = Bodies.rectangle(35, 460, 56, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/NwQqeng.png', xScale: 0.5, yScale: 0.5 }}})
-var threeD = Bodies.rectangle(90, 460, 52, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/ptUWXgO.png', xScale: 0.5, yScale: 0.5 }}})
-var graphic = Bodies.rectangle(60, 420, 105, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/TyOmVtt.png', xScale: 0.5, yScale: 0.5 }}})
-var photo = Bodies.rectangle(50, 380, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/tc3MsJP.png', xScale: 0.5, yScale: 0.5 }}})
-// video
-var documentary = Bodies.rectangle(220, 540, 165, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/QYNTBNr.png', xScale: 0.5, yScale: 0.5 }}})
-var animation = Bodies.rectangle(200, 490, 128, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/rSnEY9Q.png', xScale: 0.5, yScale: 0.5 }}})
-var vintage = Bodies.rectangle(190, 440, 104, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/5BSBvSm.png', xScale: 0.5, yScale: 0.5 }}})
-var short = Bodies.rectangle(170, 390, 82, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/VEyrikN.png', xScale: 0.5, yScale: 0.5 }}})
-//misc
-var website = Bodies.rectangle(360, 420, 108, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hr9p4uV.png', xScale: 0.5, yScale: 0.5 }}})
-var article = Bodies.rectangle(300, 380, 92, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/n6TV7XG.png', xScale: 0.5, yScale: 0.5 }}})
-var music = Bodies.rectangle(400, 360, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/dax8MwT.png', xScale: 0.5, yScale: 0.5 }}})
-var star = Bodies.rectangle(80, 260, 42, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/C2qPMbB.png', xScale: 0.5, yScale: 0.5 }}})
-//about
-var about = Bodies.rectangle(230, 140, 87, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/4gPcZVN.png', xScale: 0.5, yScale: 0.5 }}})
-var instagram = Bodies.rectangle(320, 180, 40, 40, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RStSwfG.png', xScale: 0.5, yScale: 0.5 }}, url: 'https://www.instagram.com/fuse.blog/'})
-var random = Bodies.rectangle(230, 180, 112, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/YS51eIC.png', xScale: 0.5, yScale: 0.5 }}})
+var ratiosvg;
 
 
-// Original Shape
-// var illustration = Bodies.rectangle(70, 500, 133, 40, {render: { fillStyle: arts}, chamfer: {radius: 20}})
+function setup() {
+
+	wdwidth = window.innerWidth;
+	wdheight = window.innerHeight;
+	hex = 200;
+
+	if (wdwidth > wdheight) {
+		ratiosvg = ratio*wdwidth/1800;
+	} else {
+		ratiosvg = ratio*wdheight/1000;
+	}
 
 
-// add all of the bodies to the world
-World.add(engine.world, [
-	ground, wallLeft, wallRight, roof, illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random
-]);
+
+
+	ground = new Boundary(wdwidth/2, wdheight + hex/2, wdwidth, hex)
+	roof = new Boundary(wdwidth/2, - hex/2, wdwidth, hex)
+	wallL = new Boundary(-hex/2, wdheight/2, hex, wdheight)
+	wallR = new Boundary(wdwidth + hex/2, wdheight/2, hex, wdheight)
+
+	World.add(world, [ground, wallL, wallR, roof]);
+
+
+	domieSocks = new DomieSocks(wdwidth/2, - hex/2, 1008*ratiosvg, 261*ratiosvg),
+	diary = new Diary(wdwidth/2, - hex/2, 529*ratiosvg, 261*ratiosvg),
+	proe = new ProE(wdwidth/2, - hex/2, 938*ratiosvg, 260*ratiosvg),
+	olibanner = new OliBanner(wdwidth/2, - hex/2, 1100*ratiosvg, 261*ratiosvg)
+	savour = new Savour(wdwidth/2, - hex/2, 623*ratiosvg, 261*ratiosvg),
+
+	World.add(engine.world, [domieSocks, diary, proe, olibanner, savour]);
+}
+
+
+
+
+
 
 // add mouse control
 var mouse = Mouse.create(render.canvas),
