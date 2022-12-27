@@ -1,6 +1,8 @@
 $(document).ready(function(){
+	var scroll = $(window).scrollTop();
 	var width = $(window).innerWidth();
 	var height = $(window).innerHeight();
+	var up = scroll / height;
 
 	
 	if ( width >= height ) {
@@ -42,6 +44,11 @@ $(document).ready(function(){
 	});
 
 
+	$('.talmbg .hiremecircle').hover(function(){
+		$(this).addClass('hovered');
+	}, function(){
+		$(this).removeClass('hovered');
+	});
 
 
 	$(window).scroll(function(){
@@ -96,16 +103,28 @@ $(document).ready(function(){
 			});
 		};
 
-		if (4.5 <= up && up <= 5) {
-			$('.bgcontent').css({
-				backgroundColor: 'black'
-			});
-			$('#goodat').css({
-				color: 'var(--t)'
-			});
-			$('.didesign .star').css({
-				fill: 'var(--t)'
-			});
+		if (4.5 <= up) {
+			if (up <= 5) {
+				$('.bgcontent').css({
+					backgroundColor: 'black'
+				});
+				$('#goodat').css({
+					color: 'var(--t)'
+				});
+				$('.didesign .star').css({
+					fill: 'var(--t)'
+				});
+			} else{
+				$('.bgcontent').css({
+					backgroundColor: 'black'
+				});
+				$('#goodat').css({
+					color: 'var(--t)'
+				});
+				$('.didesign .star').css({
+					fill: 'var(--t)'
+				});
+			}
 		}
 
 		if (4.5 <= up && up <= 5.1) {
@@ -163,6 +182,16 @@ $(document).ready(function(){
 			$('#uidesigner').not('.done').css({
 				transform: 'translate3d(' + ((200)*up + (-1200)) + '%, ' +  ((-60)*up + (350)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((20)*up + (-110))) + 'deg)'
 			});
+		}
+
+		if (up >= 7) {
+			if (up <= 7.1) {
+				$('.talmbg .hiremecircle').addClass('checked');
+			} else {
+				$('.talmbg .hiremecircle').addClass('checked');
+			}
+		} else {
+			$('.talmbg .hiremecircle').removeClass('checked');
 		}
 	});
 });

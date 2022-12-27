@@ -228,6 +228,68 @@
 	transition: all .2s ease-in;
 }
 
+.takealook #physicscreen{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.talmbg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.talmbg .hiremecircle{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	translate: -50% -80%;
+	pointer-events: auto !important;
+	width: 30vw;
+	height: 30vw;
+	max-width: 450px;
+	max-height: 450px;
+	border-radius: 10000000000px;
+	border: 1px solid var(--t);
+	scale: 0;
+	transition: scale .5s cubic-bezier(.1,.63,.36,.57);
+	cursor: none !important;
+}
+.talmbg .hiremecircle div{
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	text-align: center;
+	translate: -50% -50%;
+	cursor: none;
+}
+.talmbg .hiremecircle div p{
+	position: absolute;
+	top: 50% !important;
+	left: 50% !important;
+	translate: -50% -50%;
+	font-family: Fonth;
+	font-size: 50px;
+	width: 300px;
+	text-align: center;
+	margin: 0px;
+}
+.talmbg .hiremecircle .cursor{
+	font-family: Fonth;
+	font-size: 70px;
+	mix-blend-mode: difference;
+	scale: 0;
+	transition: scale .3s cubic-bezier(.1,.63,.36,.57);
+	pointer-events: none;
+}
+.talmbg .hiremecircle.hovered .cursor{
+	scale: 1;
+}
+.talmbg .hiremecircle.checked{
+	scale: 1;
+}
+
+
 
 
 

@@ -1,8 +1,11 @@
 function Boundary(x, y, w, h){
 	var options = {
-		friction: .8,
-		restitution: .9,
+		friction: .5,
+		restitution: 0.6,
 		isStatic: true,
+		render : {
+			fillStyle: "transparent",
+		}
 	}
 	
 	this.body = Bodies.rectangle(x, y, w, h, options);

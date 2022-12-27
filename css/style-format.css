@@ -25,6 +25,24 @@ body{
 	overscroll-behavior: none;
 	color: var(--t);
 }
+html, body{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+canvas{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+.p5Canvas{
+	display: none;
+}
+main{
+	display: none;
+}
+
 .break{
 	padding-left: calc(10%);
 	padding-right: calc(10%);
