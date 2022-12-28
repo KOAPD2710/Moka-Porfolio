@@ -266,6 +266,7 @@
 	mix-blend-mode: difference;
 	scale: 0;
 	cursor: none;
+	pointer-events: none;
 	transition: scale .3s cubic-bezier(.1,.63,.36,.57);
 }
 

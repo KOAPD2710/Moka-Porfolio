@@ -217,7 +217,7 @@ $(window).scroll(function(){
 			$(".hireme .infotext .lotsofthing p").addClass('hiddent');
 			$(".hireme .infotext .lotsofthing .text1").addClass('showt');
 			$(".hireme .infotext .lotsofthing .text1").removeClass('hiddent');
-	}
+		}
 	}
 	if (up >= 4.4) {
 		if (up <= 4.6) {

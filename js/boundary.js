@@ -1,7 +1,7 @@
 function Boundary(x, y, w, h){
 	var options = {
-		friction: .5,
-		restitution: 0.6,
+		friction: .1,
+		restitution: .1,
 		isStatic: true,
 		render : {
 			fillStyle: "transparent",

@@ -143,8 +143,8 @@ $(document).ready(function(){
 		}
 		if ( up < 4){
 			$('#stickercontainer nav').removeClass('done');
-			$('#creation').css({
-				transform: 'translate3d(40%, 100%, 0px) scale(.7) rotate(270deg)'
+			$('#visualdesign').css({
+				transform: 'translate3d(10%, 250%, 0px) scale(.75) rotate(-30deg)'
 			});
 			$('#graphicdesigner').css({
 				transform: 'translate3d(200%, 0%, 0px) scale(.6) rotate(70deg)'
@@ -163,25 +163,46 @@ $(document).ready(function(){
 			});
 		}
 
-		if (5 <= up && up <= 5.5) {
-			$('#creation').not('.done').css({
-				transform: 'translate3d(' + ((-140)*up + (740)) + '%, ' +  ((-460)*up + (2400)) + '%, 0px) 	scale(' +  ((7/5)*up + (-13/2)) + ') rotate(' + (((-540)*up + (2970))) + 'deg)'
-			});
-			$('#graphicdesigner').not('.done').css({
-				transform: 'translate3d(' + ((-380)*up + (2100)) + '%, ' +  ((-100)*up + (500)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((-140)*up + (770))) + 'deg)'
-			});
-			$('#handdrawing').not('.done').css({
-				transform: 'translate3d(' + ((100)*up + (-600)) + '%, ' +  ((-300)*up + (1600)) + '%, 0px) 	scale(' +  ((1)*up + (-43/10)) + ') rotate(' + (((54)*up + (-297))) + 'deg)'
-			});
-			$('#brandidentity').not('.done').css({
-				transform: 'translate3d(' + ((-200)*up + (1100)) + '%, ' +  ((-80)*up + (450)) + '%, 0px) 	scale(' +  ((7/5)*up + (-13/2)) + ') rotate(' + (((-120)*up + (660))) + 'deg)'
-			});
-			$('#artdirection').not('.done').css({
-				transform: 'translate3d(' + ((280)*up + (-1650)) + '%, ' +  ((-100)*up + (480)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((-120)*up + (660))) + 'deg)'
-			});
-			$('#uidesigner').not('.done').css({
-				transform: 'translate3d(' + ((200)*up + (-1200)) + '%, ' +  ((-60)*up + (350)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((20)*up + (-110))) + 'deg)'
-			});
+		if (up >= 5) {
+			if (up <= 5.5) {
+				$('#visualdesign').not('.done').css({
+					transform: 'translate3d(' + ((-60)*up + (310)) + '%, ' +  ((-860)*up + (4550)) + '%, 0px) 	scale(' +  ((9/10)*up + (-15/4)) + ') rotate(' + (((100)*up + (-530))) + 'deg)'
+				});
+				$('#graphicdesigner').not('.done').css({
+					transform: 'translate3d(' + ((-300)*up + (1700)) + '%, ' +  ((-100)*up + (500)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((-140)*up + (770))) + 'deg)'
+				});
+				$('#handdrawing').not('.done').css({
+					transform: 'translate3d(' + ((100)*up + (-600)) + '%, ' +  ((-300)*up + (1600)) + '%, 0px) 	scale(' +  ((1)*up + (-43/10)) + ') rotate(' + (((54)*up + (-297))) + 'deg)'
+				});
+				$('#brandidentity').not('.done').css({
+					transform: 'translate3d(' + ((-200)*up + (1100)) + '%, ' +  ((-80)*up + (450)) + '%, 0px) 	scale(' +  ((7/5)*up + (-13/2)) + ') rotate(' + (((-120)*up + (660))) + 'deg)'
+				});
+				$('#artdirection').not('.done').css({
+					transform: 'translate3d(' + ((280)*up + (-1650)) + '%, ' +  ((-100)*up + (480)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((-120)*up + (660))) + 'deg)'
+				});
+				$('#uidesigner').not('.done').css({
+					transform: 'translate3d(' + ((200)*up + (-1200)) + '%, ' +  ((-60)*up + (350)) + '%, 0px) 	scale(' +  ((6/5)*up + (-27/5)) + ') rotate(' + (((20)*up + (-110))) + 'deg)'
+				});
+			} else {
+				$('#visualdesign').css({
+					transform: 'translate3d(-20%, -180%, 0px) scale(1) rotate(20deg)'
+				});
+				$('#graphicdesigner').css({
+					transform: 'translate3d(50%, -50%, 0px) scale(1.2) rotate(0deg)'
+				});
+				$('#handdrawing').css({
+					transform: 'translate3d(-50%, -50%, 0px) scale(1.2) rotate(0deg)'
+				});
+				$('#brandidentity').css({
+					transform: 'translate3d(0%, 10%, 0px) scale(1.2) rotate(0deg)'
+				});
+				$('#artdirection').css({
+					transform: 'translate3d(-110%, -70%, 0px) scale(1.2) rotate(0deg);'
+				});
+				$('#uidesigner').css({
+					transform: 'translate3d(-100%, 20%, 0px) scale(1.2) rotate(0deg)'
+				});
+			}
 		}
 
 		if (up >= 7) {
@@ -192,6 +213,23 @@ $(document).ready(function(){
 			}
 		} else {
 			$('.talmbg .hiremecircle').removeClass('checked');
+		}
+
+
+		if ( up >= 7.4) {
+			if (up <= 8.8) {
+				$("#physicscreen").css({
+					top : ' ' + ((250/7)*up +(-1850/7)) + '% '
+				})
+			} else {
+				$("#physicscreen").css({
+					top : '50%'
+				})
+			}
+		} else {
+			 $("#physicscreen").css({
+				top : '0%'
+			})
 		}
 	});
 });

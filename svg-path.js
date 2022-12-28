@@ -8,7 +8,7 @@ if (wdwidth > wdheight) {
 }
 
 var friction = .3,
-	restitution = .4;
+	restitution = .2;
 
 function Circle(x, y , r) {
 	this.r = r;
