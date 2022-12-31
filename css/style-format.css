@@ -72,7 +72,7 @@ main{
 	mix-blend-mode: difference;
 	transition: scale .5s cubic-bezier(.01,1.62,.63,.79);
 }
-.cursor-inner{
+/*.cursor-inner{
 	width: 7px;
 	height: 7px;
 	background-color: var(--t);
@@ -81,9 +81,9 @@ main{
 	mix-blend-mode: difference;
 	scale: 1;
 	transition: scale .1s cubic-bezier(.01,1.62,.63,.79);
-}
+}*/
 .cursor-outer p{
-	position: absolute;
+	position: fixed;
 	display: inline;
 	top: 50%;
 	left: 50%;
@@ -97,17 +97,7 @@ main{
 	scale: 0;
 	transition: scale .1s cubic-bezier(.01,1.62,.63,.79);
 }
-.cursor-outer.onhovercontent{
-	scale: 2;
-	transition: scale .5s cubic-bezier(.01,1.62,.63,.79);
-}
 
-.cursor-outer.onhoverlink{
-}
-.cursor-outer.onhovervideo{
-	scale: 3;
-	transition: scale .5s cubic-bezier(.01,1.62,.63,.79);
-}
 
 
 

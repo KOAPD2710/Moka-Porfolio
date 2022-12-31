@@ -81,10 +81,6 @@ function setup() {
 			ground.removeFromWorld();
 		};
 	});
-
-	document.addEventListener("scroll", e=>{
-		Body.applyForce(proe, {x: 0, y: 0}, {x: 0, y: 0.04})
-	});
 	// 		ground.addFromWorld();
 	// 		domieSocks.addFromWorld();
 	// 		diary.addFromWorld();
