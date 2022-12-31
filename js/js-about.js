@@ -73,7 +73,6 @@ $(window).scroll(function(){
 	var constchange = 1;
 	var offset = $('#contentcontainer').offset();
 
-	var p = $( "p" ).first();
 	$( ".textscroll p" ).text(up);
 
 

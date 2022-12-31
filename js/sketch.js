@@ -6,6 +6,7 @@ var Engine = Matter.Engine,
 	Mouse = Matter.Mouse,
 	World = Matter.World,
 	Bodies = Matter.Bodies;
+	Body = Matter.Body;
 
 // create an engine
 var engine = Engine.create(),
@@ -44,10 +45,10 @@ var ratio = 1/2;
 var ratiosvg;
 
 function setup() {
-
 	wdwidth = window.innerWidth;
 	wdheight = window.innerHeight;
 	hex = 200;
+
 
 	createCanvas(0,0);
 
@@ -58,11 +59,11 @@ function setup() {
 		ratiosvg = ratio*wdheight/1000;
 	}
 
-	ground = new Boundary(wdwidth/2, wdheight + hex/2, wdwidth, hex);
-	roof = new Boundary(wdwidth/2, - hex, wdwidth, hex);
-	wallL = new Boundary(-hex/2, wdheight/2, hex, wdheight);
-	wallR = new Boundary(wdwidth + hex/2, wdheight/2, hex, wdheight);
-	cirrle = new Circle(wdwidth/2, wdheight/2 - .6*225, 225);
+	ground =	new Boundary(wdwidth/2, wdheight + hex/2, wdwidth, hex);
+	roof =		new Boundary(wdwidth/2, - hex, wdwidth, hex);
+	wallL =		new Boundary(-hex/2, wdheight/2, hex, wdheight);
+	wallR = 	new Boundary(wdwidth + hex/2, wdheight/2, hex, wdheight);
+	cirrle = 	new Circle(wdwidth/2, wdheight/2 - .6*225, 225);
 
 	domieSocks = new DomieSocks	(wdwidth/10, hex/2, 1008*ratiosvg, 261*ratiosvg);
 	diary = new Diary			(wdwidth/3, hex/3, 529*ratiosvg, 261*ratiosvg);
@@ -72,6 +73,28 @@ function setup() {
 	cocacola = new CocaCola		(wdwidth - wdwidth/10, - hex/2, 808*ratiosvg, 261*ratiosvg);
 	flowers1 = new Flowers1		(wdwidth/10, hex, 135*ratiosvg);
 	flowers2 = new Flowers2		(50 + wdwidth - wdwidth/10, hex/2, 135*ratiosvg);
+
+	document.addEventListener("scroll", e=>{
+		scroll = $(window).scrollTop();
+		up = scroll / wdheight;
+		if (up > 7.5) {
+			ground.removeFromWorld();
+		};
+	});
+
+	document.addEventListener("scroll", e=>{
+		Body.applyForce(proe, {x: 0, y: 0}, {x: 0, y: 0.04})
+	});
+	// 		ground.addFromWorld();
+	// 		domieSocks.addFromWorld();
+	// 		diary.addFromWorld();
+	// 		proe.addFromWorld();
+	// 		olibanner.addFromWorld();
+	// 		savour.addFromWorld();
+	// 		cocacola.addFromWorld();
+	// 		flowers1.addFromWorld();
+	// 		flowers2.addFromWorld();
+	
 }
 
 
@@ -133,7 +156,3 @@ Engine.run(engine);
 
 // run the renderer
 Render.run(render);
-
-
-
-

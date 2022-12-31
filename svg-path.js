@@ -26,6 +26,10 @@ function Circle(x, y , r) {
 	this.body = Bodies.circle(x, y, r, options, 450);
 	World.add(world, this.body);
 
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
+
 	this.show = function() {
 		var pos = this.body.position;
 		var angle = this.body.angle;
@@ -68,6 +72,10 @@ function DomieSocks(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
+
 	this.show = function() {
 		var pos = this.body.position;
 		var angle = this.body.angle;
@@ -107,6 +115,10 @@ function Diary(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
+
 	this.show = function() {
 		var pos = this.body.position;
 		var angle = this.body.angle;
@@ -144,6 +156,10 @@ function ProE(x, y, w, h){
 
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
+	
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -182,6 +198,10 @@ function OliBanner(x, y, w, h){
 
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
+	
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -219,6 +239,10 @@ function Savour(x, y, w, h){
 
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
+	
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -239,7 +263,6 @@ function CocaCola(x, y, w, h){
 	this.h = h;
 	radius = h/2;
 
-
 	var options = {
 		friction: friction,
 		restitution: restitution,
@@ -258,6 +281,10 @@ function CocaCola(x, y, w, h){
 
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
+	
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -288,6 +315,10 @@ function Flowers1(x, y, r){
 
 	this.body = Bodies.circle(x, y, r, options);
 	World.add(world, this.body);
+	
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -317,6 +348,10 @@ function Flowers2(x, y, r){
 
 	this.body = Bodies.circle(x, y, r, options);
 	World.add(world, this.body);
+	
+	this.addFromWorld = function (){
+		World.add(world, this.body);
+	}
 
 	this.show = function() {
 		var pos = this.body.position;

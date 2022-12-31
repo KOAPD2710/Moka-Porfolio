@@ -216,21 +216,21 @@ $(document).ready(function(){
 		}
 
 
-		if ( up >= 7.4) {
-			if (up <= 8.8) {
-				$("#physicscreen").css({
-					top : ' ' + ((250/7)*up +(-1850/7)) + '% '
-				})
-			} else {
-				$("#physicscreen").css({
-					top : '50%'
-				})
-			}
-		} else {
-			 $("#physicscreen").css({
-				top : '0%'
-			})
-		}
+		// if ( up >= 7.4) {
+		// 	if (up <= 8.8) {
+		// 		$("#physicscreen").css({
+		// 			top : ' ' + ((250/7)*up +(-1850/7)) + '% '
+		// 		})
+		// 	} else {
+		// 		$("#physicscreen").css({
+		// 			top : '50%'
+		// 		})
+		// 	}
+		// } else {
+		// 	 $("#physicscreen").css({
+		// 		top : '0%'
+		// 	})
+		// }
 	});
 });
 
