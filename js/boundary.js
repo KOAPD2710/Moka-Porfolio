@@ -7,20 +7,25 @@ function Boundary(x, y, w, h){
 			fillStyle: "transparent",
 		}
 	}
+	var wdwidth = $(window).scrollTop();
+	var wdheight = $(window).innerWidth();
 	
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	this.w = w;
 	this.h = h;
 	World.add(world, this.body);
 
-	this.removeFromWorld = function (){
+	
+	this.removeFromWorld = function() {
 		World.remove(world, this.body);
 	}
-	this.addFromWorld = function (){
+	this.addToWorld = function() {
 		World.add(world, this.body);
 	}
 
 	this.show = function() {
+		this.w = w;
+		this.h = h;
 		var pos = this.body.position;
 		var angle = this.body.angle;
 		push();

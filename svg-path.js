@@ -1,11 +1,15 @@
-var wdwidth = $(window).scrollTop();
-var wdheight = $(window).innerWidth();
 
-if (wdwidth > wdheight) {
-	ratiosvg = ratio*wdwidth/1800;
-} else {
-	ratiosvg = ratio*wdheight/1000;
-}
+$(window).ready(function(){
+	var wdwidth = $(window).scrollTop();
+	var wdheight = $(window).innerWidth();
+	var ratio = 1/2;
+	if (wdwidth > wdheight) {
+		ratiosvg = ratio*wdwidth/1800
+	} else {
+		ratiosvg = ratio*wdheight/1000
+	}
+})
+
 
 var friction = .3,
 	restitution = .2;
@@ -26,7 +30,7 @@ function Circle(x, y , r) {
 	this.body = Bodies.circle(x, y, r, options, 450);
 	World.add(world, this.body);
 
-	this.addFromWorld = function (){
+	this.addToWorld = function (){
 		World.add(world, this.body);
 	}
 
@@ -67,19 +71,17 @@ function DomieSocks(x, y, w, h){
 		url : 'https://koapd2710.github.io/Domie-Website/'
 	}
 
-	console.log(ratiosvg);
-
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
 		var pos = this.body.position;
 		var angle = this.body.angle;
-
 		push();
 		translate(pos.x, pos.y);
 		rotate(angle);
@@ -115,8 +117,9 @@ function Diary(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
@@ -157,8 +160,9 @@ function ProE(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 	
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
@@ -196,11 +200,12 @@ function OliBanner(x, y, w, h){
 		}
 	}
 
-	this.body = Bodies.rectangle(x, y, w, h, options);
+	this.body = Bodies.rectangle(x, y, w, h, options); 
 	World.add(world, this.body);
-	
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
@@ -240,8 +245,9 @@ function Savour(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 	
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
@@ -282,8 +288,9 @@ function CocaCola(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	World.add(world, this.body);
 	
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
@@ -316,8 +323,9 @@ function Flowers1(x, y, r){
 	this.body = Bodies.circle(x, y, r, options);
 	World.add(world, this.body);
 	
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
@@ -349,8 +357,9 @@ function Flowers2(x, y, r){
 	this.body = Bodies.circle(x, y, r, options);
 	World.add(world, this.body);
 	
-	this.addFromWorld = function (){
-		World.add(world, this.body);
+	this.isOffScreen = function() {
+		var pos = this.body.position;
+		return (pos.y > wdheight + 100);
 	}
 
 	this.show = function() {
