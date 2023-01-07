@@ -191,10 +191,8 @@
 	left: 50%;
 	translate: -50% -80%;
 	pointer-events: auto !important;
-	width: 30vw;
-	height: 30vw;
-	max-width: 450px;
-	max-height: 450px;
+	width: 450px;
+	height: 450px;
 	border-radius: 10000000000px;
 	border: 1px solid var(--t);
 	scale: 0;

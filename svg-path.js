@@ -14,40 +14,7 @@ $(window).ready(function(){
 var friction = .3,
 	restitution = .2;
 
-function Circle(x, y , r) {
-	this.r = r;
-
-	var options = {
-		friction: .8,
-		restitution: .9,
-		isStatic: true,
-		render : {
-			fillStyle: "transparent",
-		}
-	}
-
-
-	this.body = Bodies.circle(x, y, r, options, 450);
-	World.add(world, this.body);
-
-	this.addToWorld = function (){
-		World.add(world, this.body);
-	}
-
-	this.show = function() {
-		var pos = this.body.position;
-		var angle = this.body.angle;
-		push();
-		translate(pos.x, pos.y);
-		rotate(angle);
-		rectMode(CENTER);
-		noStroke();
-		ellipse(0, 0, this.r*2);
-		pop();
-	};
-}
-
-
+var forceconts = -0.08;
 
 function DomieSocks(x, y, w, h){
 	this.w = w;
@@ -57,7 +24,7 @@ function DomieSocks(x, y, w, h){
 	var options = {
 		friction: friction,
 		restitution: restitution,
-		angle : -30,
+		angle : 0,
 		chamfer : {
 			radius : radius,
 		},
@@ -77,6 +44,19 @@ function DomieSocks(x, y, w, h){
 	this.isOffScreen = function() {
 		var pos = this.body.position;
 		return (pos.y > wdheight + 100);
+	}
+
+	this.applyForce = function(){
+		var pos = this.body.position;
+		Body.applyForce(
+			this.body,
+			{	x: pos.x,
+				y: pos.y,
+			},
+			{	x: 0,
+				y: forceconts,
+			}
+		)
 	}
 
 	this.show = function() {
@@ -101,7 +81,7 @@ function Diary(x, y, w, h){
 	var options = {
 		friction: friction,
 		restitution: restitution,
-		angle: 20,
+		angle : 0,
 		chamfer : {
 			radius : radius,
 		},
@@ -144,7 +124,7 @@ function ProE(x, y, w, h){
 	var options = {
 		friction: friction,
 		restitution: restitution,
-		angle: 5,
+		angle : 0,
 		chamfer : {
 			radius : radius,
 		},
@@ -163,6 +143,18 @@ function ProE(x, y, w, h){
 	this.isOffScreen = function() {
 		var pos = this.body.position;
 		return (pos.y > wdheight + 100);
+	}
+	this.applyForce = function(){
+		var pos = this.body.position;
+		Body.applyForce(
+			this.body,
+			{	x: pos.x,
+				y: pos.y,
+			},
+			{	x: 0,
+				y: forceconts,
+			}
+		)
 	}
 
 	this.show = function() {
@@ -187,7 +179,7 @@ function OliBanner(x, y, w, h){
 	var options = {
 		friction: friction,
 		restitution: restitution,
-		angle: 20,
+		angle : 0,
 		chamfer : {
 			radius : radius,
 		},
@@ -249,6 +241,18 @@ function Savour(x, y, w, h){
 		var pos = this.body.position;
 		return (pos.y > wdheight + 100);
 	}
+	this.applyForce = function(){
+		var pos = this.body.position;
+		Body.applyForce(
+			this.body,
+			{	x: pos.x,
+				y: pos.y,
+			},
+			{	x: 0,
+				y: forceconts/2,
+			}
+		)
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -272,7 +276,7 @@ function CocaCola(x, y, w, h){
 	var options = {
 		friction: friction,
 		restitution: restitution,
-		angle : 30,
+		angle : 0,
 		chamfer : {
 			radius : radius,
 		},
@@ -316,11 +320,13 @@ function Flowers1(x, y, r){
 		render : {
 			sprite : {
 				texture: 'img/flower.png',
+				xScale: ratiosvg*2,
+				yScale: ratiosvg*2,
 			}
 		}
 	}
 
-	this.body = Bodies.circle(x, y, r, options);
+	this.body = Bodies.circle(x, y, r, options, r*2);
 	World.add(world, this.body);
 	
 	this.isOffScreen = function() {
@@ -336,7 +342,7 @@ function Flowers1(x, y, r){
 		rotate(angle);
 		rectMode(CENTER);
 		noStroke();
-		ellipse(0, 0, this.r*2);
+		ellipse(0, 0, r*2);
 		pop();
 	};
 }
@@ -350,11 +356,13 @@ function Flowers2(x, y, r){
 		render : {
 			sprite : {
 				texture: 'img/flower.png',
+				xScale: ratiosvg*2,
+				yScale: ratiosvg*2,
 			}
 		}
 	}
 
-	this.body = Bodies.circle(x, y, r, options);
+	this.body = Bodies.circle(x, y, r, options, r*2);
 	World.add(world, this.body);
 	
 	this.isOffScreen = function() {
@@ -370,7 +378,7 @@ function Flowers2(x, y, r){
 		rotate(angle);
 		rectMode(CENTER);
 		noStroke();
-		ellipse(0, 0, this.r*2);
+		ellipse(0, 0, r*2);
 		pop();
 	};
 }
