@@ -54,7 +54,7 @@ var mouse = Mouse.create(render.canvas),
 				visible: false,
 			}
 		}
-	});
+});
 
 World.add(world, mouseConstraint);
 
@@ -90,23 +90,19 @@ Events.on(mouseConstraint, 'mouseup', function(event) {
 					// Hyperlinking feature
 					if (bodyUrl != undefined) {
 						//window.location.href = bodyUrl;
-						window.open(bodyUrl, '_blank');
+						window.open(bodyUrl);
 						console.log("Hyperlink was opened");
 					}
-				} else {
-					pressed();
-					break;
-				}
+				} 
 			}
 		}
 	}
 });
 
-
-var pressed = function mousePressed() {
-	if (flowersmore.length < 50) {
+function mousePressed(){
+	if (flowersmore.length < 100) {
 		flowersmore.push(new Flowersmore(random(10, wdwidth - 10), -135, 135*random(0.2, 1.2)/2));
-	}
+	} return false;
 }
 
 function setup() {
@@ -137,6 +133,9 @@ function setup() {
 	// flowers1main = new Flowers1		(wdwidth/10, hex, 135*ratiosvg);
 	// flowers2main = new Flowers2		(50 + wdwidth - wdwidth/10, hex/2, 135*ratiosvg);
 }
+
+
+
 var flowersmore = [];
 var circles = [];
 var ground = [];
@@ -151,15 +150,33 @@ var flowers2 = [];
 
 
 function mouseWheel(){
-	for ( var i = 0; i < domieSocks.length; i++){
-		domieSocks[i].applyForce();
-	};
-	for ( var i = 0; i < savour.length; i++){
-		savour[i].applyForce();
-	};
-	for ( var i = 0; i < proe.length; i++){
-		proe[i].applyForce();
-	};
+	var scroll = $(window).scrollTop();
+	var width = $(window).innerWidth();
+	var height = $(window).innerHeight();
+	var up = scroll / height;
+	if (up > 7) {
+		if (up < 8) {
+			for ( var i = 0; i < domieSocks.length; i++){
+				domieSocks[i].applyForce();
+			};
+			for ( var i = 0; i < savour.length; i++){
+				savour[i].applyForce();
+			};
+			for ( var i = 0; i < proe.length; i++){
+				proe[i].applyForce();
+			};
+			for ( var i = 0; i < olibanner.length; i++){
+				olibanner[i].applyForce();
+			};
+			for ( var i = 0; i < cocacola.length; i++){
+				cocacola[i].applyForce();
+			};
+			for ( var i = 0; i < diary.length; i++){
+				diary[i].applyForce();
+			};
+		}
+	}
+
 }
 
 
@@ -233,7 +250,9 @@ function draw() {
 		}
 	};
 
-
+	for ( var i = 0; i < flowersmore.length; i++){
+		flowersmore[i].show();
+	};
 	for ( var i = 0; i < circles.length; i++){
 		circles[i].show();
 	};

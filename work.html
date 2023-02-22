@@ -27,6 +27,7 @@
 	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 	<script type="text/javascript" src="js/js-scrolltop.js"></script>
 	<script type="text/javascript" src="js/js-workcontainer.js"></script>
+	<script type="text/javascript" src="./js/mousestop.js"></script>
 
 </head>
 <body>
@@ -35,19 +36,32 @@
 			<div class="d-lg-block d-none">
 				<div class="navi break">
 					<nav class="navlogo">
-						<a href="index.html">
-							<img src="img/logow.webp" alt="logo">
+						<a class="contentcursor" href="index.html">
+							<nav class="logotext">
+								<span style="--i:1;">M</span>
+								<span style="--i:2;">o</span>
+								<span style="--i:3;">k</span>
+								<span style="--i:4;">a</span>
+							</nav>
 						</a>
 					</nav>
-					<div class="textscroll"><p></p></div>
 					<div class="navlink">
-						<a href="work.html" class="checked">
+						<a class="contentcursor" href="work.html">
 							<p>Work</p>
-							<img src="img/navlink.svg" alt="navlink">
+							<nav></nav>
+							<!-- <p style="--i:1">W</p>
+							<p style="--i:2">o</p>
+							<p style="--i:3">r</p>
+							<p style="--i:4">k</p> -->
 						</a>
-						<a href="about.html" class="">
+						<a class="contentcursor" href="about.html">
 							<p>About</p>
-							<img src="img/navlink.svg" alt="navlink">
+							<nav></nav>
+							<!-- <p style="--i:1">A</p>
+							<p style="--i:2">b</p>
+							<p style="--i:3">o</p>
+							<p style="--i:4">u</p>
+							<p style="--i:5">t</p> -->
 						</a>
 					</div>
 				</div>
@@ -202,5 +216,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="cursor-outer">
+		<p class="pvideo">Play Video</p>
+		<p class="vlink">Visit link</p>
+	</div>
+	<script type="text/javascript" src="js/cursor.js"></script>
+	<script type="text/javascript" src="js/js-main.js"></script>
 </body>
 </html>

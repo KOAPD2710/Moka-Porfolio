@@ -19,4 +19,12 @@ $(document).ready(function(val){
 	$('.menucircle').css({
 		right: ' ' + -((cirlewidth)*.4) + 'px '
 	});
+
+
+	$('.navisticky .navlink a').hover(function(val){
+		$(this).addClass('checked');
+
+	}, function(){
+		$(this).removeClass('checked');
+	})
 });

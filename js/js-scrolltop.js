@@ -84,6 +84,12 @@ $(window).scroll(function(e) {
 			});
 			$(".didesign #flowersticker").css({
 				transform: 'rotate(' + ((60)*up) + 'deg)'
+			});
+			$(".didesign .foliobandrollsm").css({
+				transform: 'translateY(' + ((80*up) + (-220)) + '%)'
+			});
+			$(".didesign .mokabandrollsm").css({
+				transform: 'translateY(' + ((80*up) + (-220)) + '%)'
 			})
 		}
 	};
@@ -202,6 +208,23 @@ $(window).scroll(function(e) {
 			});
 		}
 	}
+	if (up >= 6) {
+		if (up <= 7) {
+			$(".talmbgsm .cirlesm").css({
+				top: ' ' + ((10*up) + (-60)) + '% '
+			})
+		} else{
+			$(".talmbgsm .cirlesm").css({
+				top: '10%'
+			})
+		}
+	} else{
+		$(".talmbgsm .cirlesm").css({
+			top: '0%'
+		})
+	}
+
+
 	if (up >= 7) {
 		if (up <= 7.1) {
 			$('.talmbg .hiremecircle').addClass('checked');
@@ -230,72 +253,72 @@ $(window).scroll(function(e) {
 });
 
 
-document.addEventListener("mousemove", function() {
-	if ( up < 4){
-		$('#stickercontainer nav').removeClass('done');
+// document.addEventListener("mousemove", function() {
+// 	if ( up < 4){
+// 		$('#stickercontainer nav').removeClass('done');
 
-		$('#visualdesign').css({
-			transform: 'translate3d(10%, 250%, 0px) scale(.75) rotate(-30deg)'
-		});
-		$('#graphicdesigner').css({
-			transform: 'translate3d(200%, 0%, 0px) scale(.6) rotate(70deg)'
-		});
-		$('#handdrawing').css({
-			transform: 'translate3d(-100%, 100%, 0px) scale(.7) rotate(-27deg)'
-		});
-		$('#brandidentity').css({
-			transform: 'translate3d(100%, 50%, 0px) scale(.5) rotate(60deg)'
-		});
-		$('#artdirection').css({
-			transform: 'translate3d(-250%, -20%, 0px) scale(.6) rotate(60deg)'
-		});
-		$('#uidesigner').css({
-			transform: 'translate3d(-200%, 50%, 0px) scale(.6) rotate(-10deg)'
-		});
-	}
+// 		$('#visualdesign').css({
+// 			transform: 'translate3d(10%, 250%, 0px) scale(.75) rotate(-30deg)'
+// 		});
+// 		$('#graphicdesigner').css({
+// 			transform: 'translate3d(200%, 0%, 0px) scale(.6) rotate(70deg)'
+// 		});
+// 		$('#handdrawing').css({
+// 			transform: 'translate3d(-100%, 100%, 0px) scale(.7) rotate(-27deg)'
+// 		});
+// 		$('#brandidentity').css({
+// 			transform: 'translate3d(100%, 50%, 0px) scale(.5) rotate(60deg)'
+// 		});
+// 		$('#artdirection').css({
+// 			transform: 'translate3d(-250%, -20%, 0px) scale(.6) rotate(60deg)'
+// 		});
+// 		$('#uidesigner').css({
+// 			transform: 'translate3d(-200%, 50%, 0px) scale(.6) rotate(-10deg)'
+// 		});
+// 	}
 
-	if (up >= 5) {
-		if (up <= 5.9) {
-			$('#visualdesign').not('.done').css({
-				transform: 'translate3d(' + ((-100/3)*up + (530/3)) + '%, ' +  ((-4300/9)*up + (23750/9)) + '%, 0px) 	scale(' +  ((5/18)*up + (-23/36)) + ') rotate(' + (((500/9)*up + (-2770/9))) + 'deg)'
-			});
-			$('#graphicdesigner').not('.done').css({
-				transform: 'translate3d(' + ((-500/3)*up + (3100/3)) + '%, ' +  ((-500/9)*up + (2500/9)) + '%, 0px) 	scale(' +  ((2/3)*up + (-41/15)) + ') rotate(' + (((-700/9)*up + (4130/9))) + 'deg)'
-			});
-			$('#handdrawing').not('.done').css({
-				transform: 'translate3d(' + ((500/9)*up + (-3400/9)) + '%, ' +  ((-500/3)*up + (2800/3)) + '%, 0px) 	scale(' +  ((5/9)*up + (-187/90)) + ') rotate(' + (((30)*up + (-177))) + 'deg)'
-			});
-			$('#brandidentity').not('.done').css({
-				transform: 'translate3d(' + ((-1000/9)*up + (5900/9)) + '%, ' +  ((-400/9)*up + (2450/9)) + '%, 0px) 	scale(' +  ((7/9)*up + (-61/18)) + ') rotate(' + (((-200/3)*up + (1180/3))) + 'deg)'
-			});
-			$('#artdirection').not('.done').css({
-				transform: 'translate3d(' + ((1400/9)*up + (-9250/9)) + '%, ' +  ((-500/9)*up + (2320/9)) + '%, 0px) 	scale(' +  ((2/3)*up + (-41/15)) + ') rotate(' + (((-200/3)*up + (1180/3))) + 'deg)'
-			});
-			$('#uidesigner').not('.done').css({
-				transform: 'translate3d(' + ((1000/9)*up + (-6800/9)) + '%, ' +  ((-100/3)*up + (650/3)) + '%, 0px) 	scale(' +  ((2/3)*up + (-41/15)) + ') rotate(' + (((100/9)*up + (-590/9))) + 'deg)'
-			});
-		} else {
-			$('#visualdesign').css({
-				transform: 'translate3d(-20%, -180%, 0px) scale(1) rotate(20deg)'
-			});
-			$('#graphicdesigner').css({
-				transform: 'translate3d(50%, -50%, 0px) scale(1.2) rotate(0deg)'
-			});
-			$('#handdrawing').css({
-				transform: 'translate3d(-50%, -50%, 0px) scale(1.2) rotate(0deg)'
-			});
-			$('#brandidentity').css({
-				transform: 'translate3d(0%, 10%, 0px) scale(1.2) rotate(0deg)'
-			});
-			$('#artdirection').css({
-				transform: 'translate3d(-110%, -70%, 0px) scale(1.2) rotate(0deg)'
-			});
-			$('#uidesigner').css({
-				transform: 'translate3d(-100%, 20%, 0px) scale(1.2) rotate(0deg)'
-			});
-		}
-	}
-})
+// 	if (up >= 5) {
+// 		if (up <= 5.9) {
+// 			$('#visualdesign').not('.done').css({
+// 				transform: 'translate3d(' + ((-100/3)*up + (530/3)) + '%, ' +  ((-4300/9)*up + (23750/9)) + '%, 0px) 	scale(' +  ((5/18)*up + (-23/36)) + ') rotate(' + (((500/9)*up + (-2770/9))) + 'deg)'
+// 			});
+// 			$('#graphicdesigner').not('.done').css({
+// 				transform: 'translate3d(' + ((-500/3)*up + (3100/3)) + '%, ' +  ((-500/9)*up + (2500/9)) + '%, 0px) 	scale(' +  ((2/3)*up + (-41/15)) + ') rotate(' + (((-700/9)*up + (4130/9))) + 'deg)'
+// 			});
+// 			$('#handdrawing').not('.done').css({
+// 				transform: 'translate3d(' + ((500/9)*up + (-3400/9)) + '%, ' +  ((-500/3)*up + (2800/3)) + '%, 0px) 	scale(' +  ((5/9)*up + (-187/90)) + ') rotate(' + (((30)*up + (-177))) + 'deg)'
+// 			});
+// 			$('#brandidentity').not('.done').css({
+// 				transform: 'translate3d(' + ((-1000/9)*up + (5900/9)) + '%, ' +  ((-400/9)*up + (2450/9)) + '%, 0px) 	scale(' +  ((7/9)*up + (-61/18)) + ') rotate(' + (((-200/3)*up + (1180/3))) + 'deg)'
+// 			});
+// 			$('#artdirection').not('.done').css({
+// 				transform: 'translate3d(' + ((1400/9)*up + (-9250/9)) + '%, ' +  ((-500/9)*up + (2320/9)) + '%, 0px) 	scale(' +  ((2/3)*up + (-41/15)) + ') rotate(' + (((-200/3)*up + (1180/3))) + 'deg)'
+// 			});
+// 			$('#uidesigner').not('.done').css({
+// 				transform: 'translate3d(' + ((1000/9)*up + (-6800/9)) + '%, ' +  ((-100/3)*up + (650/3)) + '%, 0px) 	scale(' +  ((2/3)*up + (-41/15)) + ') rotate(' + (((100/9)*up + (-590/9))) + 'deg)'
+// 			});
+// 		} else {
+// 			$('#visualdesign').css({
+// 				transform: 'translate3d(-20%, -180%, 0px) scale(1) rotate(20deg)'
+// 			});
+// 			$('#graphicdesigner').css({
+// 				transform: 'translate3d(50%, -50%, 0px) scale(1.2) rotate(0deg)'
+// 			});
+// 			$('#handdrawing').css({
+// 				transform: 'translate3d(-50%, -50%, 0px) scale(1.2) rotate(0deg)'
+// 			});
+// 			$('#brandidentity').css({
+// 				transform: 'translate3d(0%, 10%, 0px) scale(1.2) rotate(0deg)'
+// 			});
+// 			$('#artdirection').css({
+// 				transform: 'translate3d(-110%, -70%, 0px) scale(1.2) rotate(0deg)'
+// 			});
+// 			$('#uidesigner').css({
+// 				transform: 'translate3d(-100%, 20%, 0px) scale(1.2) rotate(0deg)'
+// 			});
+// 		}
+// 	}
+// })
 
 
 

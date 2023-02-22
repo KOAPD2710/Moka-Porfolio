@@ -101,6 +101,18 @@ function Diary(x, y, w, h){
 		var pos = this.body.position;
 		return (pos.y > wdheight + 100);
 	}
+	this.applyForce = function(){
+		var pos = this.body.position;
+		Body.applyForce(
+			this.body,
+			{	x: pos.x,
+				y: pos.y,
+			},
+			{	x: 0,
+				y: forceconts*0.5,
+			}
+		)
+	}
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -156,7 +168,6 @@ function ProE(x, y, w, h){
 			}
 		)
 	}
-
 	this.show = function() {
 		var pos = this.body.position;
 		var angle = this.body.angle;
@@ -198,6 +209,18 @@ function OliBanner(x, y, w, h){
 	this.isOffScreen = function() {
 		var pos = this.body.position;
 		return (pos.y > wdheight + 100);
+	}
+	this.applyForce = function(){
+		var pos = this.body.position;
+		Body.applyForce(
+			this.body,
+			{	x: pos.x,
+				y: pos.y,
+			},
+			{	x: 0,
+				y: forceconts,
+			}
+		)
 	}
 
 	this.show = function() {
@@ -295,6 +318,18 @@ function CocaCola(x, y, w, h){
 	this.isOffScreen = function() {
 		var pos = this.body.position;
 		return (pos.y > wdheight + 100);
+	}
+	this.applyForce = function(){
+		var pos = this.body.position;
+		Body.applyForce(
+			this.body,
+			{	x: pos.x,
+				y: pos.y,
+			},
+			{	x: 0,
+				y: forceconts,
+			}
+		)
 	}
 
 	this.show = function() {
