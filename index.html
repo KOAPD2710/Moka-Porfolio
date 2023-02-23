@@ -16,68 +16,128 @@
 	<script type="text/javascript" src="./js/gsap.min.js"></script>
 	<script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
 
+<!-- <script type="text/javascript" src="./js/p5.js"></script>
+	<script type="text/javascript" src="./js/matter.js"></script>
+	<script type="text/javascript" src="./js/pathseg.js"></script>
+	<script defer type="text/javascript" src="./js/sketch.js"></script>
+	<script defer type="text/javascript" src="./js/box.js"></script>
+	<script defer type="text/javascript" src="./js/boundary.js"></script>
+	<script defer type="text/javascript" src="./js/ground.js"></script>
+	<script defer type="text/javascript" src="./svg-path.js"></script> -->
+
 	<script type="text/javascript" src="./js/js-index.js"></script>
 </head>
 <body>
-	<header class="layout nav-container">
-		<div class="nav-logo">
-			<a href="index.html">
-				<p>M</p>
-				<p>o</p>
-				<p>k</p>
-				<p>a</p>
-			</a>
-		</div>
-		<nav class="nav-link">
-			<ul class="nav-bar">
-				<li class="nav-barnav">
-					<a href="work.html">
-						<p>Work</p>
-					</a>
-				</li>
-				<li class="nav-barnav">
-					<a href="about.html">
-						<p>About</p>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
+	<div id="horizontal-screen">
+		<header class="layout nav-container">
+			<div class="nav-logo">
+				<a href="index.html">
+					<p>M</p>
+					<p>o</p>
+					<p>k</p>
+					<p>a</p>
+				</a>
+			</div>
+			<nav class="nav-link">
+				<ul class="nav-bar">
+					<li class="nav-barnav">
+						<a href="work.html">
+							<p>Work</p>
+						</a>
+					</li>
+					<li class="nav-barnav">
+						<a href="about.html">
+							<p>About</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-	<div class="intro-container">
-		<div class="intro">
-			<img src="./imgs/olipop.webp" alt="olipop">
+		<div class="intro-container">
+			<div class="intro">
+				<img src="./imgs/olipop.webp" alt="olipop">
+				<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
+			</div>
+		</div>
+		<div class="moka-folio">
+			<div class="moka-bandroll">
+				<p>Moka</p>
+				<div>
+					<img src="./imgs/flower1.svg" alt="flowers1">
+				</div>
+				<p>Moka</p>
+				<div>
+					<img src="./imgs/flower1.svg" alt="flowers1">
+				</div>
+				<p>Moka</p>
+				<div>
+					<img src="./imgs/flower1.svg" alt="flowers1">
+				</div>
+				<p>Moka</p>
+				<div>
+					<img src="./imgs/flower1.svg" alt="flowers1">
+				</div>
+				<p>Moka</p>
+				<div>
+					<img src="./imgs/flower1.svg" alt="flowers1">
+				</div>
+				<p>Moka</p>
+				<div>
+					<img src="./imgs/flower1.svg" alt="flowers1">
+				</div>
+			</div>
+			<div class="folio-bandroll">
+				<p>Folio</p>
+				<div>
+					<img src="./imgs/flower2.svg" alt="flower2">
+				</div>
+				<p>Folio</p>
+				<div>
+					<img src="./imgs/flower2.svg" alt="flower2">
+				</div>
+				<p>Folio</p>
+				<div>
+					<img src="./imgs/flower2.svg" alt="flower2">
+				</div>
+				<p>Folio</p>
+				<div>
+					<img src="./imgs/flower2.svg" alt="flower2">
+				</div>
+				<p>Folio</p>
+				<div>
+					<img src="./imgs/flower2.svg" alt="flower2">
+				</div>
+				<p>Folio</p>
+				<div>
+					<img src="./imgs/flower2.svg" alt="flower2">
+				</div>
+			</div>
+		</div>
+
+		<div class="layout test">
+			<div class="sticky-text">Sticku</div>
+			<div class="showreel-container">
+				<div>
+					<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
+					<p>AloAloAlo</p>
+				</div>
+				<div>
+					<img src="./imgs/olipop.webp" alt="olipop">
+					<p>AloAloAlo</p>
+				</div>
+				<div class="last">
+					<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
+					<p>AloAloAlo</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="test2">
+			
 		</div>
 	</div>
-	<div class="moka-folio">
-		<div class="moka-bandroll">
-			<p>Moka</p>
-			<img src="./imgs/flower1.svg" alt="flowers1">
-			<p>Moka</p>
-			<img src="./imgs/flower1.svg" alt="flowers1">
-			<p>Moka</p>
-			<img src="./imgs/flower1.svg" alt="flowers1">
-			<p>Moka</p>
-			<img src="./imgs/flower1.svg" alt="flowers1">
-			<p>Moka</p>
-			<img src="./imgs/flower1.svg" alt="flowers1">
-			<p>Moka</p>
-			<img src="./imgs/flower1.svg" alt="flowers1">
-		</div>
-		<div class="folio-bandroll">
-			<p>Folio</p>
-			<img src="./imgs/flower2.svg" alt="flower2">
-			<p>Folio</p>
-			<img src="./imgs/flower2.svg" alt="flower2">
-			<p>Folio</p>
-			<img src="./imgs/flower2.svg" alt="flower2">
-			<p>Folio</p>
-			<img src="./imgs/flower2.svg" alt="flower2">
-			<p>Folio</p>
-			<img src="./imgs/flower2.svg" alt="flower2">
-			<p>Folio</p>
-			<img src="./imgs/flower2.svg" alt="flower2">
-		</div>
+	<div id="vertical-screen">
 	</div>
 
 
