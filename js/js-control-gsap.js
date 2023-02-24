@@ -127,16 +127,64 @@ $(document).ready(function(e){
 		},
 		x: "400*vw",
 	});
-	gsap.to(".test .sticky-text", {
+	gsap.to(".test .test-sticky-text", {
 		scrollTrigger: {
-			trigger: ".test .sticky-text",
+			trigger: ".test .test-sticky-text",
 			start: "center center",
 			endTrigger: ".test .showreel-container .last",
 			end: "center center",
-			pin: ".test .sticky-text",
+			pin: ".test .test-sticky-text",
 			markers: false,
 			id: "sticky-text",
 		}
+	});
+	gsap.to(".test2 .test-sticky-imgs", {
+		scrollTrigger: {
+			trigger: ".test2",
+			start: "top top",
+			end: "bottom bottom",
+			scrub: 1,
+			pin: ".test2 .test-sticky-imgs",
+			markers: false,
+			id: "test-sticky-imgs",
+		}
+	});
+	gsap.to(".test2 .test-sticky-imgs-zoom", {
+		scrollTrigger: {
+			trigger: ".test2",
+			start: "top bottom",
+			end: "bottom bottom",
+			scrub: 2,
+			markers: false,
+			id: "test-sticky-imgs",
+		},
+		scale: 1,
+	});
+
+
+	gsap.to(".test2 .test-sticky-imgs .p1", {
+		scrollTrigger: {
+			trigger: ".test2 .content .curious",
+			start: "center top",
+			endTrigger: ".test2 .content .inspired",
+			end: "top center",
+			scrub: 1,
+			markers: true,
+			id: "test-sticky-imgs-p1",
+		},
+		opacity: 0,
+	})
+	gsap.to(".test2 .test-sticky-imgs .p2", {
+		scrollTrigger: {
+			trigger: ".test2 .content .inspired",
+			start: "center top",
+			endTrigger: ".test2 .content .focused",
+			end: "top center",
+			scrub: 1,
+			markers: true,
+			id: "test-sticky-imgs-p1",
+		},
+		opacity: 0,
 	})
 	//------------------Change Background------------------//
 	// gsap.to(".intro-container", {

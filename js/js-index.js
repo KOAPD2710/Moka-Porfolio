@@ -18,6 +18,11 @@ $(document).ready(function(e){
 	$(".folio-bandroll img").css("margin-top", ' ' + ((foliobandroll - flower2height)/2)*1.2 + 'px ');
 	// $(".folio-bandroll img").css("margin-bottom", ' ' + (foliobandroll - flower2height)/2 + 'px ');
 
+	// var curiousheight	= $(".curious").height(),
+	// 	curiousnavheight	= $(".curious nav").height();
+
+	// $(".curious nav").css("margin-top", ' ' + ((curiousheight - curiousnavheight)/2)*1.2 + 'px ');
+	// $(".curious nav").css("margin-bottom", ' ' + ((curiousheight - curiousnavheight)/2)*1.2 + 'px ');
 });
 
 window.addEventListener("resize", () => {

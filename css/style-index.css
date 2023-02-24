@@ -105,12 +105,13 @@
 	color: black;
 	overflow: hidden;
 
-	& .sticky-text{
+	& .test-sticky-text{
 		position: absolute;
 		left: 0;
 		background-color: blueviolet;
 		font-size: 100px;
 		z-index: 1;
+		font-weight: bold;
 	}
 	& .showreel-container{
 		position: relative;
@@ -139,6 +140,87 @@
 			margin-right: auto;
 		}
 
+
+	}
+}
+
+.test2 {
+	position: relative;
+	width: 100%;
+	background-color: orange;
+	color: black;
+	overflow: hidden;
+
+	& .content {
+		position: relative;
+		padding-top: 50vh;
+		z-index: 10;
+		color: var(--t);
+
+		& .bla-bla {
+			margin-bottom: 50vh;
+			text-align: center;
+			font-size: 40px;
+			font-weight: bold;
+		}
+
+		& div {
+			width: 100%;
+			font-size: 350px;
+			font-weight: bold;
+			text-align: center;
+
+			& p{
+				font-size: inherits;
+			}
+		}
+		& div:not(:last-child){
+			margin-bottom: 70vh;
+		}
+
+		& .inspired {
+			text-align: right;
+		}
+
+		& .focused {
+			text-align: left;
+		}
+	}
+
+
+	& .test-sticky-imgs {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		z-index: 1;
+
+		& .test-sticky-imgs-zoom{
+			width: 100vw;
+			height: 100vh;
+			scale: 1.5;
+			overflow: hidden;
+
+			& .test-sticky-imgs-move{
+				width: 100%;
+				height: 150%;
+				transform: translateY(-10px)
+				overflow: hidden;
+
+				& img {
+					position: absolute;
+					width: auto;
+					height: 100%;
+					top: 50%;
+					left: 50%;
+					translate: -50% -50%;
+				}
+			}
+		}
+
+		
 
 	}
 }
