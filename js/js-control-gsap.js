@@ -95,7 +95,7 @@ $(document).ready(function(e){
 		scrollTrigger: {
 			trigger: ".folio-bandroll",
 			start: "top bottom",
-			endTrigger: ".folio-folio .folio-bandroll",
+			endTrigger: ".moka-folio .folio-bandroll",
 			end: "bottom 0%",
 			markers: false,
 			id: "folio-bandroll",
