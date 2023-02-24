@@ -100,7 +100,9 @@
 	}
 }
 .test{
+	position: relative;
 	width: 100%;
+	height: auto;
 	background-color: var(--t);
 	color: black;
 	overflow: hidden;
@@ -113,9 +115,11 @@
 		z-index: 1;
 		font-weight: bold;
 	}
+
 	& .showreel-container{
 		position: relative;
 		padding-top: 50vh;
+		padding-bottom: 20vh;
 		z-index: 10;
 
 		& div {
@@ -147,9 +151,9 @@
 .test2 {
 	position: relative;
 	width: 100%;
-	background-color: orange;
+	height: auto;
 	color: black;
-	overflow: hidden;
+	overflow: hidden !important;
 
 	& .content {
 		position: relative;
@@ -197,6 +201,7 @@
 		overflow: hidden;
 		z-index: 1;
 
+
 		& .test-sticky-imgs-zoom{
 			width: 100vw;
 			height: 100vh;
@@ -204,8 +209,10 @@
 			overflow: hidden;
 
 			& .test-sticky-imgs-move{
+				position: relative;
+				top: -20vh;
 				width: 100%;
-				height: 150%;
+				height: 150vh;
 				overflow: hidden;
 
 				& img {

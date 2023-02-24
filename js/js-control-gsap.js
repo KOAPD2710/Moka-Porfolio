@@ -136,23 +136,35 @@ $(document).ready(function(e){
 			pin: ".test .test-sticky-text",
 			markers: false,
 			id: "sticky-text",
-		}
+		},
 	});
 	gsap.to(".test2 .test-sticky-imgs", {
 		scrollTrigger: {
 			trigger: ".test2",
 			start: "top top",
 			end: "bottom bottom",
-			scrub: 1,
 			pin: ".test2 .test-sticky-imgs",
 			markers: false,
 			id: "test-sticky-imgs",
-		}
+		},
 	});
-	gsap.to(".test2 .test-sticky-imgs-zoom", {
+	gsap.to(".test2 .test-sticky-imgs-move", {
 		scrollTrigger: {
 			trigger: ".test2",
 			start: "top bottom",
+			endTrigger: ".test2 .content .curious",
+			end: "top bottom",
+			scrub: 1,
+			markers: true,
+			id: "test-sticky-imgs-move",
+		},
+		y: 20*vh,
+	});
+	gsap.to(".test2 .test-sticky-imgs-zoom", {
+		scrollTrigger: {
+			trigger: ".test",
+			start: "bottom bottom",
+			endTrigger: ".test2",
 			end: "bottom bottom",
 			scrub: 2,
 			markers: false,
@@ -160,8 +172,6 @@ $(document).ready(function(e){
 		},
 		scale: 1,
 	});
-
-
 	gsap.to(".test2 .test-sticky-imgs .p1", {
 		scrollTrigger: {
 			trigger: ".test2 .content .curious",
@@ -169,7 +179,7 @@ $(document).ready(function(e){
 			endTrigger: ".test2 .content .inspired",
 			end: "top center",
 			scrub: 1,
-			markers: true,
+			markers: false,
 			id: "test-sticky-imgs-p1",
 		},
 		opacity: 0,
@@ -181,7 +191,7 @@ $(document).ready(function(e){
 			endTrigger: ".test2 .content .focused",
 			end: "top center",
 			scrub: 1,
-			markers: true,
+			markers: false,
 			id: "test-sticky-imgs-p1",
 		},
 		opacity: 0,
