@@ -1,4 +1,4 @@
-$(document).ready(function(e){
+function documentready() {
 	var width = $(window).innerWidth(),
 		height = $(window).innerHeight(),
 		vw = $(window).innerWidth()/100,
@@ -121,7 +121,7 @@ $(document).ready(function(e){
 			start: "top bottom",
 			endTrigger: ".moka-folio .folio-bandroll",
 			end: "bottom 0%",
-			scrub: 4,
+			scrub: 3,
 			markers: false,
 			id: "folio-bandroll",
 		},
@@ -138,6 +138,110 @@ $(document).ready(function(e){
 			id: "sticky-text",
 		},
 	});
+
+	let texttl1 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel2",
+			start: "top bottom",
+			end: "bottom bottom",
+			scrub: 0.5,
+			markers: false,
+			id: "sticky-text-div",
+		},
+	});
+	texttl1.to(".test .test-sticky-text .text",{
+		y: -300,
+	});
+
+
+	let texttl2 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel3",
+			start: "top bottom",
+			end: "bottom bottom",
+			scrub: 0.5,
+			markers: false,
+			id: "sticky-text-div",
+		},
+	});
+	texttl2.to(".test .test-sticky-text .text", {	
+		y: -600,
+	});
+
+	gsap.to(".test .test-sticky-text .text-fill .text1 p",{
+		scrollTrigger: {
+			trigger: ".test .test-sticky-text .text-fill .text1",
+			start: "top bottom",
+			endTrigger: ".test .showreel-container .showreel2",
+			end: "bottom bottom",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pfill-1",
+		},
+		x: () => "+=" + -($(".test .test-sticky-text .text-fill .text1 p").width()*$(".test .test-sticky-text .text-fill .text1 p").length - 50*vw),
+	});
+	gsap.to(".test .test-sticky-text .text-fill .text2 p",{
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel2",
+			start: "top bottom",
+			endTrigger: ".test .showreel-container .showreel3",
+			end: "bottom bottom",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pfill-2",
+		},
+		x: () => "+=" + -($(".test .test-sticky-text .text-fill .text2 p").width()*$(".test .test-sticky-text .text-fill .text2 p").length - 50*vw),
+	});
+	gsap.to(".test .test-sticky-text .text-fill .text3 p",{
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel2",
+			start: "top bottom",
+			endTrigger: ".test",
+			end: "bottom top",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pfill-3",
+		},
+		x: () => "+=" + -($(".test .test-sticky-text .text-fill .text3 p").width()*$(".test .test-sticky-text .text-fill .text3 p").length - 50*vw),
+	});
+
+	gsap.to(".test .test-sticky-text .text-stroke .text1 p",{
+		scrollTrigger: {
+			trigger: ".test .test-sticky-text .text-fill .text1",
+			start: "top bottom",
+			endTrigger: ".test .showreel-container .showreel2",
+			end: "bottom bottom",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pstroke-1",
+		},
+		x: () => "+=" + ($(".test .test-sticky-text .text-stroke .text1 p").width()*$(".test .test-sticky-text .text-stroke .text1 p").length - 50*vw),
+	});
+	gsap.to(".test .test-sticky-text .text-stroke .text2 p",{
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel2",
+			start: "top bottom",
+			endTrigger: ".test .showreel-container .showreel3",
+			end: "bottom bottom",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pstroke-2",
+		},
+		x: () => "+=" + ($(".test .test-sticky-text .text-stroke .text2 p").width()*$(".test .test-sticky-text .text-stroke .text2 p").length - 50*vw),
+	});
+	gsap.to(".test .test-sticky-text .text-stroke .text3 p",{
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel2",
+			start: "top bottom",
+			endTrigger: ".test",
+			end: "bottom top",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pstroke-3",
+		},
+		x: () => "+=" + ($(".test .test-sticky-text .text-stroke .text3 p").width()*$(".test .test-sticky-text .text-stroke .text3 p").length - 50*vw),
+	});
+
 	gsap.to(".test2 .test-sticky-imgs", {
 		scrollTrigger: {
 			trigger: ".test2",
@@ -155,10 +259,10 @@ $(document).ready(function(e){
 			endTrigger: ".test2 .content .curious",
 			end: "top bottom",
 			scrub: 1,
-			markers: true,
+			markers: false,
 			id: "test-sticky-imgs-move",
 		},
-		y: 20*vh,
+		y: 25*vh,
 	});
 	gsap.to(".test2 .test-sticky-imgs-zoom", {
 		scrollTrigger: {
@@ -216,4 +320,6 @@ $(document).ready(function(e){
 	// 	},
 	// 	backgroundColor: "var(--t)",
 	// });
-})
+};
+
+documentready();

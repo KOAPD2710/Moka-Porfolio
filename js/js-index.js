@@ -1,7 +1,4 @@
 $(document).ready(function(e){
-
-
-
 	var naviheight 		= $(".nav-container").height(),
 		navlinkheight	= $(".nav-bar").height();
 	$(".nav-bar").css("margin-top", ' ' + (naviheight - navlinkheight)/2 + 'px ');
@@ -23,6 +20,19 @@ $(document).ready(function(e){
 
 	// $(".curious nav").css("margin-top", ' ' + ((curiousheight - curiousnavheight)/2)*1.2 + 'px ');
 	// $(".curious nav").css("margin-bottom", ' ' + ((curiousheight - curiousnavheight)/2)*1.2 + 'px ');
+
+
+	var width = $(window).innerWidth(),
+		text1 = $(".test .text-stroke .text1").width(),
+		text1width = $(".test .text-stroke .text1 p").width()*$(".test .text-stroke .text1 p").length,
+		text2 = $(".test .text-stroke .text2").width(),
+		text2width = $(".test .text-stroke .text2 p").width()*$(".test .text-stroke .text2 p").length,
+		text3 = $(".test .text-stroke .text3").width(),
+		text3width = $(".test .text-stroke .text3 p").width()*$(".test .text-stroke .text3 p").length;
+		
+	$(".test .text-stroke .text1").css("margin-left", ' ' + -(text1width - .5*width) + 'px ');
+	$(".test .text-stroke .text2").css("margin-left", ' ' + -(text2width - .5*width) + 'px ');
+	$(".test .text-stroke .text3").css("margin-left", ' ' + -(text3width - .5*width) + 'px ');
 });
 
 window.addEventListener("resize", () => {
