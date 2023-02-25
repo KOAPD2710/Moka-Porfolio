@@ -93,16 +93,50 @@
 }
  .test .test-sticky-text {
 	 position: absolute;
+	 display: block;
+	 width: 100vw;
 	 left: 0;
-	 background-color: blueviolet;
-	 font-size: 100px;
 	 z-index: 1;
+	 overflow: hidden;
+}
+ .test .test-sticky-text .text-fill, .test .test-sticky-text .text-stroke {
+	 display: block;
+	 width: auto;
+	 height: 300px;
+	 overflow-y: hidden;
+	 overflow-x: inherit;
+}
+ .test .test-sticky-text .text-fill {
+	 position: relative;
+}
+ .test .test-sticky-text .text-fill div {
+	 position: relative;
+	 display: flex;
+	 width: auto;
+	 gap: 10rem;
+}
+ .test .test-sticky-text .text-stroke div {
+	 display: flex;
+	 gap: 10rem;
+}
+ .test .test-sticky-text .text-stroke div p {
+	 letter-spacing: 5px;
+	 color: var(--t);
+	 text-shadow: 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000;
+}
+ .test .test-sticky-text p {
+	 display: inline;
+	 white-space: nowrap;
+	 font-family: FontHead;
+	 font-size: 200px;
 	 font-weight: bold;
+	 margin: 0px;
+	 letter-spacing: 1px;
 }
  .test .showreel-container {
 	 position: relative;
-	 padding-top: 50vh;
-	 padding-bottom: 20vh;
+	 padding-top: 60vh;
+	 padding-bottom: 50vh;
 	 z-index: 10;
 }
  .test .showreel-container div {
@@ -112,7 +146,7 @@
 	 width: 100%;
 }
  .test .showreel-container div:not(:last-child) {
-	 margin-bottom: 70vh;
+	 margin-bottom: 80vh;
 }
  .test .showreel-container div:nth-child(1) {
 	 margin-left: auto;
@@ -178,7 +212,7 @@
 }
  .test2 .test-sticky-imgs .test-sticky-imgs-zoom .test-sticky-imgs-move {
 	 position: relative;
-	 top: -20vh;
+	 top: -50vh;
 	 width: 100%;
 	 height: 150vh;
 	 overflow: hidden;

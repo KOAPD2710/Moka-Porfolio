@@ -6,7 +6,25 @@ function documentready() {
 
 
 	gsap.registerPlugin(ScrollTrigger);
-	gsap.defaults({ease: "none",duration: 3});
+	gsap.defaults({ease: "none",duration: 2});
+
+
+	gsap.from(".nav-container .nav-logo", 1.5, {
+		y: -300,
+		ease: Elastic.easeOut,
+		delay: 1,
+	});
+	gsap.from(".nav-container .nav-barnav", 1.5, {
+		y: -300,
+		ease: Elastic.easeOut,
+		delay: 1.1,
+		stagger: 0.1,
+	});
+	gsap.from(".intro-container .intro", 2, {
+		opacity: 0,
+		y: 200,
+		ease: Power3.easeOut,
+	});
 
 
 	gsap.to(".intro img", {
