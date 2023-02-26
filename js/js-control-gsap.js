@@ -217,7 +217,6 @@ function documentready() {
 		y: () => "+=" + (stickerheight - stickercontainer),
 	});
 
-	gsap.to{}
 
 
 
