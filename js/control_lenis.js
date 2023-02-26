@@ -6,6 +6,7 @@ const lenis = new Lenis({
 	smooth: true,
 	smoothTouch: false,
 	touchMultiplier: 2,
+	// infinite: true,
 });
 
 window.lenis = lenis;

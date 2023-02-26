@@ -14,8 +14,8 @@ function documentready() {
 		ease: Elastic.easeOut,
 		delay: 1,
 	});
-	gsap.from(".nav-container .nav-barnav", 1.5, {
-		y: -300,
+	gsap.from(".nav-container .nav-barnav", 2, {
+		y: -250,
 		ease: Elastic.easeOut,
 		delay: 1.1,
 		stagger: 0.1,
@@ -29,8 +29,8 @@ function documentready() {
 
 	gsap.to(".intro img", {
 		scrollTrigger: {
-			trigger: ".intro img",
-			start: "center 50%",
+			trigger: ".intro-container",
+			start: "top top",
 			end: () => "+=" + height,
 			scrub: true,
 			markers: false,
@@ -40,8 +40,8 @@ function documentready() {
 	});
 	gsap.to(".intro video", {
 		scrollTrigger: {
-			trigger: ".intro img",
-			start: "center 50%",
+			trigger: ".intro-container",
+			start: "top top",
 			end: () => "+=" + height,
 			scrub: true,
 			markers: false,
@@ -145,12 +145,95 @@ function documentready() {
 		},
 		x: "400*vw",
 	});
+	gsap.to(".i-am-good-at .text-container", {
+		scrollTrigger: {
+			trigger: ".i-am-good-at .text-container",
+			start: "center center",
+			endTrigger: ".i-am-good-at",
+			end: "bottom bottom",
+			pin: ".i-am-good-at .text-container",
+			markers: false,
+			id: "text-container",
+		},
+	});
+	gsap.from(".i-am-good-at .text-container .i-am p", {
+		scrollTrigger: {
+			trigger: ".i-am-good-at .text-container",
+			start: "center center",
+			endTrigger: ".i-am-good-at",
+			end: "bottom bottom",
+			scrub: "random(1, 2, .1)",
+			markers: false,
+			id: "i-am p",
+		},
+		ease:  Power3.easeInOut,
+		x: "random(-100, 500)",
+		y: "random(-10, 500)",
+		scale: "random(.3, 1, .05)",
+		// rotate: "random(-360, 360)",
+	});
+	gsap.from(".i-am-good-at .text-container .flowers-good-at p", {
+		scrollTrigger: {
+			trigger: ".i-am-good-at .text-container",
+			start: "center center",
+			endTrigger: ".i-am-good-at",
+			end: "bottom bottom",
+			scrub: "random(1, 2, .1)",
+			markers: false,
+			id: "i-am p",
+		},
+		ease:  Power3.easeInOut,
+		x: "random(-500, 100)",
+		y: "random(-500, -10)",
+		scale: "random(.3, 1, .05)",
+		// rotate: "random(-360, 360)",
+	});
+
+	gsap.to(".sticker", {
+		scrollTrigger: {
+			trigger: ".sticker",
+			start: "top top",
+			end: "300px top",
+			scrub: true,
+			markers: true,
+			id: "sticker-bg",
+		},
+		backgroundColor: "#151515", ease:"linear",
+	})
+
+
+	var stickerheight = $(".sticker").height(),
+		stickercontainer = $(".sticker .sticker-container").height();
+	gsap.to(".sticker .sticker-container", {
+		scrollTrigger: {
+			trigger: ".sticker",
+			start: "top top",
+			end: "bottom bottom",
+			// pin: ".sticker .sitcker-container",
+			scrub: .5,
+			markers: false,
+			id: "sticker-container",
+		},
+		y: () => "+=" + (stickerheight - stickercontainer),
+	});
+
+	gsap.to{}
+
+
+
+
+
+
+
+
+
+
 	gsap.to(".test .test-sticky-text", {
 		scrollTrigger: {
 			trigger: ".test .test-sticky-text",
 			start: "center center",
 			endTrigger: ".test .showreel-container .last",
-			end: "center center",
+			end: "bottom bottom",
 			pin: ".test .test-sticky-text",
 			markers: false,
 			id: "sticky-text",
@@ -159,70 +242,44 @@ function documentready() {
 
 	let texttl1 = gsap.timeline({
 		scrollTrigger: {
-			trigger: ".test .showreel-container .showreel2",
-			start: "top bottom",
-			end: "bottom bottom",
+			trigger: ".test .showreel-container .showreel1",
+			start: "bottom center",
+			end: "bottom top",
 			scrub: 0.5,
 			markers: false,
 			id: "sticky-text-div",
 		},
 	});
 	texttl1.to(".test .test-sticky-text .text",{
-		y: -300,
+		y: -247,
 	});
-
-
 	let texttl2 = gsap.timeline({
 		scrollTrigger: {
-			trigger: ".test .showreel-container .showreel3",
-			start: "top bottom",
-			end: "bottom bottom",
+			trigger: ".test .showreel-container .showreel2",
+			start: "bottom center",
+			end: "bottom top",
 			scrub: 0.5,
 			markers: false,
 			id: "sticky-text-div",
 		},
 	});
 	texttl2.to(".test .test-sticky-text .text", {	
-		y: -600,
+		y: -494,
 	});
 
+	var textfillmove1 = ($(".test .test-sticky-text .text-fill .text1 p").width()*$(".test .test-sticky-text .text-fill .text1 p").length - 50*vw);
 	gsap.to(".test .test-sticky-text .text-fill .text1 p",{
 		scrollTrigger: {
 			trigger: ".test .test-sticky-text .text-fill .text1",
 			start: "top bottom",
-			endTrigger: ".test .showreel-container .showreel2",
-			end: "bottom bottom",
+			endTrigger: ".test .showreel-container .showreel1",
+			end: "bottom top",
 			scrub: 1,
 			markers: false,
 			id: "sticky-text-pfill-1",
 		},
-		x: () => "+=" + -($(".test .test-sticky-text .text-fill .text1 p").width()*$(".test .test-sticky-text .text-fill .text1 p").length - 50*vw),
+		x: () => "+=" + -textfillmove1,
 	});
-	gsap.to(".test .test-sticky-text .text-fill .text2 p",{
-		scrollTrigger: {
-			trigger: ".test .showreel-container .showreel2",
-			start: "top bottom",
-			endTrigger: ".test .showreel-container .showreel3",
-			end: "bottom bottom",
-			scrub: 1,
-			markers: false,
-			id: "sticky-text-pfill-2",
-		},
-		x: () => "+=" + -($(".test .test-sticky-text .text-fill .text2 p").width()*$(".test .test-sticky-text .text-fill .text2 p").length - 50*vw),
-	});
-	gsap.to(".test .test-sticky-text .text-fill .text3 p",{
-		scrollTrigger: {
-			trigger: ".test .showreel-container .showreel2",
-			start: "top bottom",
-			endTrigger: ".test",
-			end: "bottom top",
-			scrub: 1,
-			markers: false,
-			id: "sticky-text-pfill-3",
-		},
-		x: () => "+=" + -($(".test .test-sticky-text .text-fill .text3 p").width()*$(".test .test-sticky-text .text-fill .text3 p").length - 50*vw),
-	});
-
 	gsap.to(".test .test-sticky-text .text-stroke .text1 p",{
 		scrollTrigger: {
 			trigger: ".test .test-sticky-text .text-fill .text1",
@@ -233,19 +290,47 @@ function documentready() {
 			markers: false,
 			id: "sticky-text-pstroke-1",
 		},
-		x: () => "+=" + ($(".test .test-sticky-text .text-stroke .text1 p").width()*$(".test .test-sticky-text .text-stroke .text1 p").length - 50*vw),
+		x: () => "+=" + textfillmove1,
+	});
+
+	var textfillmove2 = ($(".test .test-sticky-text .text-fill .text2 p").width()*$(".test .test-sticky-text .text-fill .text2 p").length - 50*vw);
+	gsap.to(".test .test-sticky-text .text-fill .text2 p",{
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel1",
+			start: "bottom center",
+			endTrigger: ".test .showreel-container .showreel2",
+			end: "bottom top",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pfill-2",
+		},
+		x: () => "+=" + -textfillmove2,
 	});
 	gsap.to(".test .test-sticky-text .text-stroke .text2 p",{
 		scrollTrigger: {
-			trigger: ".test .showreel-container .showreel2",
-			start: "top bottom",
-			endTrigger: ".test .showreel-container .showreel3",
-			end: "bottom bottom",
+			trigger: ".test .showreel-container .showreel1",
+			start: "bottom center",
+			endTrigger: ".test .showreel-container .showreel2",
+			end: "bottom top",
 			scrub: 1,
 			markers: false,
 			id: "sticky-text-pstroke-2",
 		},
-		x: () => "+=" + ($(".test .test-sticky-text .text-stroke .text2 p").width()*$(".test .test-sticky-text .text-stroke .text2 p").length - 50*vw),
+		x: () => "+=" + textfillmove2,
+	});
+
+	var textfillmove3 = ($(".test .test-sticky-text .text-fill .text3 p").width()*$(".test .test-sticky-text .text-fill .text3 p").length - 50*vw);
+	gsap.to(".test .test-sticky-text .text-fill .text3 p",{
+		scrollTrigger: {
+			trigger: ".test .showreel-container .showreel2",
+			start: "top bottom",
+			endTrigger: ".test",
+			end: "bottom top",
+			scrub: 1,
+			markers: false,
+			id: "sticky-text-pfill-3",
+		},
+		x: () => "+=" + -textfillmove3,
 	});
 	gsap.to(".test .test-sticky-text .text-stroke .text3 p",{
 		scrollTrigger: {
@@ -257,7 +342,7 @@ function documentready() {
 			markers: false,
 			id: "sticky-text-pstroke-3",
 		},
-		x: () => "+=" + ($(".test .test-sticky-text .text-stroke .text3 p").width()*$(".test .test-sticky-text .text-stroke .text3 p").length - 50*vw),
+		x: () => "+=" + textfillmove3,
 	});
 
 	gsap.to(".test2 .test-sticky-imgs", {

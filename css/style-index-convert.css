@@ -57,7 +57,7 @@
  .moka-folio {
 	 width: 100%;
 	 height: 100vh;
-	 color: black;
+	 color: var(--b);
 	 overflow: hidden;
 	 background-color: var(--t);
 }
@@ -83,12 +83,97 @@
 	 font-size: 200px;
 	 margin: 0px;
 }
+ .i-am-good-at {
+	 width: 100%;
+	 height: 300vh;
+	 overflow: hidden;
+	 background-color: var(--t);
+}
+ .i-am-good-at .text-container {
+	 width: 100%;
+}
+ .i-am-good-at .text-container .i-am {
+	 display: inline-flex;
+}
+ .i-am-good-at .text-container .flowers-good-at {
+	 display: flex;
+}
+ .i-am-good-at .text-container .flowers-good-at .flowers {
+	 display: flex;
+	 gap: 3rem;
+}
+ .i-am-good-at .text-container .flowers-good-at .flowers img {
+	 width: 5vw;
+}
+ .i-am-good-at .text-container .flowers-good-at .good-at {
+	 position: relative;
+	 display: inline-flex;
+	/* background-color: orange;
+	*/
+	 margin-left: auto;
+}
+ .i-am-good-at p {
+	 font-family: FontHead;
+	 color: var(--gr);
+	 font-size: 250px;
+	 margin: 0px;
+}
+ .sticker {
+	 width: 100%;
+	 height: 200vh;
+	 overflow: hidden;
+	 background-color: var(--t);
+}
+ .sticker .sticker-container {
+	 width: 100%;
+	 height: 100vh;
+	/* background-color: orange;
+	*/
+}
+ .sticker .sticker-container img {
+	 width: 400px;
+	 position: absolute;
+	 translate: -50% -50%;
+}
+ .sticker .sticker-container .sticker1 {
+	 width: 320px;
+	 translate: 15vw 30vh;
+	 rotate: -26deg;
+}
+ .sticker .sticker-container .sticker2 {
+	 top: 25%;
+	 left: 73%;
+	 rotate: 23deg;
+}
+ .sticker .sticker-container .sticker3 {
+	 width: 280px;
+	 top: 55%;
+	 left: 60%;
+	 rotate: -23deg;
+}
+ .sticker .sticker-container .sticker4 {
+	 top: 70%;
+	 left: 80%;
+	 rotate: -23deg;
+}
+ .sticker .sticker-container .sticker5 {
+	 width: 320px;
+	 top: 72%;
+	 left: 35%;
+	 rotate: 23deg;
+}
+ .sticker .sticker-container .sticker6 {
+	 width: 220px;
+	 top: 20%;
+	 left: 50%;
+	 rotate: 5deg;
+}
  .test {
 	 position: relative;
 	 width: 100%;
 	 height: auto;
 	 background-color: var(--t);
-	 color: black;
+	 color: var(--b);
 	 overflow: hidden;
 }
  .test .test-sticky-text {
@@ -102,11 +187,13 @@
  .test .test-sticky-text .text-fill, .test .test-sticky-text .text-stroke {
 	 display: block;
 	 width: auto;
-	 height: 300px;
+	 height: 200px;
 	 overflow-y: hidden;
 	 overflow-x: inherit;
 }
  .test .test-sticky-text .text-fill {
+	/* background-color: blueviolet;
+	*/
 	 position: relative;
 }
  .test .test-sticky-text .text-fill div {
@@ -114,6 +201,10 @@
 	 display: flex;
 	 width: auto;
 	 gap: 10rem;
+}
+ .test .test-sticky-text .text-stroke {
+	/* background-color: orange;
+	*/
 }
  .test .test-sticky-text .text-stroke div {
 	 display: flex;
@@ -132,11 +223,12 @@
 	 font-weight: bold;
 	 margin: 0px;
 	 letter-spacing: 1px;
+	 margin-top: -65px;
 }
  .test .showreel-container {
 	 position: relative;
 	 padding-top: 60vh;
-	 padding-bottom: 50vh;
+	 padding-bottom: 25vh;
 	 z-index: 10;
 }
  .test .showreel-container div {
@@ -144,9 +236,10 @@
 }
  .test .showreel-container div img, .test .showreel-container div video {
 	 width: 100%;
+	 box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);
 }
  .test .showreel-container div:not(:last-child) {
-	 margin-bottom: 80vh;
+	 margin-bottom: 90vh;
 }
  .test .showreel-container div:nth-child(1) {
 	 margin-left: auto;
@@ -162,7 +255,7 @@
 	 position: relative;
 	 width: 100%;
 	 height: auto;
-	 color: black;
+	 color: var(--b);
 	 overflow: hidden !important;
 }
  .test2 .content {
@@ -179,11 +272,13 @@
 }
  .test2 .content div {
 	 width: 100%;
-	 font-size: 350px;
+	 font-size: 200px;
 	 font-weight: bold;
 	 text-align: center;
+	 font-family: FontHead;
 }
  .test2 .content div p {
+	 font-family: inherits;
 	 font-size: inherits;
 }
  .test2 .content div:not(:last-child) {
@@ -194,6 +289,7 @@
 }
  .test2 .content .focused {
 	 text-align: left;
+	 margin-bottom: 40vh;
 }
  .test2 .test-sticky-imgs {
 	 position: absolute;

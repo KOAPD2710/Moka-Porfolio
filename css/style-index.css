@@ -69,7 +69,7 @@
 .moka-folio{
 	width: 100%;
 	height: 100vh;
-	color: black;
+	color: var(--b);
 	overflow: hidden;
 	background-color: var(--t);
 
@@ -99,12 +99,116 @@
 		}
 	}
 }
+
+.i-am-good-at {
+	width: 100%;
+	height: 300vh;
+	overflow: hidden;
+	background-color: var(--t);
+
+
+	.text-container {
+		width: 100%;
+
+		.i-am {
+			display: inline-flex;
+		}
+
+		.flowers-good-at{
+			display: flex;
+
+			.flowers{
+				display: flex;
+				gap: 3rem;
+
+				& img{
+					width: 5vw;
+				}
+			}
+
+			.good-at {
+				position: relative;
+				display: inline-flex;
+/*				background-color: orange;*/
+				margin-left: auto;
+			}
+		}
+	}
+
+	& p{
+		font-family: FontHead;
+		color: var(--gr);
+		font-size: 250px;
+		margin: 0px;
+	}
+
+
+}
+
+.sticker{
+	width: 100%;
+	height: 200vh;
+	overflow: hidden;
+	background-color: var(--t);
+
+	.sticker-container{
+		width: 100%;
+		height: 100vh;
+/*		background-color: orange;*/
+
+		& img{
+			width: 400px;
+			position: absolute;
+			translate: -50% -50%;
+		}
+		& .sticker1{
+			width: 320px;
+			translate: 15vw 30vh;
+			rotate: -26deg;
+		}
+		& .sticker2{
+			top: 25%;
+			left: 73%;
+			rotate: 23deg;
+		}
+		& .sticker3{
+			width: 280px;
+			top: 55%;
+			left: 60%;
+			rotate: -23deg;
+		}
+		& .sticker4{
+			top: 70%;
+			left: 80%;
+			rotate: -23deg;
+		}
+		& .sticker5{
+			width: 320px;
+			top: 72%;
+			left: 35%;
+			rotate: 23deg;
+		}
+		& .sticker6{
+			width: 220px;
+			top: 20%;
+			left: 50%;
+			rotate: 5deg;
+		}
+	}
+
+
+
+}
+
+
+
+
 .test{
 	position: relative;
 	width: 100%;
 	height: auto;
 	background-color: var(--t);
-	color: black;
+	color: var(--b);
 	overflow: hidden;
 
 	& .test-sticky-text {
@@ -118,12 +222,13 @@
 		& .text-fill, & .text-stroke {
 			display: block;
 			width: auto;
-			height: 300px;
+			height: 200px;
 			overflow-y: hidden;
 			overflow-x: inherit;
 		}
 
 		& .text-fill {
+/*			background-color: blueviolet;*/
 			position: relative;
 			& div{
 				position: relative;
@@ -134,6 +239,7 @@
 		}
 
 		& .text-stroke {
+/*			background-color: orange;*/
 
 			& div{
 				display: flex;
@@ -164,24 +270,27 @@
 			font-weight: bold;
 			margin: 0px;
 			letter-spacing: 1px;
+			margin-top: -65px;
 		}
 	}
 
 	& .showreel-container {
 		position: relative;
 		padding-top: 60vh;
-		padding-bottom: 50vh;
+		padding-bottom: 25vh;
 		z-index: 10;
 
 		& div {
 			width: 70%;
 
+
 			& img, & video {
 				width: 100%;
+				box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);
 			}
 		}
 		& div:not(:last-child) {
-			margin-bottom: 80vh;
+			margin-bottom: 90vh;
 		}
 		& div:nth-child(1) {
 			margin-left: auto;
@@ -200,7 +309,7 @@
 	position: relative;
 	width: 100%;
 	height: auto;
-	color: black;
+	color: var(--b);
 	overflow: hidden !important;
 
 	& .content {
@@ -218,11 +327,13 @@
 
 		& div {
 			width: 100%;
-			font-size: 350px;
+			font-size: 200px;
 			font-weight: bold;
 			text-align: center;
+			font-family: FontHead;
 
 			& p{
+				font-family: inherits;
 				font-size: inherits;
 			}
 		}
@@ -236,6 +347,7 @@
 
 		& .focused {
 			text-align: left;
+			margin-bottom: 40vh;
 		}
 	}
 
@@ -248,7 +360,6 @@
 		height: 100vh;
 		overflow: hidden;
 		z-index: 1;
-
 
 		& .test-sticky-imgs-zoom{
 			width: 100vw;

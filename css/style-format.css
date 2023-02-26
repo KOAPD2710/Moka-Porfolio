@@ -1,6 +1,7 @@
 :root {
 	--t: #FFF4E6;
 	--gr: #0F7C11;
+	--b: #151515;
 }
 
 .textscroll {
@@ -23,7 +24,7 @@ html,body {
 	min-height: 100%;
 	height: auto;
 	overscroll-behavior: none;
-	background-color: black;
+	background-color: var(--b);
 }
 
 canvas {
