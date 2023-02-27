@@ -102,10 +102,10 @@
 
 .i-am-good-at {
 	width: 100%;
-	height: 300vh;
-	overflow: hidden;
+	height: 400vh;
+	overflow-x: hidden;
+	overflow-y: visible;
 	background-color: var(--t);
-
 
 	.text-container {
 		width: 100%;
@@ -119,20 +119,67 @@
 
 			.flowers{
 				display: flex;
-				gap: 3rem;
+				gap: 1rem;
+				padding: 0 .8rem;
 
-				& img{
-					width: 5vw;
+				& svg{
+					width: 140px;
+					margin: auto;
+					fill: var(--gr);
+				}
+				& .flower2{
+					fill: var(--b);
 				}
 			}
 
 			.good-at {
 				position: relative;
 				display: inline-flex;
-/*				background-color: orange;*/
 				margin-left: auto;
 			}
 		}
+		& img{
+			width: 200px;
+			position: absolute;
+			translate: -50% -50%;
+		}
+		.sticker1{
+			width: 300px;
+			top: 5vh;
+			left: 40vw;
+			rotate: 23deg;
+		}/*Art-Direction*/
+		.sticker2{
+			width: 340px;
+			top: 68vh;
+			left: 69vw;
+			rotate: 26deg;
+		}/*Visual-Design*/
+		.sticker3{
+			width: 220px;
+			top: -1vh;
+			left: 8vw;
+			rotate: -39deg;
+		}/*Graphic-Design*/
+		.sticker4{
+			width: 300px;
+			top: 60vh;
+			left: 40vw;
+			rotate: -25deg;
+		}/*Brand-Identity*/
+		.sticker5{
+			width: 250px;
+			top: 37vh;
+			left: 15vw;
+			rotate: 23deg;
+		}/*UI-Design*/
+		.sticker6{
+			width: 200px;
+			top: 20vh;
+			left: 65vw;
+			rotate: -35deg;
+		}/*Hand_Drawing*/
+
 	}
 
 	& p{
@@ -145,7 +192,7 @@
 
 }
 
-.sticker{
+/*.sticker{
 	width: 100%;
 	height: 200vh;
 	overflow: hidden;
@@ -155,7 +202,6 @@
 		position: relative;
 		width: 100%;
 		height: 100vh;
-/*		background-color: orange;*/
 
 		& img{
 			width: 400px;
@@ -196,10 +242,7 @@
 			rotate: 5deg;
 		}
 	}
-
-
-
-}
+}*/
 
 
 

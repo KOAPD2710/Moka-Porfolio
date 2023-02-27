@@ -85,12 +85,19 @@
 }
  .i-am-good-at {
 	 width: 100%;
-	 height: 300vh;
-	 overflow: hidden;
+	 height: 400vh;
+	 overflow-x: hidden;
+	 overflow-y: visible;
 	 background-color: var(--t);
 }
  .i-am-good-at .text-container {
 	 width: 100%;
+	/*Art-Direction*/
+	/*Visual-Design*/
+	/*Graphic-Design*/
+	/*Brand-Identity*/
+	/*UI-Design*/
+	/*Hand_Drawing*/
 }
  .i-am-good-at .text-container .i-am {
 	 display: inline-flex;
@@ -100,17 +107,62 @@
 }
  .i-am-good-at .text-container .flowers-good-at .flowers {
 	 display: flex;
-	 gap: 3rem;
+	 gap: 1rem;
+	 padding: 0 0.8rem;
 }
- .i-am-good-at .text-container .flowers-good-at .flowers img {
-	 width: 5vw;
+ .i-am-good-at .text-container .flowers-good-at .flowers svg {
+	 width: 140px;
+	 margin: auto;
+	 fill: var(--gr);
+}
+ .i-am-good-at .text-container .flowers-good-at .flowers .flower2 {
+	 fill: var(--b);
 }
  .i-am-good-at .text-container .flowers-good-at .good-at {
 	 position: relative;
 	 display: inline-flex;
-	/* background-color: orange;
-	*/
 	 margin-left: auto;
+}
+ .i-am-good-at .text-container img {
+	 width: 200px;
+	 position: absolute;
+	 translate: -50% -50%;
+}
+ .i-am-good-at .text-container .sticker1 {
+	 width: 300px;
+	 top: 5vh;
+	 left: 40vw;
+	 rotate: 23deg;
+}
+ .i-am-good-at .text-container .sticker2 {
+	 width: 340px;
+	 top: 68vh;
+	 left: 69vw;
+	 rotate: 26deg;
+}
+ .i-am-good-at .text-container .sticker3 {
+	 width: 220px;
+	 top: -1vh;
+	 left: 8vw;
+	 rotate: -39deg;
+}
+ .i-am-good-at .text-container .sticker4 {
+	 width: 300px;
+	 top: 60vh;
+	 left: 40vw;
+	 rotate: -25deg;
+}
+ .i-am-good-at .text-container .sticker5 {
+	 width: 250px;
+	 top: 37vh;
+	 left: 15vw;
+	 rotate: 23deg;
+}
+ .i-am-good-at .text-container .sticker6 {
+	 width: 200px;
+	 top: 20vh;
+	 left: 65vw;
+	 rotate: -35deg;
 }
  .i-am-good-at p {
 	 font-family: FontHead;
@@ -118,57 +170,56 @@
 	 font-size: 250px;
 	 margin: 0px;
 }
- .sticker {
+/*.sticker{
 	 width: 100%;
 	 height: 200vh;
 	 overflow: hidden;
 	 background-color: var(--t);
+	 .sticker-container{
+		 position: relative;
+		 width: 100%;
+		 height: 100vh;
+		 & img{
+			 width: 400px;
+			 position: absolute;
+			 translate: -50% -50%;
+		}
+		 & .sticker1{
+			 width: 320px;
+			 translate: 15vw 30vh;
+			 rotate: -26deg;
+		}
+		 & .sticker2{
+			 top: 25%;
+			 left: 73%;
+			 rotate: 23deg;
+		}
+		 & .sticker3{
+			 width: 280px;
+			 top: 55%;
+			 left: 60%;
+			 rotate: -23deg;
+		}
+		 & .sticker4{
+			 top: 70%;
+			 left: 80%;
+			 rotate: -23deg;
+		}
+		 & .sticker5{
+			 width: 320px;
+			 top: 72%;
+			 left: 35%;
+			 rotate: 23deg;
+		}
+		 & .sticker6{
+			 width: 220px;
+			 top: 20%;
+			 left: 50%;
+			 rotate: 5deg;
+		}
+	}
 }
- .sticker .sticker-container {
- 	position: relative;
-	 width: 100%;
-	 height: 100vh;
-	/* background-color: orange;
-	*/
-}
- .sticker .sticker-container img {
-	 width: 400px;
-	 position: absolute;
-	 translate: -50% -50%;
-}
- .sticker .sticker-container .sticker1 {
-	 width: 320px;
-	 translate: 15vw 30vh;
-	 rotate: -26deg;
-}
- .sticker .sticker-container .sticker2 {
-	 top: 25%;
-	 left: 73%;
-	 rotate: 23deg;
-}
- .sticker .sticker-container .sticker3 {
-	 width: 280px;
-	 top: 55%;
-	 left: 60%;
-	 rotate: -23deg;
-}
- .sticker .sticker-container .sticker4 {
-	 top: 70%;
-	 left: 80%;
-	 rotate: -23deg;
-}
- .sticker .sticker-container .sticker5 {
-	 width: 320px;
-	 top: 72%;
-	 left: 35%;
-	 rotate: 23deg;
-}
- .sticker .sticker-container .sticker6 {
-	 width: 220px;
-	 top: 20%;
-	 left: 50%;
-	 rotate: 5deg;
-}
+*/
  .test {
 	 position: relative;
 	 width: 100%;

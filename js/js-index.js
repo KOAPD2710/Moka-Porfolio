@@ -23,16 +23,22 @@ $(document).ready(function(e){
 
 
 	var width = $(window).innerWidth(),
+		height = $(window).innerHeight(),
 		text1 = $(".test .text-stroke .text1").width(),
 		text1width = $(".test .text-stroke .text1 p").width()*$(".test .text-stroke .text1 p").length,
 		text2 = $(".test .text-stroke .text2").width(),
 		text2width = $(".test .text-stroke .text2 p").width()*$(".test .text-stroke .text2 p").length,
 		text3 = $(".test .text-stroke .text3").width(),
 		text3width = $(".test .text-stroke .text3 p").width()*$(".test .text-stroke .text3 p").length;
-		
+
 	$(".test .text-stroke .text1").css("margin-left", ' ' + -(text1width - .5*width) + 'px ');
 	$(".test .text-stroke .text2").css("margin-left", ' ' + -(text2width - .5*width) + 'px ');
 	$(".test .text-stroke .text3").css("margin-left", ' ' + -(text3width - .5*width) + 'px ');
+
+
+	var iamgoodat = $(".i-am-good-at .text-container").height();
+
+	$(".i-am-good-at").css("padding-top", ' ' + (height - iamgoodat)/2 + 'px ');
 });
 
 window.addEventListener("resize", () => {

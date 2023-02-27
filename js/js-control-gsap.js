@@ -145,77 +145,170 @@ function documentready() {
 		},
 		x: "400*vw",
 	});
+
+	var iamgoodat = $(".i-am-good-at").height();
 	gsap.to(".i-am-good-at .text-container", {
 		scrollTrigger: {
-			trigger: ".i-am-good-at .text-container",
-			start: "center center",
+			trigger: ".i-am-good-at",
+			start: "top top",
 			endTrigger: ".i-am-good-at",
 			end: "bottom bottom",
-			pin: ".i-am-good-at .text-container",
+			scrub: true,
+			// pin: ".i-am-good-at .text-container",
 			markers: false,
 			id: "text-container",
 		},
+		y: () => "+=" + (iamgoodat - height),
 	});
-	gsap.from(".i-am-good-at .text-container .i-am p", {
-		scrollTrigger: {
-			trigger: ".i-am-good-at .text-container",
-			start: "center center",
-			endTrigger: ".i-am-good-at",
-			end: "bottom bottom",
-			scrub: "random(1, 2, .1)",
-			markers: false,
-			id: "i-am p",
-		},
-		ease:  Power3.easeInOut,
-		x: "random(-100, 500)",
-		y: "random(-10, 500)",
-		scale: "random(.3, 1, .05)",
-		// rotate: "random(-360, 360)",
+	// gsap.from(".i-am-good-at .text-container .i-am p", {
+	// 	scrollTrigger: {
+	// 		trigger: ".i-am-good-at .text-container",
+	// 		start: "center center",
+	// 		endTrigger: ".i-am-good-at",
+	// 		end: "bottom bottom",
+	// 		scrub: "random(1, 2, .1)",
+	// 		markers: false,
+	// 		id: "i-am p",
+	// 	},
+	// 	ease:  Power3.easeInOut,
+	// 	x: "random(-100, 500)",
+	// 	y: "random(-10, 500)",
+	// 	scale: "random(.3, 1, .05)",
+	// 	// rotate: "random(-360, 360)",
+	// });
+
+	var textexploreanimation = Power3.linear;
+	const textcontainertl = ({
+		trigger: ".i-am-good-at",
+		start: "100 top",
+		end: () => "+=" + (2*height - 100),
+		scrub: "random(.5, 10, 1)",
+		markers: false,
+		id: "i-am p",
 	});
-	gsap.from(".i-am-good-at .text-container .flowers-good-at p", {
-		scrollTrigger: {
-			trigger: ".i-am-good-at .text-container",
-			start: "center center",
-			endTrigger: ".i-am-good-at",
-			end: "bottom bottom",
-			scrub: "random(1, 2, .1)",
-			markers: false,
-			id: "i-am p",
-		},
-		ease:  Power3.easeInOut,
-		x: "random(-500, 100)",
-		y: "random(-500, -10)",
-		scale: "random(.3, 1, .05)",
-		// rotate: "random(-360, 360)",
+	gsap.from(".i-am-good-at .text-container .i-am .i", {
+		scrollTrigger: textcontainertl,
+		x: .1*width,
+		y: .1*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .i-am .a1", {
+		scrollTrigger: textcontainertl,
+		x: -.1*width,
+		y: -.2*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .i-am .m", {
+		scrollTrigger: textcontainertl,
+		x: .2*width,
+		y: -.2*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .good-at .g", {
+		scrollTrigger: textcontainertl,
+		x: .5*width,
+		y: -.2*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .good-at .flower1", {
+		scrollTrigger: textcontainertl,
+		x: .2*width,
+		y: .1*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .good-at .flower2", {
+		scrollTrigger: textcontainertl,
+		x: -.1*width,
+		y: .2*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .good-at .d", {
+		scrollTrigger: textcontainertl,
+		x: -.5*width,
+		y: .15*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .good-at .a2", {
+		scrollTrigger: textcontainertl,
+		x: .1*width,
+		y: .25*height,
+		ease: textexploreanimation,
+	});
+	gsap.from(".i-am-good-at .text-container .good-at .t", {
+		scrollTrigger: textcontainertl,
+		x: -.05*width,
+		y: -.4*height,
+		ease: textexploreanimation,
+	});
+	const changecolortl = ({
+		trigger: ".i-am-good-at",
+		start: () => "+=" + (2*height - 100),
+		end: () => "+=" + 50,
+		scrub: "random(.5, 10, 1)",
+		markers: false,
+		id: "i-am-good-at-bg",
+	});
+	gsap.to(".i-am-good-at", {
+		scrollTrigger: changecolortl,
+		backgroundColor: "#151515", ease:"linear",
+	});
+	gsap.to(".i-am-good-at .text-container p", {
+		scrollTrigger: changecolortl,
+		color: "#FFF4E6", ease:"linear",
+	});
+	gsap.to(".i-am-good-at .flowers-good-at .flower2", {
+		scrollTrigger: changecolortl,
+		fill: "#FFF4E6", ease:"linear",
 	});
 
-	gsap.to(".sticker", {
+	gsap.from(".i-am-good-at .text-container img", 1, {
 		scrollTrigger: {
-			trigger: ".sticker",
-			start: "top top",
-			end: "300px top",
-			scrub: true,
-			markers: true,
-			id: "sticker-bg",
+			trigger: ".i-am-good-at",
+			start: () => "+=" + (2*height + 400),
+			toggleActions: "play none none reverse",
+			markers: false,
+			id: "i-am-good-at-img",
 		},
-		backgroundColor: "#151515", ease:"linear",
+		ease: Back.easeOut,
+		scale: 0,
+		stagger: .2,
+
 	})
 
 
-	var stickerheight = $(".sticker").height(),
-		stickercontainer = $(".sticker .sticker-container").height();
-	gsap.to(".sticker .sticker-container", {
-		scrollTrigger: {
-			trigger: ".sticker",
-			start: "top top",
-			end: "bottom bottom",
-			// pin: ".sticker .sitcker-container",
-			scrub: .5,
-			markers: false,
-			id: "sticker-container",
-		},
-		y: () => "+=" + (stickerheight - stickercontainer),
-	});
+
+	// gsap.from(".i-am-good-at .text-container .flowers-good-at p", {
+	// 	scrollTrigger: {
+	// 		trigger: ".i-am-good-at .text-container",
+	// 		start: "center center",
+	// 		endTrigger: ".i-am-good-at",
+	// 		end: "bottom bottom",
+	// 		scrub: "random(1, 2, .1)",
+	// 		markers: false,
+	// 		id: "i-am p",
+	// 	},
+	// 	ease:  Power3.easeInOut,
+	// 	x: "random(-500, 100)",
+	// 	y: "random(-500, -10)",
+	// 	scale: "random(.3, 1, .05)",
+	// 	// rotate: "random(-360, 360)",
+	// });
+
+
+	// var stickerheight = $(".sticker").height(),
+	// 	stickercontainer = $(".sticker .sticker-container").height();
+	// gsap.to(".sticker .sticker-container", {
+	// 	scrollTrigger: {
+	// 		trigger: ".sticker",
+	// 		start: "top top",
+	// 		end: "bottom bottom",
+	// 		// pin: ".sticker .sitcker-container",
+	// 		scrub: .5,
+	// 		markers: false,
+	// 		id: "sticker-container",
+	// 	},
+	// 	y: () => "+=" + (stickerheight - stickercontainer),
+	// });
 
 
 
