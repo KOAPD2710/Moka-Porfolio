@@ -261,7 +261,7 @@ function documentready() {
 		fill: "#FFF4E6", ease:"linear",
 	});
 
-	gsap.from(".i-am-good-at .text-container img", 1, {
+	gsap.from(".i-am-good-at .text-container img", .7, {
 		scrollTrigger: {
 			trigger: ".i-am-good-at",
 			start: () => "+=" + (2*height + 400),

@@ -1,4 +1,4 @@
-$(document).ready(function(e){
+function alignJs(){
 	var naviheight 		= $(".nav-container").height(),
 		navlinkheight	= $(".nav-bar").height();
 	$(".nav-bar").css("margin-top", ' ' + (naviheight - navlinkheight)/2 + 'px ');
@@ -21,7 +21,6 @@ $(document).ready(function(e){
 	// $(".curious nav").css("margin-top", ' ' + ((curiousheight - curiousnavheight)/2)*1.2 + 'px ');
 	// $(".curious nav").css("margin-bottom", ' ' + ((curiousheight - curiousnavheight)/2)*1.2 + 'px ');
 
-
 	var width = $(window).innerWidth(),
 		height = $(window).innerHeight(),
 		text1 = $(".test .text-stroke .text1").width(),
@@ -35,10 +34,16 @@ $(document).ready(function(e){
 	$(".test .text-stroke .text2").css("margin-left", ' ' + -(text2width - .5*width) + 'px ');
 	$(".test .text-stroke .text3").css("margin-left", ' ' + -(text3width - .5*width) + 'px ');
 
-
 	var iamgoodat = $(".i-am-good-at .text-container").height();
-
+	// 	textfs = $(".i-am-good-at .text-container .i-am p").css("font-size");
+	// 	console.log(textfs);
+	// $(".i-am-good-at .flowers-good-at").css("margin-top", ' ' + -(2*textfs) + ' ');
 	$(".i-am-good-at").css("padding-top", ' ' + (height - iamgoodat)/2 + 'px ');
+}
+
+
+$(document).ready(function(e){
+	alignJs();
 });
 
 window.addEventListener("resize", () => {
@@ -54,6 +59,7 @@ window.addEventListener("resize", () => {
 		$("#vertical-screen").css("display", "block");
 		console.log("vertical-screen");
 	}
+	alignJs();
 });
 
 
