@@ -23,6 +23,14 @@
 	font-style: normal;
 }
 @font-face{
+	font-family: FontText;
+	src:	url(../fonts/kobe11-oblique.ttf),
+			url(../fonts/kobe11-oblique.otf),
+			url(../fonts/kobe11-oblique.woff);
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face{
 	font-family: FontHead;
 	src:	url(../fonts/Beastly.ttf),
 			url(../fonts/Beastly.otf),

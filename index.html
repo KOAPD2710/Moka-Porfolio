@@ -11,24 +11,30 @@
 
 	<link rel="stylesheet" type="text/css" href="./css/style-format.css">
 	<link rel="stylesheet" type="text/css" href="./css/style-typo.css">
-	<!-- <link rel="stylesheet" type="text/css" href="./css/style-index.css"> -->
-	<link rel="stylesheet" type="text/css" href="./css/style-index-convert.css">
+	<link rel="stylesheet" type="text/css" href="./css/style-index.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./css/style-index-convert.css"> -->
 
 	<script type="text/javascript" src="./js/gsap.min.js"></script>
 	<script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
 
-<!-- <script type="text/javascript" src="./js/p5.js"></script>
+<!-- 	<script type="text/javascript" src="./js/p5.js"></script>
 	<script type="text/javascript" src="./js/matter.js"></script>
-	<script type="text/javascript" src="./js/pathseg.js"></script>
 	<script defer type="text/javascript" src="./js/sketch.js"></script>
 	<script defer type="text/javascript" src="./js/box.js"></script>
 	<script defer type="text/javascript" src="./js/boundary.js"></script>
 	<script defer type="text/javascript" src="./js/ground.js"></script>
 	<script defer type="text/javascript" src="./svg-path.js"></script> -->
-
-	<script type="text/javascript" src="./js/js-index.js"></script>
 </head>
-<body>
+<body data-barba="wrapper">
+
+	<ul id="transition">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
 	<div id="horizontal-screen">
 		<header class="layout nav-container">
 			<div class="nav-logo">
@@ -55,199 +61,175 @@
 			</nav>
 		</header>
 
-		<div class="intro-container">
-			<div class="intro">
-				<img src="./imgs/olipop.webp" alt="olipop">
-				<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
-			</div>
-		</div>
-		<div class="moka-folio">
-			<div class="moka-bandroll">
-				<p>Moka</p>
-				<div>
-					<img src="./imgs/flower1.svg" alt="flowers1">
-				</div>
-				<p>Moka</p>
-				<div>
-					<img src="./imgs/flower1.svg" alt="flowers1">
-				</div>
-				<p>Moka</p>
-				<div>
-					<img src="./imgs/flower1.svg" alt="flowers1">
-				</div>
-				<p>Moka</p>
-				<div>
-					<img src="./imgs/flower1.svg" alt="flowers1">
-				</div>
-				<p>Moka</p>
-				<div>
-					<img src="./imgs/flower1.svg" alt="flowers1">
-				</div>
-				<p>Moka</p>
-				<div>
-					<img src="./imgs/flower1.svg" alt="flowers1">
+		<main class="barba" data-barba="container" data-barba-namespace="home">
+			<div class="intro-container">
+				<div class="intro">
+					<!-- <img src="./imgs/olipop.webp" alt="olipop"> -->
+					<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
 				</div>
 			</div>
-			<div class="folio-bandroll">
-				<p>Folio</p>
-				<div>
-					<img src="./imgs/flower2.svg" alt="flower2">
+			<div class="moka-marquee">
+				<div class="moka-text">
+					<p>/FIRST OF ALL, IT IS AMAZING HAVING YOU HERE, WELCOME to my Playground!</p>
+					<p>I’M A PERSON WHO’S COMPLETELY IN LOVE WITH DRAW AND DESIGN./</p>
 				</div>
-				<p>Folio</p>
-				<div>
-					<img src="./imgs/flower2.svg" alt="flower2">
-				</div>
-				<p>Folio</p>
-				<div>
-					<img src="./imgs/flower2.svg" alt="flower2">
-				</div>
-				<p>Folio</p>
-				<div>
-					<img src="./imgs/flower2.svg" alt="flower2">
-				</div>
-				<p>Folio</p>
-				<div>
-					<img src="./imgs/flower2.svg" alt="flower2">
-				</div>
-				<p>Folio</p>
-				<div>
-					<img src="./imgs/flower2.svg" alt="flower2">
+				<div class="moka-bandroll">
+					<p>Moka</p>
+					<div>
+						<img src="./imgs/flower1.svg" alt="flowers1">
+					</div>
+					<p>Moka</p>
+					<div>
+						<img src="./imgs/flower1.svg" alt="flowers1">
+					</div>
+					<p>Moka</p>
+					<div>
+						<img src="./imgs/flower1.svg" alt="flowers1">
+					</div>
+					<p>Moka</p>
+					<div>
+						<img src="./imgs/flower1.svg" alt="flowers1">
+					</div>
+					<p>Moka</p>
+					<div>
+						<img src="./imgs/flower1.svg" alt="flowers1">
+					</div>
+					<p>Moka</p>
+					<div>
+						<img src="./imgs/flower1.svg" alt="flowers1">
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="layout i-am-good-at">
-			<div class="text-container">
-				<nav class="i-am">
-					<p class="i">I</p>
-					<p class="nbsp1">&nbsp</p>
-					<p class="a1">a</p>
-					<p class="m">m</p>
-				</nav>
-				<div class="flowers-good-at">
-					<nav class="divspace"></nav>
-					<nav class="good-at">
-						<p class="g">g</p>
-						<nav class="flowers">
-							<svg class="flower1" width="140.604" height="140.81" viewBox="0 0 140.604 140.81">
-								<path d="M70.284,119.793c-9.752,16.038-23.225,23.926-41.555,20.037-15.19-3.222-25.02-13.249-27.861-28.4C-2.5,93.448,4.836,79.757,21.454,70.509,7.695,62.863-.084,51.8,0,36.123A34.374,34.374,0,0,1,12.1,9.5C21.236,1.446,31.9-1.624,43.82.818c11.825,2.422,20.456,9.411,26.2,20.672C80.409,4.845,94.339-3.315,113.494,1.63c14.831,3.828,24.153,14.027,26.533,29.023,2.762,17.4-4.431,30.677-20.746,39.679,13.87,7.94,21.6,19.346,21.2,35.158a35.237,35.237,0,0,1-11.257,25,36.182,36.182,0,0,1-20.44,9.862c-7.946,1.179-15.288-.514-22.366-4.058-7.13-3.57-11.714-9.687-16.132-16.5"/>
-							</svg>
-							<svg class="flower2" width="140.604" height="140.81" viewBox="0 0 140.604 140.81">
-								<path d="M70.284,119.793c-9.752,16.038-23.225,23.926-41.555,20.037-15.19-3.222-25.02-13.249-27.861-28.4C-2.5,93.448,4.836,79.757,21.454,70.509,7.695,62.863-.084,51.8,0,36.123A34.374,34.374,0,0,1,12.1,9.5C21.236,1.446,31.9-1.624,43.82.818c11.825,2.422,20.456,9.411,26.2,20.672C80.409,4.845,94.339-3.315,113.494,1.63c14.831,3.828,24.153,14.027,26.533,29.023,2.762,17.4-4.431,30.677-20.746,39.679,13.87,7.94,21.6,19.346,21.2,35.158a35.237,35.237,0,0,1-11.257,25,36.182,36.182,0,0,1-20.44,9.862c-7.946,1.179-15.288-.514-22.366-4.058-7.13-3.57-11.714-9.687-16.132-16.5"/>
-							</svg>
-						</nav>
-						<p class="d">d</p>
-						<p class="nbsp2">&nbsp</p>
-						<p class="a2">a</p>
-						<p class="t">t</p>
+			<div class="layout i-am-good-at">
+				<div class="text-container">
+					<nav class="i-am">
+						<p class="i">I</p>
+						<p class="nbsp1">&nbsp</p>
+						<p class="a1">a</p>
+						<p class="m">m</p>
 					</nav>
+					<div class="flowers-good-at">
+						<nav class="divspace"></nav>
+						<nav class="good-at">
+							<p class="g">g</p>
+							<nav class="flowers">
+								<svg class="flower flower1" width="140.604" height="140.81" viewBox="0 0 140.604 140.81">
+									<path d="M70.284,119.793c-9.752,16.038-23.225,23.926-41.555,20.037-15.19-3.222-25.02-13.249-27.861-28.4C-2.5,93.448,4.836,79.757,21.454,70.509,7.695,62.863-.084,51.8,0,36.123A34.374,34.374,0,0,1,12.1,9.5C21.236,1.446,31.9-1.624,43.82.818c11.825,2.422,20.456,9.411,26.2,20.672C80.409,4.845,94.339-3.315,113.494,1.63c14.831,3.828,24.153,14.027,26.533,29.023,2.762,17.4-4.431,30.677-20.746,39.679,13.87,7.94,21.6,19.346,21.2,35.158a35.237,35.237,0,0,1-11.257,25,36.182,36.182,0,0,1-20.44,9.862c-7.946,1.179-15.288-.514-22.366-4.058-7.13-3.57-11.714-9.687-16.132-16.5"/>
+								</svg>
+								<svg class="flower flower2" width="140.604" height="140.81" viewBox="0 0 140.604 140.81">
+									<path d="M70.284,119.793c-9.752,16.038-23.225,23.926-41.555,20.037-15.19-3.222-25.02-13.249-27.861-28.4C-2.5,93.448,4.836,79.757,21.454,70.509,7.695,62.863-.084,51.8,0,36.123A34.374,34.374,0,0,1,12.1,9.5C21.236,1.446,31.9-1.624,43.82.818c11.825,2.422,20.456,9.411,26.2,20.672C80.409,4.845,94.339-3.315,113.494,1.63c14.831,3.828,24.153,14.027,26.533,29.023,2.762,17.4-4.431,30.677-20.746,39.679,13.87,7.94,21.6,19.346,21.2,35.158a35.237,35.237,0,0,1-11.257,25,36.182,36.182,0,0,1-20.44,9.862c-7.946,1.179-15.288-.514-22.366-4.058-7.13-3.57-11.714-9.687-16.132-16.5"/>
+								</svg>
+							</nav>
+							<p class="d">d</p>
+							<p class="nbsp2">&nbsp</p>
+							<p class="a2">a</p>
+							<p class="t">t</p>
+						</nav>
+					</div>
+					<div class="sticker sticker1">
+						<img src="./imgs/sticker1.svg" alt="sticker1">
+					</div>
+					<div class="sticker sticker2">
+						<img src="./imgs/sticker2.svg" alt="sticker2">
+					</div>
+					<div class="sticker sticker3">
+						<img src="./imgs/sticker3.svg" alt="sticker3">
+					</div>
+					<div class="sticker sticker4">
+						<img src="./imgs/sticker4.svg" alt="sticker4">
+					</div>
+					<div class="sticker sticker5">
+						<img src="./imgs/sticker5.svg" alt="sticker5">
+					</div>
+					<div class="sticker sticker6">
+						<img src="./imgs/sticker6.svg" alt="sticker6">
+					</div>
 				</div>
-				<img class="sticker1" src="./imgs/sticker1.svg" alt="sticker1">
-				<img class="sticker2" src="./imgs/sticker2.svg" alt="sticker2">
-				<img class="sticker3" src="./imgs/sticker3.svg" alt="sticker3">
-				<img class="sticker4" src="./imgs/sticker4.svg" alt="sticker4">
-				<img class="sticker5" src="./imgs/sticker5.svg" alt="sticker5">
-				<img class="sticker6" src="./imgs/sticker6.svg" alt="sticker6">
-
 			</div>
-		</div>
 
-		<div class="layout test">
-			<div class="test-sticky-text">
-				<div class="text-fill">
-					<div class="text text1">
-						<p>Olipop</p>
-						<p>Olipop</p>
-						<p>Olipop</p>
-						<p>Olipop</p>
+			<div class="folio-marquee">
+				<div class="bg-b"></div>
+				<div class="folio-text">
+					<p>/Creating websites that are visually attractive through design and motion is what I love to do./</p>
+				</div>
+				<div class="folio-bandroll">
+					<div class="marquee-container">
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
 					</div>
-					<div class="text text2">
-						<p>Olele</p>
-						<p>Olele</p>
-						<p>Olele</p>
-						<p>Olele</p>
-					</div>
-					<div class="text text3">
-						<p>Olala</p>
-						<p>Olala</p>
-						<p>Olala</p>
-						<p>Olala</p>
+					<div class="marquee-container">
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
+						<p>Folio</p>
+						<div>
+							<img src="./imgs/flower3.svg" alt="flower3">
+						</div>
 					</div>
 				</div>
-				<div class="text-stroke">
-					<div class="text text1">
-						<p>Banner</p>
-						<p>Banner</p>
-						<p>Banner</p>
-						<p>Banner</p>
-					</div>
-					<div class="text text2">
-						<p>Banger</p>
-						<p>Banger</p>
-						<p>Banger</p>
-						<p>Banger</p>
-					</div>
-					<div class="text text3">
-						<p>Banesc</p>
-						<p>Banesc</p>
-						<p>Banesc</p>
-						<p>Banesc</p>
+			</div>
+
+			<div class="layout test2">
+				<div class="test-sticky-imgs">
+					<div class="test-sticky-imgs-zoom">
+						<div class="test-sticky-imgs-move">
+							<img class="p3" src="./imgs/p3.webp" alt="p3">
+							<img class="p2" src="./imgs/p6.webp" alt="p2">
+							<img class="p1" src="./imgs/reel1.jpg" alt="p1">
+						</div>
 					</div>
 				</div>
+				<div class="content">
+					<p class="bla-bla">Bla Bla Bla ver1</p>
+					<div class="curious">
+						Curious
+						<p>(WE ARE TALENTED CRAFTSPEOPLE)
+							WE’RE GREAT AT WHAT WE DO. YOU COULD SAY IT’S MORE OF A CALLING THAN A JOB.
+						</p>
+					</div>
+					<div class="inspired">
+						Inspired
+						<p>(WE ARE TALENTED CRAFTSPEOPLE)
+							WE’RE GREAT AT WHAT WE DO. YOU COULD SAY IT’S MORE OF A CALLING THAN A JOB.
+						</p>
+					</div>
+					<div class="focused">
+						Focused
+						<p>(WE ARE TALENTED CRAFTSPEOPLE)
+							WE’RE GREAT AT WHAT WE DO. YOU COULD SAY IT’S MORE OF A CALLING THAN A JOB.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="">
 				
 			</div>
-			<div class="showreel-container">
-				<div class="showreel1">
-					<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
-					<p>AloAloAlo</p>
-				</div>
-				<div class="showreel2">
-					<img src="./imgs/olipop.webp" alt="olipop">
-					<p>AloAloAlo</p>
-				</div>
-				<div class="showreel3 last">
-					<video class="olipopvideo videocursor" src="img/Olipop.mp4" autoplay muted loop></video>
-					<p>AloAloAlo</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="layout test2">
-			<div class="test-sticky-imgs">
-				<div class="test-sticky-imgs-zoom">
-					<div class="test-sticky-imgs-move">
-						<img class="p3" src="./imgs/p3.webp" alt="p3">
-						<img class="p2" src="./imgs/p6.webp" alt="p2">
-						<img class="p1" src="./imgs/p1.webp" alt="p1">
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<p class="bla-bla">Bla Bla Bla ver1</p>
-				<div class="curious">
-					Curious
-					<p>(WE ARE TALENTED CRAFTSPEOPLE)
-						WE’RE GREAT AT WHAT WE DO. YOU COULD SAY IT’S MORE OF A CALLING THAN A JOB.
-					</p>
-				</div>
-				<div class="inspired">
-					Inspired
-					<p>(WE ARE TALENTED CRAFTSPEOPLE)
-						WE’RE GREAT AT WHAT WE DO. YOU COULD SAY IT’S MORE OF A CALLING THAN A JOB.
-					</p>
-				</div>
-				<div class="focused">
-					Focused
-					<p>(WE ARE TALENTED CRAFTSPEOPLE)
-						WE’RE GREAT AT WHAT WE DO. YOU COULD SAY IT’S MORE OF A CALLING THAN A JOB.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="">
-			
-		</div>
+		</main>
 	</div>
 
 
@@ -255,9 +237,10 @@
 	</div>
 
 
-
+	<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+	<script type="text/javascript" src="./js/js-main.js"></script>
 	<script type="text/javascript" src="./js/lenis.min.js"></script>
 	<script type="text/javascript" src="./js/control_lenis.js"></script>
-	<script type="text/javascript" src="./js/js-control-gsap.js"></script>
+	<script type="text/javascript" src="./js/js-index.js"></script>
 </body>
 </html>
