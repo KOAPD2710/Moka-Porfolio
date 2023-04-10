@@ -1,197 +1,458 @@
-.nav-container{
-	position: absolute;
-	width: 100%;
-	top: 0;
-	left: 0;
-	display: flex;
-	padding-top: 10px;
-	z-index: 1000;
+body {
+  background: var(--t);
 }
 
-.nav-logo {
-
-	& a {
-		display: flex;
-		gap: .1rem;
-
-		& p {
-			font-family: FontLogo;
-			font-size: 4rem;
-			margin: 0px;
-			margin-top: 8px;
-			color: var(--t);
-		}
-	}
+.section1 {
+  width: 100vw;
+  height: 200vh;
+  background-color: var(--b);
+}
+.section1 .intro {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.section1 .intro img, .section1 .intro video {
+  position: absolute;
+  width: 100%;
+  scale: 0.5;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
-.nav-link {
-	position: relative;
-	margin-left: auto;
-
-	& .nav-bar {
-		margin: 0px;
-		padding: 0px;
-		display: flex;
-		gap: 2rem;
-
-		& li{
-			list-style: none;
-
-			& a{
-				color: var(--t);
-				font-weight: bold;
-			}
-		}
-	}
+.section2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  color: var(--b);
 }
-.intro-container {
-	width: 100vw;
-	height: 200vh;
-
-	& .intro{
-		position: sticky;
-		top: 0;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-
-		& img, & video{
-			position: absolute;
-			width: 100%;
-			scale: .5;
-			top: 50%;
-			left: 50%;
-			translate: -50% -50%;
-		}
-	}
+.section2 .head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 1vw;
+}
+.section2 .marquee-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: -50px;
+  width: 100vw;
+  overflow: hidden;
+}
+.section2 .marquee-container .marquee-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.section2 .marquee-container .marquee-content nav {
+  display: flex;
+  width: 100px;
+}
+.section2 .marquee-container .marquee-content nav img {
+  width: 100%;
+}
+.section2 .marquee-container .marquee-content p {
+  font-family: FontLogo;
+  font-size: 250px;
+}
+.section2 .content {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+.section2 .content p {
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+.section2 .content p span {
+  color: var(--gr);
+}
+.section2 .content .left {
+  justify-content: center;
+}
+.section2 .content .left img {
+  max-width: 800px;
+  width: 100%;
+}
+.section2 .content div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.section2 .content .right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section2 .content .right h3 {
+  font-family: FontHead;
+  font-size: 3.5rem;
+  color: var(--gr);
+}
+.section2 p {
+  margin: 0;
 }
 
-.moka-folio{
-	width: 100%;
-	height: 100vh;
-	color: var(--b);
-	overflow: hidden;
-	background-color: var(--t);
-
-	& .moka-bandroll{
-		display: flex;
-		flex-direction: columns;
-		gap: 3rem;
-		font-family: FontLogo;
-		overflow: hidden;
-
-		& p{
-			font-size: 200px;
-			margin: 0px;
-		}
-	}
-
-	& .folio-bandroll{
-		display: flex;
-		flex-direction: columns;
-		gap: 3rem;
-		font-family: FontHead;
-		translate: -100% 0;
-
-		& p{
-			font-size: 200px;
-			margin: 0px;
-		}
-	}
+.section3 {
+  width: 100%;
+  height: 250vh;
+}
+.section3 .text-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  /*Art-Direction*/
+  /*Graphic-Design*/
+  /*Hand_Drawing*/
+  /*UI-Design*/
+  /*Brand-Identity*/
+  /*Visual-Design*/
+}
+.section3 .text-container .align {
+  position: relative;
+  width: 100%;
+}
+.section3 .text-container .i-am {
+  display: inline-flex;
+}
+.section3 .text-container .flowers-good-at {
+  display: flex;
+  margin-top: -100px;
+}
+.section3 .text-container .flowers-good-at .flowers {
+  display: flex;
+  gap: 1rem;
+  padding: 0px 0.8rem;
+  padding-top: 3rem;
+}
+.section3 .text-container .flowers-good-at .flowers svg {
+  width: 8vw;
+  margin: auto;
+  fill: var(--gr);
+}
+.section3 .text-container .flowers-good-at .flowers .flower2 {
+  fill: var(--gr) !important;
+}
+.section3 .text-container .flowers-good-at .good-at {
+  position: relative;
+  display: inline-flex;
+  margin-left: auto;
+}
+.section3 .text-container .sticker {
+  position: absolute;
+  translate: -50% -50%;
+  width: 200px;
+}
+.section3 .text-container .sticker img {
+  width: 100%;
+}
+.section3 .text-container .sticker1 {
+  width: 15vw;
+  top: -1vh;
+  left: 8vw;
+  rotate: -21deg;
+}
+.section3 .text-container .sticker3 {
+  width: 11vw;
+  top: 3vh;
+  left: 40vw;
+  rotate: 14deg;
+}
+.section3 .text-container .sticker6 {
+  width: 200px;
+  top: 10vh;
+  left: 67vw;
+  rotate: -35deg;
+}
+.section3 .text-container .sticker5 {
+  width: 300px;
+  bottom: -10vh;
+  left: 15vw;
+  rotate: 23deg;
+}
+.section3 .text-container .sticker4 {
+  width: 14vw;
+  top: 45vh;
+  left: 50vw;
+  rotate: -25deg;
+}
+.section3 .text-container .sticker2 {
+  width: 16vw;
+  top: 40vh;
+  left: 70vw;
+  rotate: 26deg;
+}
+.section3 p {
+  font-family: FontHead;
+  color: var(--gr);
+  font-size: 14vw;
+  margin: 0px;
+  text-transform: none;
 }
 
-.i-am-good-at {
-	width: 100%;
-	height: 400vh;
-	overflow-x: hidden;
-	overflow-y: visible;
-	background-color: var(--t);
+.section4 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: var(--t);
+  color: var(--b);
+}
+.section4 .marquee-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: -50px;
+  width: 100vw;
+  overflow: hidden;
+}
+.section4 .marquee-container .marquee-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.section4 .marquee-container .marquee-content nav {
+  display: flex;
+  width: 100px;
+}
+.section4 .marquee-container .marquee-content nav img {
+  width: 100%;
+}
+.section4 .marquee-container .marquee-content p {
+  font-family: FontHead;
+  font-size: 250px;
+  text-transform: none;
+}
+.section4 .content {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+.section4 .content .left {
+  justify-content: center;
+}
+.section4 .content .left img {
+  max-width: 800px;
+  width: 100%;
+}
+.section4 .content div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.section4 .content .right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section4 .content .right p {
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+.section4 .content .right p span {
+  color: var(--gr);
+}
+.section4 p {
+  margin: 0;
+}
 
-	.text-container {
-		position: relative;
-		width: 100%;
+.section5 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: var(--b);
+  overflow: hidden !important;
+}
+.section5 .content {
+  position: relative;
+  padding-top: 50vh;
+  z-index: 10;
+  color: var(--t);
+}
+.section5 .content .bla-bla {
+  margin-bottom: 50vh;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+}
+.section5 .content div {
+  width: 100%;
+  font-size: 150px;
+  font-weight: normal;
+  text-align: center;
+  font-family: FontHead;
+}
+.section5 .content div p {
+  font-family: FontText;
+  font-size: inherits;
+}
+.section5 .content div:not(:last-child) {
+  margin-bottom: 70vh;
+}
+.section5 .content .inspired {
+  text-align: right;
+}
+.section5 .content .focused {
+  text-align: left;
+  margin-bottom: 40vh;
+}
+.section5 .test-sticky-imgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+.section5 .test-sticky-imgs .test-sticky-imgs-zoom {
+  width: 100vw;
+  height: 100vh;
+  scale: 1.5;
+  overflow: hidden;
+}
+.section5 .test-sticky-imgs .test-sticky-imgs-zoom .test-sticky-imgs-move {
+  position: relative;
+  top: -50vh;
+  width: 100%;
+  height: 150vh;
+  overflow: hidden;
+}
+.section5 .test-sticky-imgs .test-sticky-imgs-zoom .test-sticky-imgs-move img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  filter: brightness(0.5);
+}
 
-		.i-am {
-			display: inline-flex;
-		}
+.section6 {
+  position: relative;
+  display: block;
+}
+.section6 .marquee-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  bottom: -50px;
+  width: 100vw;
+  overflow: hidden;
+}
+.section6 .marquee-container .marquee-content {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+.section6 .marquee-container .marquee-content nav {
+  display: flex;
+  width: 100px;
+}
+.section6 .marquee-container .marquee-content nav img {
+  width: 100%;
+}
+.section6 .marquee-container .marquee-content p {
+  font-family: FontHead;
+  font-size: 250px;
+  text-transform: none;
+}
 
-		.flowers-good-at{
-			display: flex;
-			margin-top: -100px;
-
-			.flowers{
-				display: flex;
-				gap: 1rem;
-				padding: 0 .8rem;
-
-				& svg{
-					width: 8vw;
-					margin: auto;
-					fill: var(--gr);
-				}
-				& .flower2{
-					fill: var(--b);
-				}
-			}
-
-			.good-at {
-				position: relative;
-				display: inline-flex;
-				margin-left: auto;
-			}
-		}
-		& img{
-			position: absolute;
-			translate: -50% -50%;
-			width: 200px;
-		}
-		.sticker1{
-			width: 300px;
-			top: 5vh;
-			left: 40vw;
-			rotate: 23deg;
-		}/*Art-Direction*/
-		.sticker2{
-			width: 340px;
-			top: 68vh;
-			left: 69vw;
-			rotate: 26deg;
-		}/*Visual-Design*/
-		.sticker3{
-			width: 220px;
-			top: -1vh;
-			left: 8vw;
-			rotate: -39deg;
-		}/*Graphic-Design*/
-		.sticker4{
-			width: 300px;
-			top: 60vh;
-			left: 40vw;
-			rotate: -25deg;
-		}/*Brand-Identity*/
-		.sticker5{
-			width: 250px;
-			top: 37vh;
-			left: 15vw;
-			rotate: 23deg;
-		}/*UI-Design*/
-		.sticker6{
-			width: 200px;
-			top: 20vh;
-			left: 65vw;
-			rotate: -35deg;
-		}/*Hand_Drawing*/
-
-	}
-
-	& p{
-		font-family: FontHead;
-		color: var(--gr);
-		font-size: 14vw;
-		margin: 0px;
-	}
-
-
+.footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: var(--b);
+}
+.footer .content {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+.footer .content .left {
+  justify-content: center;
+}
+.footer .content .left img {
+  max-width: 800px;
+  width: 100%;
+}
+.footer .content div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.footer .content .right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer .content .right p {
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+.footer .content .right p span {
+  color: var(--gr);
+}
+.footer .content .right h1 {
+  font-family: FontHead;
+  font-size: 57px;
+  color: var(--t);
+}
+.footer .content .right h1 span {
+  color: var(--gr);
+}
+.footer .bottom {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  list-style-type: none;
+}
+.footer .bottom p {
+  color: var(--t);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.footer .svg-path {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+.footer .svg-path svg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+}
+.footer .svg-path .flower {
+  position: absolute;
 }
 
 /*.sticker{
@@ -246,189 +507,4 @@
 	}
 }*/
 
-
-
-
-.test{
-	position: relative;
-	width: 100%;
-	height: auto;
-	background-color: var(--t);
-	color: var(--b);
-	overflow: hidden;
-
-	& .test-sticky-text {
-		position: absolute;
-		display: block;
-		width: 100vw;
-		left: 0;
-		z-index: 1;
-		overflow: hidden;
-
-		& .text-fill, & .text-stroke {
-			display: block;
-			width: auto;
-			height: 200px;
-			overflow-y: hidden;
-			overflow-x: inherit;
-		}
-
-		& .text-fill {
-/*			background-color: blueviolet;*/
-			position: relative;
-			& div{
-				position: relative;
-				display: flex;
-				width: auto;
-				gap: 10rem;
-			}
-		}
-
-		& .text-stroke {
-/*			background-color: orange;*/
-
-			& div{
-				display: flex;
-				gap: 10rem;
-
-				& p{
-					letter-spacing: 5px;
-					color: var(--t);
-					text-shadow:
-						1px 	1px 	#000,
-						-1px 	-1px 	#000,
-						1px 	-1px 	#000,
-						-1px 	1px 	#000,
-						2px		0 		#000,
-						0 		2px 	#000,
-						-2px 	0 		#000,
-						0 		-2px 	#000;
-
-				}
-			}
-		}
-
-		& p {
-			display: inline;
-			white-space: nowrap;
-			font-family: FontHead;
-			font-size: 200px;
-			font-weight: bold;
-			margin: 0px;
-			letter-spacing: 1px;
-			margin-top: -65px;
-		}
-	}
-
-	& .showreel-container {
-		position: relative;
-		padding-top: 60vh;
-		padding-bottom: 25vh;
-		z-index: 10;
-
-		& div {
-			width: 70%;
-
-
-			& img, & video {
-				width: 100%;
-				box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);
-			}
-		}
-		& div:not(:last-child) {
-			margin-bottom: 90vh;
-		}
-		& div:nth-child(1) {
-			margin-left: auto;
-			margin-right: auto;
-		}
-		& div:nth-child(2) {
-			margin-left: auto;
-		}
-		& div:nth-child(3) {
-			margin-right: auto;
-		}
-	}
-}
-
-.test2 {
-	position: relative;
-	width: 100%;
-	height: auto;
-	color: var(--b);
-	overflow: hidden !important;
-
-	& .content {
-		position: relative;
-		padding-top: 50vh;
-		z-index: 10;
-		color: var(--t);
-
-		& .bla-bla {
-			margin-bottom: 50vh;
-			text-align: center;
-			font-size: 40px;
-			font-weight: bold;
-		}
-
-		& div {
-			width: 100%;
-			font-size: 200px;
-			font-weight: bold;
-			text-align: center;
-			font-family: FontHead;
-
-			& p{
-				font-family: inherits;
-				font-size: inherits;
-			}
-		}
-		& div:not(:last-child){
-			margin-bottom: 70vh;
-		}
-
-		& .inspired {
-			text-align: right;
-		}
-
-		& .focused {
-			text-align: left;
-			margin-bottom: 40vh;
-		}
-	}
-
-
-	& .test-sticky-imgs {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		overflow: hidden;
-		z-index: 1;
-
-		& .test-sticky-imgs-zoom{
-			width: 100vw;
-			height: 100vh;
-			scale: 1.5;
-			overflow: hidden;
-
-			& .test-sticky-imgs-move{
-				position: relative;
-				top: -50vh;
-				width: 100%;
-				height: 150vh;
-				overflow: hidden;
-
-				& img {
-					position: absolute;
-					width: auto;
-					height: 100%;
-					top: 50%;
-					left: 50%;
-					translate: -50% -50%;
-				}
-			}
-		}
-	}
-}
+/*# sourceMappingURL=style-index.css.map */

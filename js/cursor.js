@@ -100,8 +100,3 @@ var onhovervideo = document.querySelectorAll(".onhovervideo");
 var onhoverlink = document.querySelectorAll(".onhoverlink");
 // console.log(contentcursor.length, onhovervideo.length, onhoverlink.length);
 
-
-
-
-
-

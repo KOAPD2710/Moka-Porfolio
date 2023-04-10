@@ -1,160 +1,129 @@
 .playground {
-	background-color: var(--b);
-	min-height: 100vh;
-	overflow: hidden;
-
-	.playground-container {
-		width: 100%;
-		height: auto;
-
-		.play-text {
-			display: inline-flex;			
-		}
-
-		.ground {
-			margin-top: -15%;
-			display: inline-flex;
-
-			& nav {
-				position: relative;
-				width: 200px;
-				margin: 0 10px;
-
-				& img {
-					position: relative;
-					width: 100%;
-					margin-top: 200px;
-				}
-			}
-		}
-
-	}
-	.text{
-			display: inline-block;
-			padding-left: 40px;
-
-			& nav {
-				margin-top: 150px;
-			}
-
-			& p {
-				font-size: 30px;
-				margin: 0px;
-			}
-
-			& span {
-				color: var(--gr);
-				font-style: italic;
-				display: inline;
-
-
-			}
-		}
-	.head {
-		font-family: FontHead;
-		font-size: 350px;
-		margin: 0px;
-	}
+  background-color: var(--b);
+  min-height: 100vh;
+  overflow: hidden;
+}
+.playground .playground-container {
+  width: 100%;
+  height: auto;
+}
+.playground .playground-container .play-text {
+  display: inline-flex;
+}
+.playground .playground-container .ground {
+  margin-top: -15%;
+  display: inline-flex;
+}
+.playground .playground-container .ground nav {
+  position: relative;
+  width: 200px;
+  margin: 0 10px;
+}
+.playground .playground-container .ground nav img {
+  position: relative;
+  width: 100%;
+  margin-top: 200px;
+}
+.playground .text {
+  display: inline-block;
+  padding-left: 40px;
+}
+.playground .text nav {
+  margin-top: 150px;
+}
+.playground .text p {
+  font-size: 30px;
+  margin: 0px;
+}
+.playground .text span {
+  color: var(--gr);
+  font-style: italic;
+  display: inline;
+}
+.playground .head {
+  font-family: FontHead;
+  font-size: 350px;
+  margin: 0px;
 }
 
-.project{
-	position: relative;
-	width: 100%;
-	height: auto;
-	background-color: var(--t);
-	color: var(--b);
-
-	& .project-sticky-text {
-		position: absolute;
-		display: block;
-		width: 100vw;
-		top: 50vh;
-		left: 0;
-		z-index: 1;
-		overflow: hidden;
-
-		& .text-fill, & .text-stroke {
-			display: block;
-			width: auto;
-			height: 200px;
-			overflow-y: hidden;
-			overflow-x: inherit;
-		}
-
-		& .text-fill {
-			position: relative;
-
-			& div{
-				position: relative;
-				display: flex;
-				width: auto;
-				gap: 10rem;
-			}
-		}
-
-		& .text-stroke {
-
-			& div{
-				display: flex;
-				gap: 10rem;
-
-				& span{
-					letter-spacing: 5px;
-					color: var(--t);
-					text-shadow:
-						1px 	1px 	#000,
-						-1px 	-1px 	#000,
-						1px 	-1px 	#000,
-						-1px 	1px 	#000,
-						2px		0 		#000,
-						0 		2px 	#000,
-						-2px 	0 		#000,
-						0 		-2px 	#000;
-
-				}
-			}
-		}
-
-		& span {
-			display: inline;
-			white-space: nowrap;
-			font-family: FontHead;
-			font-size: 200px;
-			font-weight: bold;
-			margin: 0px;
-			letter-spacing: 1px;
-			margin-top: -65px;
-		}
-	}
-
-	.showreel-container {
-		position: relative;
-		padding-top: 100vh;
-		padding-bottom: 25vh;
-		z-index: 10;
-
-		& div {
-			min-width: 350px;
-			width: 70%;
-			max-width: 1300px;
-
-			& img, & video {
-				width: 100%;
-/*				box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);*/
-			}
-		}
-		& div:not(:last-child) {
-			margin-bottom: 90vh;
-		}
-		& div:nth-child(1),  & div:nth-child(4){
-			margin-left: auto;
-			margin-right: auto;
-		}
-		& div:nth-child(2) {
-			margin-left: auto;
-		}
-		& div:nth-child(3) {
-			margin-right: auto;
-		}
-	}
+.project {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: var(--t);
+  color: var(--b);
 }
+.project .project-sticky-text {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  top: 50vh;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+.project .project-sticky-text .text-fill, .project .project-sticky-text .text-stroke {
+  display: block;
+  width: auto;
+  height: 200px;
+  overflow-y: hidden;
+  overflow-x: inherit;
+}
+.project .project-sticky-text .text-fill {
+  position: relative;
+}
+.project .project-sticky-text .text-fill div {
+  position: relative;
+  display: flex;
+  width: auto;
+  gap: 10rem;
+}
+.project .project-sticky-text .text-stroke div {
+  display: flex;
+  gap: 10rem;
+}
+.project .project-sticky-text .text-stroke div span {
+  letter-spacing: 5px;
+  color: var(--t);
+  text-shadow: 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000;
+}
+.project .project-sticky-text span {
+  display: inline;
+  white-space: nowrap;
+  font-family: FontHead;
+  font-size: 200px;
+  font-weight: bold;
+  margin: 0px;
+  letter-spacing: 1px;
+  margin-top: -65px;
+}
+.project .showreel-container {
+  position: relative;
+  padding-top: 100vh;
+  padding-bottom: 25vh;
+  z-index: 10;
+}
+.project .showreel-container div {
+  min-width: 350px;
+  width: 70%;
+  max-width: 1300px;
+}
+.project .showreel-container div img, .project .showreel-container div video {
+  width: 100%;
+  /*				box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);*/
+}
+.project .showreel-container div:not(:last-child) {
+  margin-bottom: 90vh;
+}
+.project .showreel-container div:nth-child(1), .project .showreel-container div:nth-child(4) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.project .showreel-container div:nth-child(2) {
+  margin-left: auto;
+}
+.project .showreel-container div:nth-child(3) {
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style-work.css.map */

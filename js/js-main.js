@@ -1,75 +1,70 @@
-function pageTransition() {
-	var tl = gsap.timeline();
-
-	tl.to("ul#transition li", {
-		duration: .5,
-		scaleY: 1,
-		transformOrigin: "bottom left",
-		stagger: .2,
-		ease: Power3.easeOut,
-	}),
-	tl.to("ul#transition li", {
-		duration: .5,
-		scaleY: 0 ,
-		transformOrigin: "bottom left",
-		stagger: .1,
-		delay: .1,
-		ease: Power1.easeInOut,
+function pageInTransition() {
+	gsap.from('ul#curtain li', {
+		scaleY: 2,
+		duration: 1,
+		ease: Power2.Out,
+		stagger: {
+			from: "random",
+			amount: .2
+		}
 	})
 }
 
-function contentAnitamtion() {
-	gsap.from(".nav-container .nav-logo p", 1.5, {
-		y: -300,
-		ease: Elastic.easeOut,
-		stagger: 0.05,
-	});
-	gsap.from(".nav-container .nav-barnav", 2, {
-		y: -250,
-		ease: Elastic.easeOut,
-		delay: 0.1,
-		stagger: 0.1,
-	});
-	gsap.from(".intro-container .intro", 2, {
-		opacity: 0,
-		y: 200,
-		ease: Power3.easeOut,
-	});
+function pageOutTransition() {
+	gsap.to('ul#curtain li', {
+		scaleY: 2,
+		duration: .8,
+		ease: Power4.Out,
+		stagger: {
+			from: "random",
+			amount: .2
+		}
+	})
+	gsap.from('*', {
+		background: "#FFF4E6 !important",
+		duration: .5
+	})
 }
 
-function delay(n) {
-	n = n || 2000;
-	return new Promise((done) => {
-		setTimeout(() => {
-			done();
-		}, n);
-	});
-}
+$(document).ready(function(e) {
+	pageInTransition();
+	// Select all a tags
+	const links = document.querySelectorAll("a[prefetch]");
 
-
-$(document).ready(function(){
-
-	barba.init({
-		sync: true,
-
-		transitions: [
-			{	
-				name: "index",
-				namespaces: "home",
-				async leave(data) {
-					const done = this.async();
-
-					pageTransition();
-					await delay(1000);
-					done();
-				},
-				async enter(data) {
-					contentAnitamtion();
-				},
-				async once(data) {
-					contentAnitamtion();
-				}
-			}
-		]
+	// Loop through each a tag
+	links.forEach((link) => {
+		// Add click event listener
+		link.addEventListener("click", function (e) {
+			pageOutTransition()
+			// Prevent default behavior
+			e.preventDefault();
+			// Get the href attribute value
+			const href = this.getAttribute("href");
+			const prefetchLink = document.createElement('link');
+			prefetchLink.rel = 'prefetch';
+			prefetchLink.href = href;
+			document.head.appendChild(prefetchLink);
+			// Delay for 500ms
+			setTimeout(() => {
+				// Redirect to the href value
+				window.location.href = href;
+			}, 1000);
+		});
 	});
 })
+
+
+
+
+
+
+// document.querySelectorAll('a').forEach(link => {
+//   link.addEventListener('click', () => {
+//   	pageOutTransition();
+//     const href = link.getAttribute('href');
+//     const prefetchLink = document.createElement('link');
+//     prefetchLink.rel = 'prefetch';
+//     prefetchLink.href = href;
+//     document.head.appendChild(prefetchLink);
+//   });
+// });
