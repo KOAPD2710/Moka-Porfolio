@@ -12,7 +12,6 @@ function index() {
 			end: "bottom 70%",
 			scrub: true,
 			markers: false,
-			id: "zoom",
 		},
 		scale: "1.7",
 	});
@@ -24,7 +23,6 @@ function index() {
 			end: "bottom 0%",
 			scrub: true,
 			markers: false,
-			id: "move",
 		},
 		y: () => "+=" + 50*height/100,
 	});
@@ -194,12 +192,11 @@ function index() {
 			markers: false,
 		},
 	});
-	gsap.to(".section5 .test-sticky-imgs-move", {
+	gsap.from(".section5 .test-sticky-imgs-move", {
 		scrollTrigger: {
 			trigger: ".section5",
 			start: "top bottom",
-			endTrigger: ".section5 .content .curious",
-			end: "top bottom",
+			end: "top top",
 			scrub: 1,
 			markers: false,
 		},
@@ -221,7 +218,7 @@ function index() {
 	gsap.from(".section5 .test-sticky-imgs img", {
 		scrollTrigger: {
 			trigger: ".section5",
-			start: "-300px top",
+			start: "top center",
 			end: "top top",
 			scrub: 1,
 			markers: false,

@@ -328,7 +328,7 @@ body {
 }
 .section5 .test-sticky-imgs .test-sticky-imgs-zoom .test-sticky-imgs-move {
   position: relative;
-  top: -50vh;
+  top: -25vh;
   width: 100%;
   height: 150vh;
   overflow: hidden;
@@ -450,6 +450,7 @@ body {
   bottom: 0;
   left: 50%;
   translate: -50% 0;
+  opacity: 0;
 }
 .footer .svg-path .flower {
   position: absolute;
