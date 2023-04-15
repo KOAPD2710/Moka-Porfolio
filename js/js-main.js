@@ -26,8 +26,29 @@ function pageOutTransition() {
 	})
 }
 
+function reSize() {
+	var width = $(window).innerWidth(),
+		height = $(window).innerHeight();
+	console.log(width, height);
+	if (width >= height) {
+		$("#horizontal-screen").css("display", "block");
+		$("#vertical-screen").css("display", "none");
+		console.log("horizontal-screen");
+	} else {
+		$("#horizontal-screen").css("display", "none");
+		$("#vertical-screen").css("display", "block");
+		console.log("vertical-screen");
+	}
+}
+
+
+window.addEventListener("resize", () => {
+	reSize()
+});
+
 $(document).ready(function(e) {
 	pageInTransition();
+	reSize();
 	// Select all a tags
 	const links = document.querySelectorAll("a[prefetch]");
 

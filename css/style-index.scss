@@ -28,14 +28,11 @@ body {
 	position: relative;
 	display: block;
 	width: 100%;
-	height: 100vh;
 	background: transparent;
 	color: var(--b);
 
 	.head {
-		position: absolute;
-		top: 0;
-		left: 0;
+		position: relative;
 		display: flex;
 		width: 100%;
 		flex-direction: row;
@@ -44,10 +41,9 @@ body {
 	}
 
 	.marquee-container {
-		position: absolute;
+		position: relative;
 		display: flex;
 		flex-direction: row;
-		bottom: -50px;
 		width: 100vw;
 		overflow: hidden;
 
@@ -72,9 +68,13 @@ body {
 		}	
 	}
 	.content {
+		position: relative;
 		display: flex;
 		height: 100%;
 		flex-direction: row;
+		margin-top: 20vh;
+		margin-bottom: 20vh;
+
 		p {
 			margin-bottom: 50px;
 			max-width: 600px;
@@ -220,15 +220,13 @@ body {
 	position: relative;
 	display: block;
 	width: 100%;
-	height: 100vh;
-	background: var(--t);
-	color: var(--b);
+	color: var(--t);
+
 
 	.marquee-container {
-		position: absolute;
+		position: relative;
 		display: flex;
 		flex-direction: row;
-		bottom: -50px;
 		width: 100vw;
 		overflow: hidden;
 
@@ -258,9 +256,11 @@ body {
 		display: flex;
 		height: 100%;
 		flex-direction: row;
+		margin-bottom: 20vh;
 
 		.left {
 			justify-content: center;
+			padding-top: calc(50vh + 200px);
 
 			img {
 				max-width: 800px;
@@ -275,8 +275,12 @@ body {
 		}
 		.right {
 			flex-direction: column;
-			justify-content: center;
 			align-items: flex-start;
+
+			.sticky {
+				position: sticky;
+				top: 40vh;
+			}
 
 			p {
 				margin-bottom: 50px;
@@ -315,7 +319,7 @@ body {
 
 		div {
 			width: 100%;
-			font-size: 150px;
+			font-size: 100px;
 			font-weight: normal;
 			text-align: center;
 			font-family: FontHead;

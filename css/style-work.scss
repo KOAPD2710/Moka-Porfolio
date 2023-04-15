@@ -1,160 +1,157 @@
-.playground {
-	background-color: var(--b);
-	min-height: 100vh;
-	overflow: hidden;
+.section1 {
+	position: relative;
+	display: block;
+	align-items: center;
+	min-height: 250vh;
+
+	.sticky {
+		position: sticky;
+		display: flex;
+		top: 0;
+		width: 100vw;
+		min-height: 100vh;
+		align-items: center;
+		overflow: hidden;
+	}
 
 	.playground-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		height: auto;
 
 		.play-text {
-			display: inline-flex;			
+			display: inline-flex;
+			justify-content: flex-start;
 		}
 
 		.ground {
-			margin-top: -15%;
 			display: inline-flex;
+			justify-content: flex-end;
 
-			& nav {
+			nav {
 				position: relative;
-				width: 200px;
+				display: flex;
+				align-items: center;
+				width: 150px;
 				margin: 0 10px;
+				padding-top: 6%;
 
-				& img {
+				img {
 					position: relative;
 					width: 100%;
-					margin-top: 200px;
 				}
 			}
 		}
-
-	}
-	.text{
-			display: inline-block;
-			padding-left: 40px;
-
-			& nav {
-				margin-top: 150px;
-			}
-
-			& p {
-				font-size: 30px;
-				margin: 0px;
-			}
-
-			& span {
-				color: var(--gr);
-				font-style: italic;
-				display: inline;
-
-
-			}
-		}
-	.head {
-		font-family: FontHead;
-		font-size: 350px;
-		margin: 0px;
-	}
-}
-
-.project{
-	position: relative;
-	width: 100%;
-	height: auto;
-	background-color: var(--t);
-	color: var(--b);
-
-	& .project-sticky-text {
-		position: absolute;
-		display: block;
-		width: 100vw;
-		top: 50vh;
-		left: 0;
-		z-index: 1;
-		overflow: hidden;
-
-		& .text-fill, & .text-stroke {
-			display: block;
-			width: auto;
-			height: 200px;
-			overflow-y: hidden;
-			overflow-x: inherit;
-		}
-
-		& .text-fill {
-			position: relative;
-
-			& div{
-				position: relative;
-				display: flex;
-				width: auto;
-				gap: 10rem;
-			}
-		}
-
-		& .text-stroke {
-
-			& div{
-				display: flex;
-				gap: 10rem;
-
-				& span{
-					letter-spacing: 5px;
-					color: var(--t);
-					text-shadow:
-						1px 	1px 	#000,
-						-1px 	-1px 	#000,
-						1px 	-1px 	#000,
-						-1px 	1px 	#000,
-						2px		0 		#000,
-						0 		2px 	#000,
-						-2px 	0 		#000,
-						0 		-2px 	#000;
-
-				}
-			}
-		}
-
-		& span {
-			display: inline;
-			white-space: nowrap;
+		.head {
 			font-family: FontHead;
-			font-size: 200px;
-			font-weight: bold;
+			font-size: 250px;
 			margin: 0px;
-			letter-spacing: 1px;
-			margin-top: -65px;
+			text-transform: none;
+		}
+		.head.y {
+			margin-left: -15px;
 		}
 	}
 
-	.showreel-container {
-		position: relative;
-		padding-top: 100vh;
-		padding-bottom: 25vh;
-		z-index: 10;
+	.text {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		translate: -50% 0;
+		width: 450px;
+		z-index: 99;
 
-		& div {
-			min-width: 350px;
-			width: 70%;
-			max-width: 1300px;
-
-			& img, & video {
-				width: 100%;
-/*				box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);*/
+		p {
+			margin: 0;
+			span {
+				color: var(--gr);
 			}
 		}
-		& div:not(:last-child) {
-			margin-bottom: 90vh;
+	}
+
+}
+.section2 {
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: 500vh;
+
+	.sticky-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		.sticky-text {
+			position: sticky;
+			top: -1px;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-top: 10vh;
+			padding-bottom: 10vh;
+
+			.content-container{
+				--h: 250px;
+				height: var(--h);
+				// overflow: hidden;
+
+				.marquee-container {
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					gap: 150px;
+					width: 100vw;
+					overflow: hidden;
+
+					.marquee-content {
+						position: relative;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						// background: orange;
+
+						p {
+							position: relative;
+							font-family: FontHead;
+							font-size: 250px;
+							margin-top: calc(var(--h)*(-.5/2));
+							margin-bottom: calc(var(--h)*(-.5/2));
+						}
+					}	
+				}
+			}
+			
+			.fill-text {
+				color: var(--b);
+			}
+			.stroke-text {
+				color: var(--t);
+				text-shadow:
+					1px 0px var(--b),
+					1px 1px var(--b),
+					0px 1px var(--b),
+					-1px 1px var(--b),
+					-1px 0px var(--b),
+					-1px -1px var(--b),
+					0px -1px var(--b),
+					1px -1px var(--b);
+			}
+
 		}
-		& div:nth-child(1),  & div:nth-child(4){
-			margin-left: auto;
-			margin-right: auto;
-		}
-		& div:nth-child(2) {
-			margin-left: auto;
-		}
-		& div:nth-child(3) {
-			margin-right: auto;
-		}
+	}
+	
+	.content {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .2);
 	}
 }

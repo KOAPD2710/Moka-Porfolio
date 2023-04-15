@@ -99,6 +99,8 @@ ul#curtain li {
   margin: 0px;
   padding: 0px;
   display: flex;
+  height: 100%;
+  align-items: center;
   gap: 2rem;
 }
 .nav-container .nav-link .nav-bar li {

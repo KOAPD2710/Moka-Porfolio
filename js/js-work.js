@@ -4,158 +4,161 @@ function work() {
 
 	gsap.defaults({ease: "none",duration: 2});
 
-	gsap.to(".project .project-sticky-text", {
+
+	gsap.to('.section1 .play-text .head.p', {
 		scrollTrigger: {
-			trigger: ".project-sticky-text",
-			start: "center center",
-			endTrigger: ".project",
-			end: "bottom bottom",
-			pin: ".project .project-sticky-text",
-			markers: true,
-			id: "project-sticky-text",
-		}
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 1,
+			markers: false,
+		},
+		x: () => "+=" + width
+	})
+	gsap.to('.section1 .play-text .head.l', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 2,
+			markers: false,
+		},
+		x: () => "+=" + width
+	})
+	gsap.to('.section1 .play-text .head.a', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 3,
+			markers: false,
+		},
+		x: () => "+=" + width
+	})
+	gsap.to('.section1 .play-text .head.y', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 2,
+			markers: false,
+		},
+		x: () => "+=" + width
+	})
+	gsap.to('.section1 .ground .head.g', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 1,
+			markers: false,
+		},
+		x: () => "+=" + -width
+	})
+	gsap.to('.section1 .ground .head.r', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 2,
+			markers: false,
+		},
+		x: () => "+=" + -width
+	})
+	gsap.to('.section1 .ground .head.nav', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 3,
+			markers: false,
+		},
+		x: () => "+=" + -width
+	})
+	gsap.to('.section1 .ground .head.u', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 1,
+			markers: false,
+		},
+		x: () => "+=" + -width
+	})
+	gsap.to('.section1 .ground .head.n', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 2,
+			markers: false,
+		},
+		x: () => "+=" + -width
+	})
+	gsap.to('.section1 .ground .head.d', {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "115% bottom",
+			scrub: 1,
+			markers: false,
+		},
+		x: () => "+=" + -width
+	})
+	// gsap.from('.section1 .text', {
+	// 	scrollTrigger: {
+	// 		trigger: ".section1",
+	// 		start: "center center",
+	// 		// start: () => "+=" + , 
+	// 		end: "bottom center",
+	// 		scrub: true,
+	// 		markers: true
+	// 	},
+	// 	y: () => "+=" + -.5*width
+	// })
+
+	var sc1sc2 = ({
+		trigger: ".section2",
+		start: "top 75%",
+		end: "top 50%",
+		scrub: 1,
+		markers: false
 	})
 
-	// const marquee = -240;
-	// var texttl1 = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		trigger: ".test .showreel-container .showreel1",
-	// 		start: "bottom center",
-	// 		end: "bottom top",
-	// 		scrub: true,
-	// 		markers: false,
-	// 		id: "sticky-text-div",
-	// 	},
-	// });
-	// var texttl2 = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		trigger: ".test .showreel-container .showreel2",
-	// 		start: "bottom center",
-	// 		end: "bottom top",
-	// 		scrub: true,
-	// 		markers: false,
-	// 		id: "sticky-text-div",
-	// 	},
-	// });
-	// var texttl3 = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		trigger: ".test .showreel-container .showreel3",
-	// 		start: "bottom center",
-	// 		end: "bottom top",
-	// 		scrub: true,
-	// 		markers: false,
-	// 		id: "sticky-text-div",
-	// 	},
-	// });
-	// texttl1.to(".test .test-sticky-text .text",{
-	// 	y: "+=-240",
-	// });
-	// texttl2.to(".test .test-sticky-text .text", {	
-	// 	y: "+=-240",
-	// });
-	// texttl3.to(".test .test-sticky-text .text", {	
-	// 	y: "+=-240",
-	// });
-
-	// var textmove = ($(".test .test-sticky-text .text-fill .text1 h3").width()*$(".test .test-sticky-text .text-fill .text1 h3").length - 50*vw);
-	// var trigger1 = ({
-	// 		trigger: ".test .test-sticky-text .text-fill .text1",
-	// 		start: "top bottom",
-	// 		endTrigger: ".test .showreel-container .showreel2",
-	// 		end: "bottom bottom",
-	// 		scrub: 1,
-	// 		markers: false,
-	// 		id: "sticky-text-1",
-	// });
-	// var trigger2 = ({
-	// 		trigger: ".test .showreel-container .showreel1",
-	// 		start: "bottom center",
-	// 		endTrigger: ".test .showreel-container .showreel2",
-	// 		end: "bottom top",
-	// 		scrub: 1,
-	// 		markers: false,
-	// 		id: "sticky-text-2",
-	// });
-	// var trigger3 = ({
-	// 		trigger: ".test .showreel-container .showreel2",
-	// 		start: "bottom center",
-	// 		endTrigger: ".test .showreel-container .showreel3",
-	// 		end: "bottom top",
-	// 		scrub: 1,
-	// 		markers: false,
-	// 		id: "sticky-text-3",
-	// });
-	// var triggerlast = ({
-	// 		trigger: ".test .showreel-container .showreel3",
-	// 		start: "top bottom",
-	// 		endTrigger: ".test",
-	// 		end: "bottom top",
-	// 		scrub: 1,
-	// 		markers: false,
-	// 		id: "sticky-text-4",
-	// });
-	// gsap.timeline().to(".test .test-sticky-text .text-fill .text1 h3",{
-	// 	scrollTrigger: trigger1,
-	// 	x: () => "+=" + -textmove,
-	// }).to(".test .test-sticky-text .text-stroke .text1 h3",{
-	// 	scrollTrigger: trigger1,
-	// 	x: () => "+=" + textmove,
-	// });
-	// gsap.timeline().to(".test .test-sticky-text .text-fill .text2 h3",{
-	// 	scrollTrigger: trigger2,
-	// 	x: () => "+=" + -textmove,
-	// }).to(".test .test-sticky-text .text-stroke .text2 h3",{
-	// 	scrollTrigger: trigger2,
-	// 	x: () => "+=" + textmove,
-	// });
-	// gsap.timeline().to(".test .test-sticky-text .text-fill .text3 h3",{
-	// 	scrollTrigger: trigger3,
-	// 	x: () => "+=" + -textmove,
-	// }).to(".test .test-sticky-text .text-stroke .text3 h3",{
-	// 	scrollTrigger: trigger3,
-	// 	x: () => "+=" + textmove,
-	// });
-	// gsap.timeline().to(".test .test-sticky-text .text-fill .text4 h3",{
-	// 	scrollTrigger: triggerlast,
-	// 	x: () => "+=" + -textmove,
-	// }).to(".test .test-sticky-text .text-stroke .text4 h3",{
-	// 	scrollTrigger: triggerlast,
-	// 	x: () => "+=" + textmove,
-	// });
+	gsap.fromTo("body", {
+		background: "#151515"
+	}, {
+		scrollTrigger: sc1sc2,
+		background: "#FFF4E6"
+	})
+	gsap.to(".section1 .text", {
+		scrollTrigger: sc1sc2,
+		color: "#151515"
+	})
 };
 
-function workAlign(){
+function marquee() {
+	var mqgap = 100,
+		width = $(window).innerWidth(),
+		height = $(window).innerHeight();
 
-	var naviheight 		= $(".nav-container").height(),
-		navlinkheight	= $(".nav-bar").height();
-	$(".nav-bar").css("margin-top", ' ' + (naviheight - navlinkheight)/2 + 'px ');
-	$(".nav-bar").css("margin-bottom", ' ' + (naviheight - navlinkheight)/2 + 'px ');
-
-	var playgroundcontainer = $(".playground .playground-container").height(),
-		playground = $(".playground").height();
-	$(".playground .playground-container").css("margin-top", ' ' + (playground-playgroundcontainer)/2 + 'px ');
-
-	// var width = $(window).innerWidth(),
-	// 	height = $(window).innerHeight(),
-	// 	text1 = $(".test .text-stroke .text1").width(),
-	// 	text1width = $(".test .text-stroke .text1 h3").width()*$(".test .text-stroke .text1 h3").length,
-	// 	text2 = $(".test .text-stroke .text2").width(),
-	// 	text2width = $(".test .text-stroke .text2 h3").width()*$(".test .text-stroke .text2 h3").length,
-	// 	text3 = $(".test .text-stroke .text3").width(),
-	// 	text3width = $(".test .text-stroke .text3 h3").width()*$(".test .text-stroke .text3 h3").length;
-	// 	text4 = $(".test .text-stroke .text4").width(),
-	// 	text4width = $(".test .text-stroke .text4 h3").width()*$(".test .text-stroke .text4 h3").length;
-	// $(".test .text-stroke .text1").css("margin-left", ' ' + -(text1width - .5*width) + 'px ');
-	// $(".test .text-stroke .text2").css("margin-left", ' ' + -(text2width - .5*width) + 'px ');
-	// $(".test .text-stroke .text3").css("margin-left", ' ' + -(text3width - .5*width) + 'px ');
-	// $(".test .text-stroke .text4").css("margin-left", ' ' + -(text4width - .5*width) + 'px ');
+	$(".section2 .marquee-content").css('padding-left', ' ' + mqgap/2 +  'px ');
+	$(".section2 .marquee-content").css('padding-right', ' ' + mqgap/2 +  'px ');
+	gsap.to(".section2 .marquee-content", {
+		x: () => "+=" + -(width+mqgap),
+		repeat: -1,
+		duration: 5,
+		ease: "none"
+	})
 }
 
-$(document).ready(function(){
-	workAlign();
-	window.addEventListener('load', function(){
+window.addEventListener('load', function(){
+	work();
+	marquee();
+
+	window.addEventListener('resize', function() {
 		work();
-		console.log("fuck")
+		marquee();
 	})
 })
 

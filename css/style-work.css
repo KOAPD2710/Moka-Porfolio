@@ -1,129 +1,132 @@
-.playground {
-  background-color: var(--b);
+.section1 {
+  position: relative;
+  display: block;
+  align-items: center;
+  min-height: 250vh;
+}
+.section1 .sticky {
+  position: sticky;
+  display: flex;
+  top: 0;
+  width: 100vw;
   min-height: 100vh;
+  align-items: center;
   overflow: hidden;
 }
-.playground .playground-container {
+.section1 .playground-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
 }
-.playground .playground-container .play-text {
+.section1 .playground-container .play-text {
   display: inline-flex;
+  justify-content: flex-start;
 }
-.playground .playground-container .ground {
-  margin-top: -15%;
+.section1 .playground-container .ground {
   display: inline-flex;
+  justify-content: flex-end;
 }
-.playground .playground-container .ground nav {
+.section1 .playground-container .ground nav {
   position: relative;
-  width: 200px;
+  display: flex;
+  align-items: center;
+  width: 150px;
   margin: 0 10px;
+  padding-top: 6%;
 }
-.playground .playground-container .ground nav img {
+.section1 .playground-container .ground nav img {
   position: relative;
   width: 100%;
-  margin-top: 200px;
 }
-.playground .text {
-  display: inline-block;
-  padding-left: 40px;
-}
-.playground .text nav {
-  margin-top: 150px;
-}
-.playground .text p {
-  font-size: 30px;
-  margin: 0px;
-}
-.playground .text span {
-  color: var(--gr);
-  font-style: italic;
-  display: inline;
-}
-.playground .head {
+.section1 .playground-container .head {
   font-family: FontHead;
-  font-size: 350px;
+  font-size: 250px;
   margin: 0px;
+  text-transform: none;
+}
+.section1 .playground-container .head.y {
+  margin-left: -15px;
+}
+.section1 .text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 450px;
+  z-index: 99;
+}
+.section1 .text p {
+  margin: 0;
+}
+.section1 .text p span {
+  color: var(--gr);
 }
 
-.project {
+.section2 {
   position: relative;
-  width: 100%;
-  height: auto;
-  background-color: var(--t);
-  color: var(--b);
-}
-.project .project-sticky-text {
-  position: absolute;
   display: block;
   width: 100vw;
-  top: 50vh;
+  height: 500vh;
+}
+.section2 .sticky-container {
+  position: absolute;
+  top: 0;
   left: 0;
-  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.section2 .sticky-container .sticky-text {
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.section2 .sticky-container .sticky-text .content-container {
+  --h: 250px;
+  height: var(--h);
+}
+.section2 .sticky-container .sticky-text .content-container .marquee-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  width: 100vw;
   overflow: hidden;
 }
-.project .project-sticky-text .text-fill, .project .project-sticky-text .text-stroke {
-  display: block;
-  width: auto;
-  height: 200px;
-  overflow-y: hidden;
-  overflow-x: inherit;
-}
-.project .project-sticky-text .text-fill {
-  position: relative;
-}
-.project .project-sticky-text .text-fill div {
+.section2 .sticky-container .sticky-text .content-container .marquee-container .marquee-content {
   position: relative;
   display: flex;
-  width: auto;
-  gap: 10rem;
+  flex-direction: row;
+  align-items: center;
 }
-.project .project-sticky-text .text-stroke div {
-  display: flex;
-  gap: 10rem;
-}
-.project .project-sticky-text .text-stroke div span {
-  letter-spacing: 5px;
-  color: var(--t);
-  text-shadow: 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000;
-}
-.project .project-sticky-text span {
-  display: inline;
-  white-space: nowrap;
+.section2 .sticky-container .sticky-text .content-container .marquee-container .marquee-content p {
+  position: relative;
   font-family: FontHead;
-  font-size: 200px;
-  font-weight: bold;
-  margin: 0px;
-  letter-spacing: 1px;
-  margin-top: -65px;
+  font-size: 250px;
+  margin-top: calc(var(--h) * -0.25);
+  margin-bottom: calc(var(--h) * -0.25);
 }
-.project .showreel-container {
+.section2 .sticky-container .sticky-text .fill-text {
+  color: var(--b);
+}
+.section2 .sticky-container .sticky-text .stroke-text {
+  color: var(--t);
+  text-shadow: 1px 0px var(--b), 1px 1px var(--b), 0px 1px var(--b), -1px 1px var(--b), -1px 0px var(--b), -1px -1px var(--b), 0px -1px var(--b), 1px -1px var(--b);
+}
+.section2 .content {
   position: relative;
-  padding-top: 100vh;
-  padding-bottom: 25vh;
-  z-index: 10;
-}
-.project .showreel-container div {
-  min-width: 350px;
-  width: 70%;
-  max-width: 1300px;
-}
-.project .showreel-container div img, .project .showreel-container div video {
+  display: block;
   width: 100%;
-  /*				box-shadow: 6px 5px 15px rgba(0, 0, 0, .3);*/
-}
-.project .showreel-container div:not(:last-child) {
-  margin-bottom: 90vh;
-}
-.project .showreel-container div:nth-child(1), .project .showreel-container div:nth-child(4) {
-  margin-left: auto;
-  margin-right: auto;
-}
-.project .showreel-container div:nth-child(2) {
-  margin-left: auto;
-}
-.project .showreel-container div:nth-child(3) {
-  margin-right: auto;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style-work.css.map */

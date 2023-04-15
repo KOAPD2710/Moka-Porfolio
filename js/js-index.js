@@ -44,22 +44,6 @@ function index() {
 		ease: "none"
 	})
 
-	const colors2s3 = ({
-		trigger: ".section3",
-		start: "top 30%",
-		end: () => "+=" + 200,
-		markers: false,
-		scrub: .5,
-	})
-	gsap.to('.section2 .marquee-content p', {
-		scrollTrigger: colors2s3,
-		color: "#FFF4E6"
-	})
-	gsap.to('body', {
-		scrollTrigger: colors2s3,
-		background: "#151515"
-	})
-
 	var textexploreanimation = Power3.linear;
 	const textcontainertl = ({
 		trigger: ".section3",
@@ -161,7 +145,6 @@ function index() {
 		scale: 0,
 		stagger: .2,
 		duration: .8,
-		delay: .5,
 	});
 
 	var section4gap = 5*width/100,
@@ -182,6 +165,53 @@ function index() {
 		duration: 3,
 		ease: "none"
 	})
+	const colors2s3 = ({
+		trigger: ".section3",
+		start: "top 30%",
+		end: () => "+=" + 200,
+		markers: false,
+		scrub: .5,
+	})
+	const colors3s4 = ({
+		trigger: ".section4",
+		start: "top 30%",
+		end: () => "+=" + 200,
+		markers: false,
+		scrub: .5,
+	})
+	gsap.fromTo('body', {
+		background: "#FFF4E6",
+	}, {
+		scrollTrigger: {
+			trigger: ".section5",
+			start: "1% top",
+			end: "99% bottom",
+			markers: false,
+			scrub: true,
+		},
+		background: "#151515",
+	})
+	gsap.fromTo('body', {
+		background: "#151515",
+	}, {
+		scrollTrigger: colors3s4,
+		background: "#FFF4E6",
+	})
+	gsap.fromTo('body', {
+		background: "#FFF4E6"
+	}, {
+		scrollTrigger: colors2s3,
+		background: "#151515"
+	})
+
+	gsap.to('.section2 .marquee-content p', {
+		scrollTrigger: colors2s3,
+		color: "#FFF4E6"
+	})
+	gsap.to(".section4", {
+		scrollTrigger: colors3s4,
+		color: "#151515",
+	})
 
 	gsap.to(".section5 .test-sticky-imgs", {
 		scrollTrigger: {
@@ -200,6 +230,7 @@ function index() {
 			scrub: 1,
 			markers: false,
 		},
+		ease: Power2.out,
 		y: () => "+=" + 25*height/100,
 	});
 	gsap.to(".section5 .test-sticky-imgs-zoom", {
@@ -248,6 +279,7 @@ function index() {
 		opacity: 0,
 	})
 
+
 	var section6gap = 5*width/100,
 		sec6marqueewidth = $(".section6 .marquee-content").width()+section6gap*2;
 	$(".section6 .marquee-content").css('gap', ' ' + section6gap +  'px ');
@@ -264,6 +296,13 @@ function index() {
 		repeat: -1,
 		duration: 3,
 		ease: "none"
+	})
+
+	gsap.to('.footer .flower img', {
+		rotate: 360,
+		repeat: -1,
+		duration: 3,
+		ease: "none",
 	})
 }
 
@@ -323,19 +362,6 @@ function footersvg() {
 }
 
 window.addEventListener("resize", () => {
-	var width = $(window).innerWidth(),
-		height = $(window).innerHeight();
-	console.log(width, height);
-	if (width >= height) {
-		$("#horizontal-screen").css("display", "block");
-		$("#vertical-screen").css("display", "none");
-		console.log("horizontal-screen");
-	} else {
-		$("#horizontal-screen").css("display", "none");
-		$("#vertical-screen").css("display", "block");
-		console.log("vertical-screen");
-	}
-
 	footersvg();
 });
 
