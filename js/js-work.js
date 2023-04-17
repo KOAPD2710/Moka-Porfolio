@@ -10,7 +10,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 1,
+			scrub: 1.5,
 			markers: false,
 		},
 		x: () => "+=" + width
@@ -20,7 +20,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 2,
+			scrub: 1.8,
 			markers: false,
 		},
 		x: () => "+=" + width
@@ -30,7 +30,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 3,
+			scrub: 2.1,
 			markers: false,
 		},
 		x: () => "+=" + width
@@ -40,7 +40,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 2,
+			scrub: 1.9,
 			markers: false,
 		},
 		x: () => "+=" + width
@@ -50,7 +50,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 1,
+			scrub: 2.25,
 			markers: false,
 		},
 		x: () => "+=" + -width
@@ -60,7 +60,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 2,
+			scrub: 2.1,
 			markers: false,
 		},
 		x: () => "+=" + -width
@@ -70,7 +70,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 3,
+			scrub: 1.9,
 			markers: false,
 		},
 		x: () => "+=" + -width
@@ -80,7 +80,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 1,
+			scrub: 1.75,
 			markers: false,
 		},
 		x: () => "+=" + -width
@@ -90,7 +90,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 2,
+			scrub: 1.9,
 			markers: false,
 		},
 		x: () => "+=" + -width
@@ -100,7 +100,7 @@ function work() {
 			trigger: ".section1",
 			start: "top top",
 			end: "115% bottom",
-			scrub: 1,
+			scrub: 2.1,
 			markers: false,
 		},
 		x: () => "+=" + -width
@@ -120,7 +120,7 @@ function work() {
 	var sc1sc2 = ({
 		trigger: ".section2",
 		start: "top 75%",
-		end: "top 50%",
+		end: () => "+=" + 50,
 		scrub: 1,
 		markers: false
 	})
@@ -134,6 +134,82 @@ function work() {
 	gsap.to(".section1 .text", {
 		scrollTrigger: sc1sc2,
 		color: "#151515"
+	})
+
+	var sc2head = 180,
+		sc2time = sc2head/2,
+		sc2mq = $(".section2 .sticky-container .marquee-container"),
+		sc2timemq = $(".section2 .sticky-container .content-container .text"),
+		sc2start = "top 50%",
+		sc2end = "bottom 65%",
+		sc2timestart = "bottom 60%",
+		sc2timeend = () => "+=" + 100,
+		sc2scrub = 1,
+		sc2timescrub = 1.5,
+		sc2maker = true;
+
+	gsap.timeline().to(sc2mq, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .olipop span",
+			start: sc2start,
+			end: sc2end,
+			scrub: sc2scrub,
+			// markers: sc2maker,
+		},
+		y: () => "+=" + -(sc2head),
+	}).to(sc2timemq, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .olipop span",
+			start: sc2timestart,
+			end: sc2timeend,
+			scrub: sc2timescrub,
+			markers: sc2maker,
+		},
+		y: () => "+=" + -(sc2time),
+	}).fromTo(sc2mq, {
+		y: () => "+=" + -(sc2head),
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .savour span",
+			start: sc2start,
+			end: sc2end,
+			scrub: sc2scrub,
+			// markers: sc2maker,
+		},
+		y: () => "+=" + -(sc2head),
+	}).fromTo(sc2timemq, {
+		y: () => "+=" + -(sc2time),
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .savour span",
+			start: sc2timestart,
+			end: sc2timeend,
+			scrub: sc2timescrub,
+			// markers: sc2maker,
+		},
+		y: () => "+=" + -(sc2time),
+	}).fromTo(sc2mq, {
+		y: () => "+=" + -(sc2head),
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .proE span",
+			start: sc2start,
+			end: sc2end,
+			scrub: sc2scrub,
+			// markers: sc2maker,
+		},
+		y: () => "+=" + -(sc2head),
+	}).fromTo(sc2timemq, {
+		y: () => "+=" + -(sc2time),
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .proE span",
+			start: sc2timestart,
+			end: sc2timeend,
+			scrub: sc2timescrub,
+			// markers: sc2maker,
+		},
+		y: () => "+=" + -(sc2time),
 	})
 };
 
