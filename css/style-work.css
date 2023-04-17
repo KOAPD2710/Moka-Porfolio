@@ -128,23 +128,36 @@
   right: 110%;
 }
 .section2 .sticky-container .sticky-text .time-text {
+  position: relative;
   --time: calc(var(--h)/2);
   height: var(--time);
   color: var(--b);
   margin-top: 20px;
+  overflow: visible;
 }
-.section2 .sticky-container .sticky-text .time-text .text {
+.section2 .sticky-container .sticky-text .time-text .text-container {
   position: relative;
-  display: flex;
-  justify-content: flex-end;
+  display: block;
 }
-.section2 .sticky-container .sticky-text .time-text .text:nth-of-type(2n) {
-  justify-content: normal;
+.section2 .sticky-container .sticky-text .time-text .text-container .text {
+  position: absolute;
+  top: 0;
+  display: block;
+  padding-left: 5vw;
+  overflow: hidden;
 }
-.section2 .sticky-container .sticky-text .time-text p {
+.section2 .sticky-container .sticky-text .time-text .text-container .text p {
   font-size: var(--time);
   margin-top: calc(var(--time) * -0.35);
   margin-bottom: calc(var(--time) * -0.15);
+}
+.section2 .sticky-container .sticky-text .time-text .text-container .text:nth-of-type(2n-1) {
+  right: 0;
+  padding-left: 0;
+  padding-right: 5vw;
+}
+.section2 .sticky-container .sticky-text .time-text .text-container .text:nth-of-type(n) {
+  filter: hue-rotate(calc(var(--i) * 30deg));
 }
 .section2 .thumb-container {
   position: relative;
