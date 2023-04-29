@@ -170,8 +170,7 @@
 
 						p {
 							font-size: var(--time);
-							margin-top: calc(var(--time)*(-.7/2));
-							margin-bottom: calc(var(--time)*(-.3/2));
+							margin: 0;
 						}
 					}
 
@@ -179,9 +178,6 @@
 						right: 0;
 						padding-left: 0;
 						padding-right: 5vw;
-					}
-					.text:nth-of-type(n) {
-						filter: hue-rotate(calc(var(--i)*30deg));
 					}
 				}
 			}

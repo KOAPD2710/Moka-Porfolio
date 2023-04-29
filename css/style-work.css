@@ -148,16 +148,12 @@
 }
 .section2 .sticky-container .sticky-text .time-text .text-container .text p {
   font-size: var(--time);
-  margin-top: calc(var(--time) * -0.35);
-  margin-bottom: calc(var(--time) * -0.15);
+  margin: 0;
 }
 .section2 .sticky-container .sticky-text .time-text .text-container .text:nth-of-type(2n-1) {
   right: 0;
   padding-left: 0;
   padding-right: 5vw;
-}
-.section2 .sticky-container .sticky-text .time-text .text-container .text:nth-of-type(n) {
-  filter: hue-rotate(calc(var(--i) * 30deg));
 }
 .section2 .thumb-container {
   position: relative;

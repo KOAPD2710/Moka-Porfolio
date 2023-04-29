@@ -132,7 +132,7 @@ function work() {
 		sc2start = "top 50%",
 		sc2end = "bottom 65%",
 		sc2scrub = 1,
-		sc2maker = true,
+		sc2maker = false,
 		sc2ease = "Power3.inOut";
 
 
@@ -194,7 +194,6 @@ function work() {
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: true,
-			markers: false
 		},
 		xPercent: -100
 	}).fromTo(sc2text4p, {
@@ -205,7 +204,6 @@ function work() {
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: 1,
-			markers: false
 		},
 		x: 0
 	}).fromTo(sc2text2p, {
@@ -216,7 +214,6 @@ function work() {
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: true,
-			markers: false
 		},
 		xPercent: 100
 	}).fromTo(sc2text3p, {
@@ -227,7 +224,6 @@ function work() {
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: 1,
-			markers: true
 		},
 		x: 0
 	}).fromTo(sc2text1p, {
@@ -238,7 +234,6 @@ function work() {
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: true,
-			markers: false
 		},
 		xPercent: -100
 	}).fromTo(sc2text2p, {
@@ -249,7 +244,6 @@ function work() {
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: 1,
-			markers: false
 		},
 		x: 0
 	})
@@ -268,7 +262,7 @@ function marquee() {
 		sst1 = $(".section2 .banner .marquee-content").width()+mqless,
 		sst2 = $(".section2 .website .marquee-content").width()+mqless,
 		sst3 = $(".section2 .app .marquee-content").width()+mqless,
-		t1 = 5,
+		t1 = 8,
 		tf2 = (sf2*t1)/s1,
 		tf3 = (sf3*t1)/s1,
 		tf4 = (sf4*t1)/s1,
