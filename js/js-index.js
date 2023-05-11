@@ -354,7 +354,7 @@ function footersvg() {
 				end: .95,
 			},
 			ease: Power4.inOut,
-			yoyo: true,
+			// yoyo: true,
 			duration: bla/700,
 			repeat: -1,
 		})

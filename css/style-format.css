@@ -18,6 +18,10 @@
   display: none;
 }
 
+* img, * svg {
+  vertical-align: middle !important;
+}
+
 html, body {
   height: 100%;
   color: var(--t);
@@ -184,5 +188,3 @@ ul#curtain li {
   display: block;
   padding-left: 40%;
 }
-
-/*# sourceMappingURL=style-format.css.map */

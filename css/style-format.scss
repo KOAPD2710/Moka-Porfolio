@@ -15,6 +15,9 @@
 *::-webkit-scrollbar{
 	display: none;
 }
+*img, *svg {
+	vertical-align: middle !important;
+}
 html,body {
 	height: 100%;
 	color: var(--t);
