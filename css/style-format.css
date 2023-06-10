@@ -5,7 +5,8 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
   -moz-transform: perspective(1000px);
   -moz-transform-style: preserve-3d;
@@ -29,7 +30,8 @@ html, body {
   width: 100%;
   min-height: 100%;
   height: auto;
-  overscroll-behavior: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
   background-color: var(--b);
 }
 
@@ -74,11 +76,14 @@ main:not(.page-container) {
   height: calc(-10px + var(--w));
   background-color: var(--t);
   border-radius: 50%;
+  -webkit-transition: all 0.4s cubic-bezier(0.61, 1.57, 0.39, 1);
   transition: all 0.4s cubic-bezier(0.61, 1.57, 0.39, 1);
 }
 
 ul#curtain {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
   left: 0;
@@ -91,8 +96,10 @@ ul#curtain {
   list-style-type: none;
 }
 ul#curtain li {
-  transform: scaleY(0);
-  transform-origin: bottom center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
   background: var(--gr);
   width: 20%;
   height: 100%;
@@ -103,6 +110,8 @@ ul#curtain li {
   width: 100%;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 25px;
   z-index: 1000;
@@ -111,6 +120,8 @@ ul#curtain li {
   position: relative;
 }
 .nav-container .nav-logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .nav-container .nav-logo a p {
@@ -119,29 +130,36 @@ ul#curtain li {
   font-size: 60px;
   margin: 0px;
   color: var(--t);
+  -webkit-transition: translate 0.5s ease-in-out;
   transition: translate 0.5s ease-in-out;
 }
 .nav-container .nav-logo a .fragment {
   position: absolute;
   left: 39.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 65;
   overflow: hidden;
 }
 .nav-container .nav-logo a #point p {
-  transition-delay: 0.15s;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
 }
 .nav-container .nav-logo a #oka p {
   translate: -65px;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 .nav-container .nav-logo.hovered a #point p {
   translate: -65px;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 .nav-container .nav-logo.hovered a #oka p {
   translate: 0px;
-  transition-delay: 0.15s;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
 }
 .nav-container .nav-link {
   position: relative;
@@ -150,9 +168,13 @@ ul#curtain li {
 .nav-container .nav-link .nav-bar {
   margin: 0px;
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2rem;
 }
 .nav-container .nav-link .nav-bar li {
@@ -167,8 +189,13 @@ ul#curtain li {
 
 .foot-container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 100vh;
   background-color: var(--t);
@@ -194,6 +221,8 @@ ul#curtain li {
   padding-bottom: 40px;
 }
 .foot-container .footlink ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   font-size: 20px;
@@ -215,6 +244,7 @@ ul#curtain li {
   color: var(--gr);
   margin: 0 2px;
   text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .foot-container .footlink ul li.design_develop span:hover {
@@ -236,3 +266,4 @@ ul#curtain li {
   display: block;
   padding-left: 40%;
 }
+/*# sourceMappingURL=style-format.css.map */
