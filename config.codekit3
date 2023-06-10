@@ -216,6 +216,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/css\/style-savour.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/style-savour.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/css\/style-typo.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -302,6 +317,22 @@
       "oAP" : "\/fonts\/Benzin-Bold.ttf",
       "oF" : 0
     },
+    "\/fonts\/Foqha.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Foqha.otf",
+      "oF" : 0
+    },
+    "\/fonts\/Foqha.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Foqha.ttf",
+      "oF" : 0
+    },
     "\/fonts\/Neutra-Text-Book.otf" : {
       "cB" : 0,
       "ft" : 8192,
@@ -332,22 +363,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/fonts\/Neutra-Text-Italic.ttf",
-      "oF" : 0
-    },
-    "\/fonts\/Think-Bold.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/Think-Bold.otf",
-      "oF" : 0
-    },
-    "\/fonts\/Think-Bold.ttf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/Think-Bold.ttf",
       "oF" : 0
     },
     "\/imgs\/about-chatbox.svg" : {
@@ -526,12 +541,12 @@
     },
     "\/imgs\/shortcut.png" : {
       "ft" : 32768,
-      "iS" : 7630,
+      "iS" : 2624,
       "oA" : 0,
       "oAP" : "\/imgs\/shortcut.png",
       "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
+      "oIPL" : 0,
+      "opt" : 0,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
@@ -557,11 +572,31 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/imgs\/sticker2asaasaa.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/imgs\/sticker2asaasaa.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/imgs\/sticker3.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/imgs\/sticker3.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/imgs\/sticker3asasasa.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/imgs\/sticker3asasasa.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -577,6 +612,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/imgs\/sticker4asasas.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/imgs\/sticker4asasas.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/imgs\/sticker5.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -587,11 +632,41 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/imgs\/sticker5aaasa.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/imgs\/sticker5aaasa.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/imgs\/sticker6.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/imgs\/sticker6.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/imgs\/sticker6asdasas.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/imgs\/sticker6asdasas.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/imgs\/sticker121211.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/imgs\/sticker121211.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -769,6 +844,28 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/js\/js-savour-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-savour-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/js-savour.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-savour-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/js\/js-work-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -907,6 +1004,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/work.html",
+      "oF" : 0
+    },
+    "\/works-savour.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/works-savour.html",
       "oF" : 0
     }
   },

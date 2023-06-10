@@ -361,30 +361,23 @@ function footersvg() {
 	}
 }
 
-window.addEventListener("resize", () => {
-	footersvg();
-});
+function sticker() {
 
-
-window.addEventListener('load', function() {
-	index();
-	footersvg();
-
-	var mouse = {
-		x: 0,
-		y: 0
-	};
+	var scroll = $(window).scrollTop(),
+		cx = window.innerWidth,
+		cy = window.innerHeight;
 
 	$(window).mousemove(function(event) {
-		var scroll = $(window).scrollTop(),
-			cx = window.innerWidth,
-			cy = window.innerHeight;
+
 		dx = event.pageX;
 		dy = event.pageY - scroll;
 
+		var ease = Power4.inOut,
+			dur = .3;
+
 		var rotatest1 = -21,
-			st1h = $(".section3 .text-container .sticker1 img").height(),
-			st1w = $(".section3 .text-container .sticker1 img").width(),
+			st1h = $(".section3 .text-container .sticker1 svg").height(),
+			st1w = $(".section3 .text-container .sticker1 svg").width(),
 			st1t = $(".section3 .text-container .sticker1").offset().top - scroll,
 			st1l = $(".section3 .text-container .sticker1").offset().left;
 		sqrtst1 = (Math.sqrt(Math.pow(st1w, 2)+Math.pow(st1h, 2)));
@@ -397,15 +390,44 @@ window.addEventListener('load', function() {
 		radiusst1 = Math.sqrt(Math.pow(tiltxst1, 2) + Math.pow(tiltyst1, 2));
 		constst1 = 60;
 		degreest1 = constst1*radiusst1;
-		TweenMax.to(".section3 .text-container .sticker1 img", {
+		gsap.to(".section3 .text-container .sticker1 svg", {
 			transform: 'rotate3d(' + (constst1/2)*(tiltxst1) + ', ' + (constst1/2)*(tiltyst1) + ', 0, ' + degreest1 + 'deg)',
-			ease: Power4.inOut,
-			duration: .3,
+			ease: ease,
+			duration: dur,
+		});
+
+		t1S1 = $(".section3 .text-container .sticker1 svg .art");
+		t2S1 = $(".section3 .text-container .sticker1 svg .direction");
+		s1S1 = $(".section3 .text-container .sticker1 svg .star1");
+		s2S1 = $(".section3 .text-container .sticker1 svg .star2");
+		gsap.to( t1S1, {
+			x: 134.7 - tiltyst1*50,
+			y: 75.61 + tiltxst1*50,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( t2S1, {
+			x: 74.82 - tiltyst1*30,
+			y: 117.53 + tiltxst1*30,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s1S1, {
+			x: -tiltyst1*60,
+			y: tiltxst1*60,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s2S1, {
+			x: -tiltyst1*20,
+			y: tiltxst1*20,
+			ease: ease,
+			duration: dur,
 		});
 		
 		var rotatest2 = 26,
-			st2h = $(".section3 .text-container .sticker2 img").height(),
-			st2w = $(".section3 .text-container .sticker2 img").width(),
+			st2h = $(".section3 .text-container .sticker2 svg").height(),
+			st2w = $(".section3 .text-container .sticker2 svg").width(),
 			st2t = $(".section3 .text-container .sticker2").offset().top - scroll,
 			st2l = $(".section3 .text-container .sticker2").offset().left;
 		sqrtst2 = (Math.sqrt(Math.pow(st2w, 2)+Math.pow(st2h, 2)));
@@ -418,15 +440,45 @@ window.addEventListener('load', function() {
 		radiusst2 = Math.sqrt(Math.pow(tiltxst2, 2) + Math.pow(tiltyst2, 2));
 		constst2 = 60;
 		degreest2 = constst2*radiusst2;
-		TweenMax.to(".section3 .text-container .sticker2 img", {
+		gsap.to(".section3 .text-container .sticker2 svg", {
 			transform: 'rotate3d(' + (constst2/2)*(tiltxst2) + ', ' + (constst2/2)*(tiltyst2) + ', 0, ' + degreest2 + 'deg)',
-			ease: Power4.inOut,
-			duration: .3,
+			ease: ease,
+			duration: dur,
 		});
 
+		t1S2 = $(".section3 .text-container .sticker2 svg .visualdesign");
+		s1S2 = $(".section3 .text-container .sticker2 svg .star1");
+		s2S2 = $(".section3 .text-container .sticker2 svg .star2");
+		stroke1S2 = $(".section3 .text-container .sticker2 svg .WStroke");
+		gsap.to( t1S2, {
+			x: 44.8 - tiltyst2*20,
+			y: 57.29 + tiltxst2*20,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s1S2, {
+			x: -tiltyst2*35,
+			y: tiltxst2*35,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s2S2, {
+			x: -tiltyst2*15,
+			y: tiltxst2*15,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( stroke1S2, {
+			x: -tiltyst2*5,
+			y: tiltxst2*5,
+			ease: ease,
+			duration: dur,
+		});
+
+
 		var rotatest3 = 14,
-			st3h = $(".section3 .text-container .sticker3 img").height(),
-			st3w = $(".section3 .text-container .sticker3 img").width(),
+			st3h = $(".section3 .text-container .sticker3 svg").height(),
+			st3w = $(".section3 .text-container .sticker3 svg").width(),
 			st3t = $(".section3 .text-container .sticker3").offset().top - scroll,
 			st3l = $(".section3 .text-container .sticker3").offset().left;
 		sqrtst3 = (Math.sqrt(Math.pow(st3w, 2)+Math.pow(st3h, 2)));
@@ -439,15 +491,37 @@ window.addEventListener('load', function() {
 		radiusst3 = Math.sqrt(Math.pow(tiltxst3, 2) + Math.pow(tiltyst3, 2));
 		constst3 = 60;
 		degreest3 = constst3*radiusst3;
-		TweenMax.to(".section3 .text-container .sticker3 img", {
+		gsap.to(".section3 .text-container .sticker3 svg", {
 			transform: 'rotate3d(' + (constst3/2)*(tiltxst3) + ', ' + (constst3/2)*(tiltyst3) + ', 0, ' + degreest3 + 'deg)',
-			ease: Power4.inOut,
-			duration: .3,
+			ease: ease,
+			duration: dur,
+		});
+
+		t1S3 = $(".section3 .text-container .sticker3 svg .graphic");
+		t2S3 = $(".section3 .text-container .sticker3 svg .design");
+		s1S3 = $(".section3 .text-container .sticker3 svg .star1");
+		gsap.to( t1S3, {
+			x: -tiltyst3*30,
+			y: tiltxst3*30,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( t2S3, {
+			x: -tiltyst3*15,
+			y: tiltxst3*15,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s1S3, {
+			x: -tiltyst3*50,
+			y: tiltxst3*50,
+			ease: ease,
+			duration: dur,
 		});
 
 		var rotatest4 = -25,
-			st4h = $(".section3 .text-container .sticker4 img").height(),
-			st4w = $(".section3 .text-container .sticker4 img").width(),
+			st4h = $(".section3 .text-container .sticker4 svg").height(),
+			st4w = $(".section3 .text-container .sticker4 svg").width(),
 			st4t = $(".section3 .text-container .sticker4").offset().top - scroll,
 			st4l = $(".section3 .text-container .sticker4").offset().left;
 		sqrtst4 = (Math.sqrt(Math.pow(st4w, 2)+Math.pow(st4h, 2)));
@@ -460,15 +534,46 @@ window.addEventListener('load', function() {
 		radiusst4 = Math.sqrt(Math.pow(tiltxst4, 2) + Math.pow(tiltyst4, 2));
 		constst4 = 60;
 		degreest4 = constst4*radiusst4;
-		TweenMax.to(".section3 .text-container .sticker4 img", {
+		gsap.to(".section3 .text-container .sticker4 svg", {
 			transform: 'rotate3d(' + (constst4/2)*(tiltxst4) + ', ' + (constst4/2)*(tiltyst4) + ', 0, ' + degreest4 + 'deg)',
-			ease: Power4.inOut,
-			duration: .3,
+			ease: ease,
+			duration: dur,
 		});
 
+		t1S4 = $(".section3 .text-container .sticker4 svg .brand");
+		t2S4 = $(".section3 .text-container .sticker4 svg .identity");
+		s1S4 = $(".section3 .text-container .sticker4 svg .star1");
+		s2S4 = $(".section3 .text-container .sticker4 svg .star2");
+		gsap.to( s1S4, {
+			x: -tiltyst4*15,
+			y: tiltxst4*15,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( t1S4, {
+			x: 101.79 - tiltyst4*30,
+			y: 75.51 + tiltxst4*30,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( t2S4, {
+			x: 90.32 - tiltyst4*40,
+			y: 109.57 + tiltxst4*40,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s2S4, {
+			x: -tiltyst4*20,
+			y: tiltxst4*20,
+			ease: ease,
+			duration: dur,
+		});
+
+
+
 		var rotatest5 = 23,
-			st5h = $(".section3 .text-container .sticker5 img").height(),
-			st5w = $(".section3 .text-container .sticker5 img").width(),
+			st5h = $(".section3 .text-container .sticker5 svg").height(),
+			st5w = $(".section3 .text-container .sticker5 svg").width(),
 			st5t = $(".section3 .text-container .sticker5").offset().top - scroll,
 			st5l = $(".section3 .text-container .sticker5").offset().left;
 		sqrtst5 = (Math.sqrt(Math.pow(st5w, 2)+Math.pow(st5h, 2)));
@@ -481,15 +586,51 @@ window.addEventListener('load', function() {
 		radiusst5 = Math.sqrt(Math.pow(tiltxst5, 2) + Math.pow(tiltyst5, 2));
 		constst5 = 60;
 		degreest5 = constst5*radiusst5;
-		TweenMax.to(".section3 .text-container .sticker5 img", {
+		gsap.to(".section3 .text-container .sticker5 svg", {
 			transform: 'rotate3d(' + (constst5/2)*(tiltxst5) + ', ' + (constst5/2)*(tiltyst5) + ', 0, ' + degreest5 + 'deg)',
-			ease: Power4.inOut,
-			duration: .3,
+			ease: ease,
+			duration: dur,
+		});
+
+		t1S5 = $(".section3 .text-container .sticker5 svg .ui");
+		t2S5 = $(".section3 .text-container .sticker5 svg .design");
+		s1S5 = $(".section3 .text-container .sticker5 svg .star1");
+		s2S5 = $(".section3 .text-container .sticker5 svg .star2");
+		instrokeS5 = $(".section3 .text-container .sticker5 svg .In_Stroke");
+		gsap.to( t1S5, {
+			x: 153.95 - tiltyst5*50,
+			y: 99.22 + tiltxst5*50,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( t2S5, {
+			x: 81.88 - tiltyst5*30,
+			y: 147.96 + tiltxst5*30,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s1S5, {
+			x: -tiltyst5*20,
+			y: tiltxst5*20,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s2S5, {
+			x: -tiltyst5*35,
+			y: tiltxst5*35,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( instrokeS5, {
+			x: -tiltyst5*15,
+			y: tiltxst5*15,
+			ease: ease,
+			duration: dur,
 		});
 
 		var rotatest6 = -35,
-			st6h = $(".section3 .text-container .sticker6 img").height(),
-			st6w = $(".section3 .text-container .sticker6 img").width(),
+			st6h = $(".section3 .text-container .sticker6 svg").height(),
+			st6w = $(".section3 .text-container .sticker6 svg").width(),
 			st6t = $(".section3 .text-container .sticker6").offset().top - scroll,
 			st6l = $(".section3 .text-container .sticker6").offset().left;
 		sqrtst6 = (Math.sqrt(Math.pow(st6w, 2)+Math.pow(st6h, 2)));
@@ -502,10 +643,45 @@ window.addEventListener('load', function() {
 		radiusst6 = Math.sqrt(Math.pow(tiltxst6, 2) + Math.pow(tiltyst6, 2));
 		constst6 = 60;
 		degreest6 = constst6*radiusst6;
-		TweenMax.to(".section3 .text-container .sticker6 img", {
+		gsap.to(".section3 .text-container .sticker6 svg", {
 			transform: 'rotate3d(' + (constst6/2)*(tiltxst6) + ', ' + (constst6/2)*(tiltyst6) + ', 0, ' + degreest6 + 'deg)',
-			ease: Power4.inOut,
-			duration: .3,
+			ease: ease,
+			duration: dur,
 		});
+
+		t1S6 = $(".section3 .text-container .sticker6 svg .hand");
+		t2S6 = $(".section3 .text-container .sticker6 svg .drawing");
+		s1S6 = $(".section3 .text-container .sticker6 svg .star1");
+		gsap.to( t1S6, {
+			x: -tiltyst6*15,
+			y: tiltxst6*15,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( s1S6, {
+			x: -tiltyst6*35,
+			y: tiltxst6*35,
+			ease: ease,
+			duration: dur,
+		});
+		gsap.to( t2S6, {
+			x: 22.89 - tiltyst6*20,
+			y: 175.6 + tiltxst6*20,
+			ease: ease,
+			duration: dur,
+		});
+		
+
 	});
+}
+
+window.addEventListener("resize", () => {
+	footersvg();
+});
+
+
+window.addEventListener('load', function() {
+	index();
+	footersvg();
+	sticker();
 });

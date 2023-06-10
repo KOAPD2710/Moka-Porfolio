@@ -60,6 +60,7 @@ body {
 }
 .section2 .marquee-container .marquee-content p {
   font-family: FontLogo;
+  text-transform: none;
   font-size: 250px;
 }
 .section2 .content {
@@ -159,6 +160,9 @@ body {
 .section3 .text-container .sticker img {
   width: 100%;
 }
+.section3 .text-container .sticker svg > * {
+  transform-origin: center center;
+}
 .section3 .text-container .sticker1 {
   width: 15vw;
   top: -1vh;
@@ -184,7 +188,7 @@ body {
   rotate: 23deg;
 }
 .section3 .text-container .sticker4 {
-  width: 14vw;
+  width: 15vw;
   top: 45vh;
   left: 50vw;
   rotate: -25deg;
@@ -276,13 +280,16 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  color: var(--b);
+  color: var(--t);
   overflow: hidden !important;
 }
 .section5 .content {
   position: relative;
   padding-top: 50vh;
   z-index: 10;
+  color: var(--t);
+}
+.section5 .content a {
   color: var(--t);
 }
 .section5 .content .bla-bla {
