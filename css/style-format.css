@@ -12,6 +12,7 @@
   -moz-transform-style: preserve-3d;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: none !important;
 }
 
 *::-webkit-scrollbar {
@@ -79,6 +80,17 @@ main:not(.page-container) {
   -webkit-transition: all 0.4s cubic-bezier(0.61, 1.57, 0.39, 1);
   transition: all 0.4s cubic-bezier(0.61, 1.57, 0.39, 1);
 }
+#cursor .cursor-in {
+  --w-in: 15px;
+  position: fixed;
+  translate: -50% -50%;
+  width: var(--w-in);
+  height: var(--w-in);
+  background-color: var(--b);
+  border-radius: 50%;
+  -webkit-transition: all 0.4s cubic-bezier(0.61, 1.57, 0.39, 1);
+  transition: all 0.4s cubic-bezier(0.61, 1.57, 0.39, 1);
+}
 
 ul#curtain {
   position: fixed;
@@ -115,6 +127,9 @@ ul#curtain li {
   display: flex;
   padding-top: 25px;
   z-index: 1000;
+  mix-blend-mode: difference;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .nav-container .nav-logo {
   position: relative;
@@ -185,6 +200,18 @@ ul#curtain li {
   font-family: FontText;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+.nav-container.scroll-up {
+  top: 0px;
+  -webkit-transition: all 0.5s cubic-bezier(0.13, 0.01, 0.11, 0.68);
+  transition: all 0.5s cubic-bezier(0.13, 0.01, 0.11, 0.68);
+}
+
+.nav-container.scroll-down {
+  top: -115px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .foot-container {

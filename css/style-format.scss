@@ -10,7 +10,7 @@
     -moz-transform-style: preserve-3d;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-	// cursor: none !important;
+	cursor: none !important;
 }
 *::-webkit-scrollbar{
 	display: none;
@@ -73,6 +73,18 @@ main:not(.page-container) {
 		border-radius: 50%;
 		transition: all .4s cubic-bezier(.61,1.57,.39,1);
 	}
+
+	.cursor-in {
+		--w-in: 15px;
+
+		position: fixed;
+		translate: -50% -50%;
+		width: var(--w-in);
+		height: var(--w-in);
+		background-color: var(--b);
+		border-radius: 50%;
+		transition: all .4s cubic-bezier(.61,1.57,.39,1);
+	}
 }
 
 
@@ -109,6 +121,8 @@ ul#curtain {
 	display: flex;
 	padding-top: 25px;
 	z-index: 1000;
+	mix-blend-mode: difference;
+	transition: all .5s ease-in;
 
 	.nav-logo {
 		position: relative;
@@ -187,6 +201,14 @@ ul#curtain {
 			}
 		}
 	}
+}
+.nav-container.scroll-up {
+	top: 0px;
+	transition: all .5s cubic-bezier(.13,.01,.11,.68);
+}
+.nav-container.scroll-down {
+	top: -115px;
+	transition: all .5s ease-in-out;
 }
 
 .foot-container {

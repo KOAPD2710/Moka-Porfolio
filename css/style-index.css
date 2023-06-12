@@ -214,6 +214,7 @@ body {
 .section3 .text-container .sticker svg > * {
   -webkit-transform-origin: center center;
           transform-origin: center center;
+  font-family: FontHead !important;
 }
 .section3 .text-container .sticker1 {
   width: 15vw;

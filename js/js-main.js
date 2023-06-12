@@ -74,6 +74,20 @@ $(document).ready(function(e) {
 		});
 	});
 
+	var prevScrollpos = window.pageYOffset;
+
+	window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		if (prevScrollpos > currentScrollPos) {
+			$("#nav-container").addClass('scroll-up');
+			$("#nav-container").removeClass('scroll-down');
+		} else {
+			$("#nav-container").removeClass('scroll-up');
+			$("#nav-container").addClass('scroll-down');
+		}
+		prevScrollpos = currentScrollPos;
+	}
+
 
 	fragp = $(".nav-container .nav-logo #point p");
 	fragoka = $(".nav-container .nav-logo #oka p");
@@ -88,18 +102,29 @@ $(document).ready(function(e) {
 		// fragp.css('translate', '0px');
 	});
 
-	const cursor = document.querySelector('#cursor');
+	const cursor = document.querySelector('#cursor'),
+		cursorOut = document.querySelector('#cursor .cursor'),
+		cursorIn = document.querySelector('#cursor .cursor-in');
+
 	document.addEventListener('mousemove', function(event) {
 		var scroll = $(window).scrollTop();
 	// circle move
 		cursor.style.top = event.pageY - scroll + "px";
 		cursor.style.left = event.pageX + "px";
 
-		hover = document.querySelectorAll('a');
+		hoverItems = document.querySelectorAll('a');
+		hoverLogo = document.getElementById('logo');
 
-		$(hover).hover(function() {
+		$(hoverItems).hover(function() {
 			cursor.style.setProperty('--w', '100px');
+			cursorIn.style.scale = 0;
 		}, function() {
+			cursor.style.setProperty('--w', '50px');
+			cursorIn.style.scale = 1;
+		})
+		$(hoverLogo).hover(function() {
+			cursor.style.setProperty('--w', '170px');
+		},function() {
 			cursor.style.setProperty('--w', '50px');
 		})
 	})
