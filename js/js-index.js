@@ -416,124 +416,126 @@ window.addEventListener('load', function() {
 		var ease = Power4.inOut,
 			dur = .3;
 
-		var rotatest1 = -21,
-			st1h = $(".section3 .text-container .sticker1 svg").height(),
-			st1w = $(".section3 .text-container .sticker1 svg").width(),
-			st1t = $(".section3 .text-container .sticker1").offset().top - scroll,
-			st1l = $(".section3 .text-container .sticker1").offset().left,
-			t1S1 = $(".section3 .text-container .sticker1 svg .art"),
-			t2S1 = $(".section3 .text-container .sticker1 svg .direction"),
-			s1S1 = $(".section3 .text-container .sticker1 svg .star1"),
-			s2S1 = $(".section3 .text-container .sticker1 svg .star2");
-		sqrtst1 = (Math.sqrt(Math.pow(st1w, 2)+Math.pow(st1h, 2)));
-		st1x = (st1w*Math.cos(rotatest1 * (Math.PI / 180))) + (st1h*Math.cos((90-rotatest1) * (Math.PI / 180))),
-		testst1 = (Math.acos(st1w/sqrtst1)) * (180/Math.PI),
-		st1y = sqrtst1*Math.sin(testst1);
-		// Math.min( Math.max( , -1), 1)
-		tiltxst1 = (dy-(st1t + st1y/2))/cy;
-		tiltyst1 =  -(dx - (st1l + st1x/2))/cx;
-		radiusst1 = Math.sqrt(Math.pow(tiltxst1, 2) + Math.pow(tiltyst1, 2));
-		constst1 = 40;
-		degreest1 = constst1*radiusst1;
-		// console.log((constst1/2)*(tiltxst1), (constst1/2)*(tiltyst1))
+		if ($('.section3').hasClass('action')) {
+			var rotatest1 = -21,
+				st1h = $(".section3 .text-container .sticker1 svg").height(),
+				st1w = $(".section3 .text-container .sticker1 svg").width(),
+				st1t = $(".section3 .text-container .sticker1").offset().top - scroll,
+				st1l = $(".section3 .text-container .sticker1").offset().left,
+				t1S1 = $(".section3 .text-container .sticker1 svg .art"),
+				t2S1 = $(".section3 .text-container .sticker1 svg .direction"),
+				s1S1 = $(".section3 .text-container .sticker1 svg .star1"),
+				s2S1 = $(".section3 .text-container .sticker1 svg .star2");
+			sqrtst1 = (Math.sqrt(Math.pow(st1w, 2)+Math.pow(st1h, 2)));
+			st1x = (st1w*Math.cos(rotatest1 * (Math.PI / 180))) + (st1h*Math.cos((90-rotatest1) * (Math.PI / 180))),
+			testst1 = (Math.acos(st1w/sqrtst1)) * (180/Math.PI),
+			st1y = sqrtst1*Math.sin(testst1);
+			// Math.min( Math.max( , -1), 1)
+			tiltxst1 = (dy-(st1t + st1y/2))/cy;
+			tiltyst1 =  -(dx - (st1l + st1x/2))/cx;
+			radiusst1 = Math.sqrt(Math.pow(tiltxst1, 2) + Math.pow(tiltyst1, 2));
+			constst1 = 40;
+			degreest1 = constst1*radiusst1;
+		
+			var rotatest2 = 26,
+				st2h = $(".section3 .text-container .sticker2 svg").height(),
+				st2w = $(".section3 .text-container .sticker2 svg").width(),
+				st2t = $(".section3 .text-container .sticker2").offset().top - scroll,
+				st2l = $(".section3 .text-container .sticker2").offset().left,
+				t1S2 = $(".section3 .text-container .sticker2 svg .visualdesign"),
+				s1S2 = $(".section3 .text-container .sticker2 svg .star1"),
+				s2S2 = $(".section3 .text-container .sticker2 svg .star2"),
+				stroke1S2 = $(".section3 .text-container .sticker2 svg .WStroke");
+			sqrtst2 = (Math.sqrt(Math.pow(st2w, 2)+Math.pow(st2h, 2)));
+			st2x = (st2w*Math.cos(rotatest2 * (Math.PI / 180))) + (st2h*Math.cos((90-rotatest2) * (Math.PI / 180))),
+			testst2 = (Math.acos(st2w/sqrtst2)) * (180/Math.PI),
+			st2y = sqrtst2*Math.sin(testst2);
+			tiltxst2 = (dy-(st2t - st2y/2))/cy;
+			tiltyst2 = -(dx - (st2l + st2x/2))/cx;
+			radiusst2 = Math.sqrt(Math.pow(tiltxst2, 2) + Math.pow(tiltyst2, 2));
+			constst2 = 40;
+			degreest2 = constst2*radiusst2;
+
+			var rotatest3 = 14,
+				st3h = $(".section3 .text-container .sticker3 svg").height(),
+				st3w = $(".section3 .text-container .sticker3 svg").width(),
+				st3t = $(".section3 .text-container .sticker3").offset().top - scroll,
+				st3l = $(".section3 .text-container .sticker3").offset().left,
+				t1S3 = $(".section3 .text-container .sticker3 svg .graphic"),
+				t2S3 = $(".section3 .text-container .sticker3 svg .design"),
+				s1S3 = $(".section3 .text-container .sticker3 svg .star1");
+			sqrtst3 = (Math.sqrt(Math.pow(st3w, 2)+Math.pow(st3h, 2)));
+			st3x = (st3w*Math.cos(rotatest3 * (Math.PI / 180))) + (st3h*Math.cos((90-rotatest3) * (Math.PI / 180))),
+			testst3 = (Math.acos(st3w/sqrtst3)) * (180/Math.PI),
+			st3y = sqrtst3*Math.sin(testst3);
+			// Math.min( Math.max( , -1), 1)
+			tiltxst3 = (dy-(st3t - st3y/2))/cy;
+			tiltyst3 = -(dx - (st3l + st3x/2))/cx;
+			radiusst3 = Math.sqrt(Math.pow(tiltxst3, 2) + Math.pow(tiltyst3, 2));
+			constst3 = 40;
+			degreest3 = constst3*radiusst3;
+			
+			var rotatest4 = -25,
+				st4h = $(".section3 .text-container .sticker4 svg").height(),
+				st4w = $(".section3 .text-container .sticker4 svg").width(),
+				st4t = $(".section3 .text-container .sticker4").offset().top - scroll,
+				st4l = $(".section3 .text-container .sticker4").offset().left,
+				t1S4 = $(".section3 .text-container .sticker4 svg .brand"),
+				t2S4 = $(".section3 .text-container .sticker4 svg .identity"),
+				s1S4 = $(".section3 .text-container .sticker4 svg .star1"),
+				s2S4 = $(".section3 .text-container .sticker4 svg .star2");
+			sqrtst4 = (Math.sqrt(Math.pow(st4w, 2)+Math.pow(st4h, 2)));
+			st4x = (st4w*Math.cos(rotatest4 * (Math.PI / 180))) + (st4h*Math.cos((90-rotatest4) * (Math.PI / 180))),
+			testst4 = (Math.acos(st4w/sqrtst4)) * (180/Math.PI),
+			st4y = sqrtst4*Math.sin(testst4);
+
+			tiltxst4 = (dy-(st4t + st4y/2))/cy;
+			tiltyst4 = -(dx - (st4l + st4x/2))/cx;
+			radiusst4 = Math.sqrt(Math.pow(tiltxst4, 2) + Math.pow(tiltyst4, 2));
+			constst4 = 40;
+			degreest4 = constst4*radiusst4;
+			
+			var rotatest5 = 23,
+				st5h = $(".section3 .text-container .sticker5 svg").height(),
+				st5w = $(".section3 .text-container .sticker5 svg").width(),
+				st5t = $(".section3 .text-container .sticker5").offset().top - scroll,
+				st5l = $(".section3 .text-container .sticker5").offset().left,
+				t1S5 = $(".section3 .text-container .sticker5 svg .ui"),
+				t2S5 = $(".section3 .text-container .sticker5 svg .design"),
+				s1S5 = $(".section3 .text-container .sticker5 svg .star1"),
+				s2S5 = $(".section3 .text-container .sticker5 svg .star2"),
+				instrokeS5 = $(".section3 .text-container .sticker5 svg .In_Stroke");
+			sqrtst5 = (Math.sqrt(Math.pow(st5w, 2)+Math.pow(st5h, 2)));
+			st5x = (st5w*Math.cos(rotatest5 * (Math.PI / 180))) + (st5h*Math.cos((90-rotatest5) * (Math.PI / 180))),
+			testst5 = (Math.acos(st5w/sqrtst5)) * (180/Math.PI),
+			st5y = sqrtst5*Math.sin(testst5);
+
+			tiltxst5 = (dy-(st5t - st5y/2))/cy;
+			tiltyst5 = -(dx - (st5l + st5x/2))/cx;
+			radiusst5 = Math.sqrt(Math.pow(tiltxst5, 2) + Math.pow(tiltyst5, 2));
+			constst5 = 40;
+			degreest5 = constst5*radiusst5;
+
+			var rotatest6 = -35,
+				st6h = $(".section3 .text-container .sticker6 svg").height(),
+				st6w = $(".section3 .text-container .sticker6 svg").width(),
+				st6t = $(".section3 .text-container .sticker6").offset().top - scroll,
+				st6l = $(".section3 .text-container .sticker6").offset().left,
+				t1S6 = $(".section3 .text-container .sticker6 svg .hand"),
+				t2S6 = $(".section3 .text-container .sticker6 svg .drawing"),
+				s1S6 = $(".section3 .text-container .sticker6 svg .star1");
+			sqrtst6 = (Math.sqrt(Math.pow(st6w, 2)+Math.pow(st6h, 2)));
+			st6x = (st6w*Math.cos(rotatest6 * (Math.PI / 180))) + (st6h*Math.cos((90-rotatest6) * (Math.PI / 180))),
+			testst6 = (Math.acos(st6w/sqrtst6)) * (180/Math.PI),
+			st6y = sqrtst6*Math.sin(testst6);
+
+			tiltxst6 = (dy-(st6t + st6y/2))/cy;
+			tiltyst6 = -(dx - (st6l + st6x/2))/cx;
+			radiusst6 = Math.sqrt(Math.pow(tiltxst6, 2) + Math.pow(tiltyst6, 2));
+			constst6 = 40;
+			degreest6 = constst6*radiusst6;
+		}
 	
-		var rotatest2 = 26,
-			st2h = $(".section3 .text-container .sticker2 svg").height(),
-			st2w = $(".section3 .text-container .sticker2 svg").width(),
-			st2t = $(".section3 .text-container .sticker2").offset().top - scroll,
-			st2l = $(".section3 .text-container .sticker2").offset().left,
-			t1S2 = $(".section3 .text-container .sticker2 svg .visualdesign"),
-			s1S2 = $(".section3 .text-container .sticker2 svg .star1"),
-			s2S2 = $(".section3 .text-container .sticker2 svg .star2"),
-			stroke1S2 = $(".section3 .text-container .sticker2 svg .WStroke");
-		sqrtst2 = (Math.sqrt(Math.pow(st2w, 2)+Math.pow(st2h, 2)));
-		st2x = (st2w*Math.cos(rotatest2 * (Math.PI / 180))) + (st2h*Math.cos((90-rotatest2) * (Math.PI / 180))),
-		testst2 = (Math.acos(st2w/sqrtst2)) * (180/Math.PI),
-		st2y = sqrtst2*Math.sin(testst2);
-		tiltxst2 = (dy-(st2t - st2y/2))/cy;
-		tiltyst2 = -(dx - (st2l + st2x/2))/cx;
-		radiusst2 = Math.sqrt(Math.pow(tiltxst2, 2) + Math.pow(tiltyst2, 2));
-		constst2 = 40;
-		degreest2 = constst2*radiusst2;
-
-		var rotatest3 = 14,
-			st3h = $(".section3 .text-container .sticker3 svg").height(),
-			st3w = $(".section3 .text-container .sticker3 svg").width(),
-			st3t = $(".section3 .text-container .sticker3").offset().top - scroll,
-			st3l = $(".section3 .text-container .sticker3").offset().left,
-			t1S3 = $(".section3 .text-container .sticker3 svg .graphic"),
-			t2S3 = $(".section3 .text-container .sticker3 svg .design"),
-			s1S3 = $(".section3 .text-container .sticker3 svg .star1");
-		sqrtst3 = (Math.sqrt(Math.pow(st3w, 2)+Math.pow(st3h, 2)));
-		st3x = (st3w*Math.cos(rotatest3 * (Math.PI / 180))) + (st3h*Math.cos((90-rotatest3) * (Math.PI / 180))),
-		testst3 = (Math.acos(st3w/sqrtst3)) * (180/Math.PI),
-		st3y = sqrtst3*Math.sin(testst3);
-		// Math.min( Math.max( , -1), 1)
-		tiltxst3 = (dy-(st3t - st3y/2))/cy;
-		tiltyst3 = -(dx - (st3l + st3x/2))/cx;
-		radiusst3 = Math.sqrt(Math.pow(tiltxst3, 2) + Math.pow(tiltyst3, 2));
-		constst3 = 40;
-		degreest3 = constst3*radiusst3;
-		
-		var rotatest4 = -25,
-			st4h = $(".section3 .text-container .sticker4 svg").height(),
-			st4w = $(".section3 .text-container .sticker4 svg").width(),
-			st4t = $(".section3 .text-container .sticker4").offset().top - scroll,
-			st4l = $(".section3 .text-container .sticker4").offset().left,
-			t1S4 = $(".section3 .text-container .sticker4 svg .brand"),
-			t2S4 = $(".section3 .text-container .sticker4 svg .identity"),
-			s1S4 = $(".section3 .text-container .sticker4 svg .star1"),
-			s2S4 = $(".section3 .text-container .sticker4 svg .star2");
-		sqrtst4 = (Math.sqrt(Math.pow(st4w, 2)+Math.pow(st4h, 2)));
-		st4x = (st4w*Math.cos(rotatest4 * (Math.PI / 180))) + (st4h*Math.cos((90-rotatest4) * (Math.PI / 180))),
-		testst4 = (Math.acos(st4w/sqrtst4)) * (180/Math.PI),
-		st4y = sqrtst4*Math.sin(testst4);
-
-		tiltxst4 = (dy-(st4t + st4y/2))/cy;
-		tiltyst4 = -(dx - (st4l + st4x/2))/cx;
-		radiusst4 = Math.sqrt(Math.pow(tiltxst4, 2) + Math.pow(tiltyst4, 2));
-		constst4 = 40;
-		degreest4 = constst4*radiusst4;
-		
-		var rotatest5 = 23,
-			st5h = $(".section3 .text-container .sticker5 svg").height(),
-			st5w = $(".section3 .text-container .sticker5 svg").width(),
-			st5t = $(".section3 .text-container .sticker5").offset().top - scroll,
-			st5l = $(".section3 .text-container .sticker5").offset().left,
-			t1S5 = $(".section3 .text-container .sticker5 svg .ui"),
-			t2S5 = $(".section3 .text-container .sticker5 svg .design"),
-			s1S5 = $(".section3 .text-container .sticker5 svg .star1"),
-			s2S5 = $(".section3 .text-container .sticker5 svg .star2"),
-			instrokeS5 = $(".section3 .text-container .sticker5 svg .In_Stroke");
-		sqrtst5 = (Math.sqrt(Math.pow(st5w, 2)+Math.pow(st5h, 2)));
-		st5x = (st5w*Math.cos(rotatest5 * (Math.PI / 180))) + (st5h*Math.cos((90-rotatest5) * (Math.PI / 180))),
-		testst5 = (Math.acos(st5w/sqrtst5)) * (180/Math.PI),
-		st5y = sqrtst5*Math.sin(testst5);
-
-		tiltxst5 = (dy-(st5t - st5y/2))/cy;
-		tiltyst5 = -(dx - (st5l + st5x/2))/cx;
-		radiusst5 = Math.sqrt(Math.pow(tiltxst5, 2) + Math.pow(tiltyst5, 2));
-		constst5 = 40;
-		degreest5 = constst5*radiusst5;
-
-		var rotatest6 = -35,
-			st6h = $(".section3 .text-container .sticker6 svg").height(),
-			st6w = $(".section3 .text-container .sticker6 svg").width(),
-			st6t = $(".section3 .text-container .sticker6").offset().top - scroll,
-			st6l = $(".section3 .text-container .sticker6").offset().left,
-			t1S6 = $(".section3 .text-container .sticker6 svg .hand"),
-			t2S6 = $(".section3 .text-container .sticker6 svg .drawing"),
-			s1S6 = $(".section3 .text-container .sticker6 svg .star1");
-		sqrtst6 = (Math.sqrt(Math.pow(st6w, 2)+Math.pow(st6h, 2)));
-		st6x = (st6w*Math.cos(rotatest6 * (Math.PI / 180))) + (st6h*Math.cos((90-rotatest6) * (Math.PI / 180))),
-		testst6 = (Math.acos(st6w/sqrtst6)) * (180/Math.PI),
-		st6y = sqrtst6*Math.sin(testst6);
-
-		tiltxst6 = (dy-(st6t + st6y/2))/cy;
-		tiltyst6 = -(dx - (st6l + st6x/2))/cx;
-		radiusst6 = Math.sqrt(Math.pow(tiltxst6, 2) + Math.pow(tiltyst6, 2));
-		constst6 = 40;
-		degreest6 = constst6*radiusst6;
 		// Math.min( Math.max(, -15), 15)
 		var sticker = gsap.timeline().to(".section3 .text-container .sticker1 svg", {
 			transform: 'rotate3d(' + Math.min( Math.max((constst1/2)*(tiltxst1), -15), 15) + ', ' + Math.min( Math.max((constst1/2)*(tiltyst1), -15), 15) + ', 0, ' + degreest1 + 'deg)',
@@ -560,13 +562,13 @@ window.addEventListener('load', function() {
 			ease: ease,
 			duration: dur,
 		}, 0).to( t1S1, {
-			x: Math.min( Math.max(134.7 - tiltyst1*50, 134.7-40), 134.7+40),
-			y: Math.min( Math.max(75.61 + tiltxst1*50, 75.61-40), 75.61+40),
+			x: 134.7 - tiltyst1*50,
+			y: 75.61 + tiltxst1*50,
 			ease: ease,
 			duration: dur,
 		}, 0).to( t2S1, {
-			x: Math.min( Math.max(74.82 - tiltyst1*30, 74.82-40), 74.82+40),
-			y: Math.min( Math.max(117.53 + tiltxst1*30, 117.53-40), 117.53+40),
+			x: 74.82 - tiltyst1*30,
+			y: 117.53 + tiltxst1*30,
 			ease: ease,
 			duration: dur,
 		}, 0).to( s1S1, {
@@ -681,21 +683,21 @@ window.addEventListener('load', function() {
 		scrollTrigger: {
 			trigger: '.section3',
 			start: 'top bottom',
-			end: 'bottom center',
+			end: 'bottom top',
 			markers: false,
 			toggleClass: 'action',
-			onEnter: () => function() {
-				sticker.play()
-			},
-			onLeave: () => function() {
-				sticker.pause()
-			},
-			onEnterBack: () => function() {
-				sticker.play()
-			},
-			onLeaveBack:  () => function() {
-				sticker.pause()
-			},
+			// onEnter: () => function() {
+			// 	sticker.play()
+			// },
+			// onLeave: () => function() {
+			// 	sticker.pause()
+			// },
+			// onEnterBack: () => function() {
+			// 	sticker.play()
+			// },
+			// onLeaveBack:  () => function() {
+			// 	sticker.pause()
+			// },
 		}
 	})
 });
