@@ -534,149 +534,151 @@ window.addEventListener('load', function() {
 			radiusst6 = Math.sqrt(Math.pow(tiltxst6, 2) + Math.pow(tiltyst6, 2));
 			constst6 = 40;
 			degreest6 = constst6*radiusst6;
+
+			var sticker = gsap.timeline().to(".section3 .text-container .sticker1 svg", {
+				transform: 'rotate3d(' + (constst1/2)*(tiltxst1) + ', ' + (constst1/2)*(tiltyst1) + ', 0, ' + degreest1 + 'deg)',
+				ease: ease,
+				duration: dur,
+			}).to(".section3 .text-container .sticker2 svg", {
+				transform: 'rotate3d(' + (constst2/2)*(tiltxst2) + ', ' + (constst2/2)*(tiltyst2) + ', 0, ' + degreest2 + 'deg)',
+				ease: ease,
+				duration: dur,
+			}, 0).to(".section3 .text-container .sticker3 svg", {
+				transform: 'rotate3d(' + (constst3/2)*(tiltxst3) + ', ' + (constst3/2)*(tiltyst3) + ', 0, ' + degreest3 + 'deg)',
+				ease: ease,
+				duration: dur,
+			}, 0).to(".section3 .text-container .sticker4 svg", {
+				transform: 'rotate3d(' + (constst4/2)*(tiltxst4) + ', ' + (constst4/2)*(tiltyst4) + ', 0, ' + degreest4 + 'deg)',
+				ease: ease,
+				duration: dur,
+			}, 0).to(".section3 .text-container .sticker5 svg", {
+				transform: 'rotate3d(' + (constst5/2)*(tiltxst5) + ', ' + (constst5/2)*(tiltyst5) + ', 0, ' + degreest5 + 'deg)',
+				ease: ease,
+				duration: dur,
+			}, 0).to(".section3 .text-container .sticker6 svg", {
+				transform: 'rotate3d(' + (constst6/2)*(tiltxst6) + ', ' + (constst6/2)*(tiltyst6) + ', 0, ' + degreest6 + 'deg)',
+				ease: ease,
+				duration: dur,
+			}, 0).to( t1S1, {
+				x: 134.7 - tiltyst1*40,
+				y: 75.61 + tiltxst1*40,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t2S1, {
+				x: 74.82 - tiltyst1*30,
+				y: 117.53 + tiltxst1*30,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s1S1, {
+				x: -tiltyst1*60,
+				y: tiltxst1*60,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s2S1, {
+				x: -tiltyst1*20,
+				y: tiltxst1*20,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t1S2, {
+				x: 44.8 - tiltyst2*20,
+				y: 57.29 + tiltxst2*20,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s1S2, {
+				x: -tiltyst2*35,
+				y: tiltxst2*35,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s2S2, {
+				x: -tiltyst2*15,
+				y: tiltxst2*15,
+				ease: ease,
+				duration: dur,
+			}, 0).to( stroke1S2, {
+				x: -tiltyst2*10,
+				y: tiltxst2*10,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t1S3, {
+				x: -tiltyst3*30,
+				y: tiltxst3*30,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t2S3, {
+				x: -tiltyst3*15,
+				y: tiltxst3*15,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s1S3, {
+				x: -tiltyst3*50,
+				y: tiltxst3*50,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s1S4, {
+				x: -tiltyst4*15,
+				y: tiltxst4*15,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t1S4, {
+				x: 101.79 - tiltyst4*30,
+				y: 75.51 + tiltxst4*30,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t2S4, {
+				x: 90.32 - tiltyst4*40,
+				y: 109.57 + tiltxst4*40,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s2S4, {
+				x: -tiltyst4*20,
+				y: tiltxst4*20,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t1S5, {
+				x: 153.95 - tiltyst5*50,
+				y: 99.22 + tiltxst5*50,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t2S5, {
+				x: 81.88 - tiltyst5*30,
+				y: 147.96 + tiltxst5*30,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s1S5, {
+				x: -tiltyst5*20,
+				y: tiltxst5*20,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s2S5, {
+				x: -tiltyst5*35,
+				y: tiltxst5*35,
+				ease: ease,
+				duration: dur,
+			}, 0).to( instrokeS5, {
+				x: -tiltyst5*15,
+				y: tiltxst5*15,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t1S6, {
+				x: -tiltyst6*15,
+				y: tiltxst6*15,
+				ease: ease,
+				duration: dur,
+			}, 0).to( s1S6, {
+				x: -tiltyst6*35,
+				y: tiltxst6*35,
+				ease: ease,
+				duration: dur,
+			}, 0).to( t2S6, {
+				x: 22.89 - tiltyst6*20,
+				y: 175.6 + tiltxst6*20,
+				ease: ease,
+				duration: dur,
+			}, 0);
 		}
 	
 		// Math.min( Math.max(, -15), 15)
-		var sticker = gsap.timeline().to(".section3 .text-container .sticker1 svg", {
-			transform: 'rotate3d(' + Math.min( Math.max((constst1/2)*(tiltxst1), -15), 15) + ', ' + Math.min( Math.max((constst1/2)*(tiltyst1), -15), 15) + ', 0, ' + degreest1 + 'deg)',
-			ease: ease,
-			duration: dur,
-		}).to(".section3 .text-container .sticker2 svg", {
-			transform: 'rotate3d(' + Math.min( Math.max((constst2/2)*(tiltxst2), -15), 15) + ', ' + Math.min( Math.max((constst2/2)*(tiltyst2), -15), 15) + ', 0, ' + degreest2 + 'deg)',
-			ease: ease,
-			duration: dur,
-		}, 0).to(".section3 .text-container .sticker3 svg", {
-			transform: 'rotate3d(' + Math.min( Math.max((constst3/2)*(tiltxst3), -15), 15) + ', ' + Math.min( Math.max((constst3/2)*(tiltyst3), -15), 15) + ', 0, ' + degreest3 + 'deg)',
-			ease: ease,
-			duration: dur,
-		}, 0).to(".section3 .text-container .sticker4 svg", {
-			transform: 'rotate3d(' + Math.min( Math.max((constst4/2)*(tiltxst4), -15), 15) + ', ' + Math.min( Math.max((constst4/2)*(tiltyst4), -15), 15) + ', 0, ' + degreest4 + 'deg)',
-			ease: ease,
-			duration: dur,
-		}, 0).to(".section3 .text-container .sticker5 svg", {
-			transform: 'rotate3d(' + Math.min( Math.max((constst5/2)*(tiltxst5), -15), 15) + ', ' + Math.min( Math.max((constst5/2)*(tiltyst5), -15), 15) + ', 0, ' + degreest5 + 'deg)',
-			ease: ease,
-			duration: dur,
-		}, 0).to(".section3 .text-container .sticker6 svg", {
-			transform: 'rotate3d(' + Math.min( Math.max((constst6/2)*(tiltxst6), -15), 15) + ', ' + Math.min( Math.max((constst6/2)*(tiltyst6), -15), 15) + ', 0, ' + degreest6 + 'deg)',
-			ease: ease,
-			duration: dur,
-		}, 0).to( t1S1, {
-			x: 134.7 - tiltyst1*50,
-			y: 75.61 + tiltxst1*50,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t2S1, {
-			x: 74.82 - tiltyst1*30,
-			y: 117.53 + tiltxst1*30,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s1S1, {
-			x: -tiltyst1*60,
-			y: tiltxst1*60,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s2S1, {
-			x: -tiltyst1*20,
-			y: tiltxst1*20,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t1S2, {
-			x: 44.8 - tiltyst2*20,
-			y: 57.29 + tiltxst2*20,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s1S2, {
-			x: -tiltyst2*35,
-			y: tiltxst2*35,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s2S2, {
-			x: -tiltyst2*15,
-			y: tiltxst2*15,
-			ease: ease,
-			duration: dur,
-		}, 0).to( stroke1S2, {
-			x: -tiltyst2*10,
-			y: tiltxst2*10,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t1S3, {
-			x: -tiltyst3*30,
-			y: tiltxst3*30,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t2S3, {
-			x: -tiltyst3*15,
-			y: tiltxst3*15,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s1S3, {
-			x: -tiltyst3*50,
-			y: tiltxst3*50,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s1S4, {
-			x: -tiltyst4*15,
-			y: tiltxst4*15,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t1S4, {
-			x: 101.79 - tiltyst4*30,
-			y: 75.51 + tiltxst4*30,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t2S4, {
-			x: 90.32 - tiltyst4*40,
-			y: 109.57 + tiltxst4*40,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s2S4, {
-			x: -tiltyst4*20,
-			y: tiltxst4*20,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t1S5, {
-			x: 153.95 - tiltyst5*50,
-			y: 99.22 + tiltxst5*50,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t2S5, {
-			x: 81.88 - tiltyst5*30,
-			y: 147.96 + tiltxst5*30,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s1S5, {
-			x: -tiltyst5*20,
-			y: tiltxst5*20,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s2S5, {
-			x: -tiltyst5*35,
-			y: tiltxst5*35,
-			ease: ease,
-			duration: dur,
-		}, 0).to( instrokeS5, {
-			x: -tiltyst5*15,
-			y: tiltxst5*15,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t1S6, {
-			x: -tiltyst6*15,
-			y: tiltxst6*15,
-			ease: ease,
-			duration: dur,
-		}, 0).to( s1S6, {
-			x: -tiltyst6*35,
-			y: tiltxst6*35,
-			ease: ease,
-			duration: dur,
-		}, 0).to( t2S6, {
-			x: 22.89 - tiltyst6*20,
-			y: 175.6 + tiltxst6*20,
-			ease: ease,
-			duration: dur,
-		}, 0);
+		
 	});
 
 	gsap.to('.section3', {
