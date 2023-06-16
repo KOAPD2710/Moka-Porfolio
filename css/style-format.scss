@@ -54,8 +54,8 @@ main:not(.page-container) {
 	--w : 50px;
 
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: 10000px;
+	left: 10000px;
 	width: var(--w);
 	height: var(--w);
 	border-radius: 50%;

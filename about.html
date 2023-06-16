@@ -24,8 +24,10 @@
 </head>
 <body>
 
-<!-- 	<span id="hr1"></span>
-	<span id="hr2"></span> -->
+	<nav id="cursor">
+		<div class="cursor"></div>
+		<div class="cursor-in"></div>
+	</nav>
 
 	<ul id="curtain">
 		<li></li>
@@ -34,13 +36,18 @@
 		<li></li>
 		<li></li>
 	</ul>
-	<header class="layout nav-container">
+	<header class="layout nav-container" id="nav-container">
 		<div class="nav-logo">
-			<a href="index.html" prefetch>
+			<a href="index.html" prefetch id="logo">
 				<p>M</p>
-				<p>o</p>
-				<p>k</p>
-				<p>a</p>
+				<div class="fragment" id="point">
+					<p>.</p>
+				</div>
+				<div class="fragment" id="oka">
+					<p>o</p>
+					<p>k</p>
+					<p>a</p>
+				</div>
 			</a>
 		</div>
 		<nav class="nav-link">
@@ -125,7 +132,7 @@
 		<div class="footer" id="footer">
 			<div class="layout content">
 				<div class="left">
-					<img src="./imgs/germs-rolling-eyes_1.png" alt="bear">
+					<!-- <img src="./imgs/germs-rolling-eyes_1.png" alt="bear"> -->
 				</div>
 				<div class="right">
 					<p>/YOU HAVE AN IDEA? JUST DROP ME A LINE AND LET’S MAKE <span>SOMETHING</span> GREAT./</p>

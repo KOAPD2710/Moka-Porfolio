@@ -148,6 +148,16 @@ function index() {
 		duration: .8,
 	});
 
+	gsap.to('.section3', {
+		scrollTrigger: {
+			trigger: '.section3',
+			start: () => "+=" + (height + 200),
+			end: 'bottom top',
+			markers: true,
+			toggleClass: 'action',
+		}
+	})
+
 	// $(".section3 .text-container .sticker").hover(function() {
 	// 	thisSticker = $(this);
 
@@ -158,7 +168,7 @@ function index() {
 	// 	})
 
 	// 	gsap.to(thisSticker, {
-	// 		scale: 1.2,
+	// 		scale: 1.1,
 	// 		ease: Back.easeOut,
 	// 		duration: .8,
 	// 	})
@@ -177,7 +187,6 @@ function index() {
 	// 		duration: .8,
 	// 	})
 	// })
-
 
 	var section4gap = 5*width/100,
 		sec4marqueewidth = $(".section4 .marquee-content").width()+section4gap*2;
@@ -680,26 +689,4 @@ window.addEventListener('load', function() {
 		// Math.min( Math.max(, -15), 15)
 		
 	});
-
-	gsap.to('.section3', {
-		scrollTrigger: {
-			trigger: '.section3',
-			start: 'top bottom',
-			end: 'bottom top',
-			markers: false,
-			toggleClass: 'action',
-			// onEnter: () => function() {
-			// 	sticker.play()
-			// },
-			// onLeave: () => function() {
-			// 	sticker.pause()
-			// },
-			// onEnterBack: () => function() {
-			// 	sticker.play()
-			// },
-			// onLeaveBack:  () => function() {
-			// 	sticker.pause()
-			// },
-		}
-	})
 });
