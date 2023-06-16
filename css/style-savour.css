@@ -1,1 +1,34 @@
+* {
+	--y: #e0d8b0;
+	text-transform: uppercase !important;
+}
 
+.big-logo {
+	text-align: center;
+}
+.big-logo h1 {
+	font-size: 300px;
+	line-height: 1;
+	margin: 0;
+	margin-top: 100px;
+	color: var(--y);
+	text-transform: none !important;
+}
+
+.under-logo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: var(--y);
+}
+.under-logo .left, .under-logo .right {
+	width: 100%;
+}
+.under-logo .left .name, .under-logo .right .name {
+	font-weight: bold;
+}
+.under-logo p {
+	margin: 0;
+	font-size: 18px;
+}
+/*# sourceMappingURL=style-savour.css.map */

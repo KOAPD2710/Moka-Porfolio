@@ -1,0 +1,35 @@
+* {
+	--y: #e0d8b0;
+	text-transform: uppercase !important;
+} 
+
+.big-logo {
+	text-align: center;
+
+	h1 {
+		font-size: 300px;
+		line-height: 1;
+		margin: 0;
+		margin-top: 100px;
+		color: var(--y);
+		text-transform: none !important;
+	}
+}
+
+.under-logo {
+	display: flex;
+	color: var(--y);
+
+	.left, .right {
+		width: 100%;
+
+		.name {
+			font-weight: bold;
+		}
+	}
+
+	p {
+		margin: 0;
+		font-size: 18px;
+	}
+}
