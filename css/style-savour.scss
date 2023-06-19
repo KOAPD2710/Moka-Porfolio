@@ -25,11 +25,11 @@
 			font-size: 22vw;
 			margin: 0;
 			line-height: 1;
-			background: url(../imgs/about-pic1.png);
+			background: url(../imgs/reel1.jpg);
 			background-clip: text;
 			-webkit-background-clip: text;
-			background-size: contain;
-			background-position: center;
+			background-size: 160%;
+			background-position: center 800px;
 			background-attachment: fixed;
 		}
 	}
@@ -58,7 +58,7 @@
 	width: 100vw;
 	// height: 200vh;
 	// background-color: orange;
-	padding-top: 280px;
+	padding-top: 400px;
 
 	.container {
 		position: relative;
@@ -111,7 +111,7 @@
 	.text {
 		position: relative;
 		display: flex;
-		margin-top: 500px;
+		margin-top: 700px;
 		z-index: 10;
 		justify-content: center;
 		color: var(--y);
