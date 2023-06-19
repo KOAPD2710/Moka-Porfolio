@@ -1,35 +1,152 @@
 * {
 	--y: #e0d8b0;
 	text-transform: uppercase !important;
-} 
-
-.big-logo {
-	text-align: center;
-
-	h1 {
-		font-size: 300px;
-		line-height: 1;
-		margin: 0;
-		margin-top: 100px;
-		color: var(--y);
-		text-transform: none !important;
-	}
 }
 
-.under-logo {
-	display: flex;
-	color: var(--y);
+@font-face{
+	font-family: FontLogoSavour;
+	src: url(../fonts/Harmond-ExtraBoldExpanded.otf);
+	font-weight: normal;
+	font-style: normal;
+}
 
-	.left, .right {
+.canh {
+	position: absolute;
+	display: block;
+	z-index: 111111111;
+	width: 100%;
+	opacity: .5;
+
+	top: -500px;
+
+	img {
 		width: 100%;
+	}
+}
+.section1 {
+	.big-logo {
+		text-align: center;
+		text-transform: none;
+		// background-color: orangered;
 
-		.name {
-			font-weight: bold;
+		h1 {
+			font-family: FontLogoSavour;
+			text-transform: none !important;
+			color: transparent;
+			font-size: 22vw;
+			margin: 0;
+			line-height: 1;
+			background: url(../imgs/about-pic1.png);
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-size: contain;
+			background-position: center;
+			background-attachment: fixed;
 		}
 	}
 
-	p {
-		margin: 0;
-		font-size: 18px;
+	.under-logo {
+		display: flex;
+		color: var(--y);
+
+		.left, .right {
+			width: 100%;
+
+			.name {
+				font-weight: bold;
+			}
+		}
+
+		p {
+			margin: 0;
+			font-size: 18px;
+		}
+	}
+}
+
+.section2 {
+	position: relative;
+	width: 100vw;
+	// height: 200vh;
+	// background-color: orange;
+	padding-top: 280px;
+
+	.container {
+		position: relative;
+		display: block;
+		width: 100%;
+		z-index: 1;
+		// background-color: darkred;
+
+		.image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			translate: -50% -50%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.image1 {
+			width: 26.5vw;
+			top: 100px;
+			left: 52.5%;
+		}
+		.image2 {
+			width: 23vw;
+			top: 0px;
+			left: 32%;
+		}
+		.image3 {
+			width: 15vw;
+			top: 40px;
+			left: 72%;
+		}
+		.image4 {
+			width: 23vw;
+			top: 210px;
+			left: auto;
+			right: 0;
+			translate: 30px -50%;
+		}
+		.image5 {
+			width: 23vw;
+			top: 330px;
+			left: 0;
+			translate: -15px -50%;
+		}
+	}
+
+	.text {
+		position: relative;
+		display: flex;
+		margin-top: 500px;
+		z-index: 10;
+		justify-content: center;
+		color: var(--y);
+		padding-bottom: 50px;
+
+		p {
+			max-width: 650px;
+
+			span {
+				font-family: FontLogoSavour !important;
+				text-transform: none !important;
+			}
+		}
+	}
+}
+.section3 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding: 150px 325px;
+	video {
+		border-radius: 20px;
+		outline: solid 5px var(--y);
+		outline-offset: -2px;
+		width: 100%;
 	}
 }
