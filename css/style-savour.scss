@@ -9,19 +9,8 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-.canh {
-	position: absolute;
-	display: block;
-	z-index: 111111111;
-	width: 100%;
-	opacity: .5;
-
-	top: -500px;
-
-	img {
-		width: 100%;
-	}
+*img, *video {
+	--radius: 25px;
 }
 .section1 {
 	.big-logo {
@@ -142,11 +131,32 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-	padding: 150px 325px;
+	padding: 250px 17%;
 	video {
-		border-radius: 20px;
+		border-radius: var(--radius);
 		outline: solid 5px var(--y);
 		outline-offset: -2px;
+		width: 100%;
+	}
+}
+.section4 {
+	padding: 112px 0px;
+	img {
+		border-radius: 0 var(--radius) var(--radius) 0;
+		width: 58.3vw;
+	}
+}
+
+.canh {
+	position: absolute;
+	display: block;
+	z-index: 111111111;
+	width: 100%;
+	opacity: .5;
+
+	top: -360px;
+
+	img {
 		width: 100%;
 	}
 }

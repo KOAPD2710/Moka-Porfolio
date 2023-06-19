@@ -67,7 +67,7 @@ function workSavour() {
 			endTrigger: '.section2',
 			end: 'bottom top',
 			scrub: true,
-			markers: true
+			markers: false
 		},
 		y: 100,
 	})
@@ -82,15 +82,35 @@ function workSavour() {
 		},
 		y: 50,
 	})
+	gsap.from('.section3', {
+		scrollTrigger: {
+			trigger: '.section3',
+			start: '-100px top',
+			toggleActions: "play none none reverse"
+		},
+		scale: .9,
+		ease: Power3.easeOut,
+		duration: 2,
+	})
 	gsap.to('.section3 video', {
 		scrollTrigger: {
 			trigger: '.section3',
+			start: '-100px top',
+			end: 'bottom top',
+			scrub: true,
+			markers: false
+		},
+		y: 200,
+	})
+	gsap.to('.section4 img', {
+		scrollTrigger: {
+			trigger: '.section4',
 			start: 'top top',
 			end: 'bottom top',
 			scrub: true,
-			markers: true
+			markers: false
 		},
-		y: 80,
+		y: 100,
 	})
 }
 
