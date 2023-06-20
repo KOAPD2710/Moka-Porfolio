@@ -11,11 +11,20 @@ function workSavour() {
 	$('.section1').css('paddingBottom', ' ' + pad + 'px');
 
 	gsap.from('.section1 .big-logo', {
-		y: 100,
+		y: -10,
+		scale: 1.1,
 		opacity: 0,
 		ease: Power3.easeOut,
 		duration: 2,
-		delay: 1,
+		delay: 1.5,
+	})
+	gsap.from('.section1 .under-logo p', {
+		x: 50,
+		opacity: 0,
+		ease: Power3.easeOut,
+		duration: 2,
+		stagger: .1,
+		delay: 2,
 	})
 	gsap.to('.section1', {
 		scrollTrigger: {
@@ -69,7 +78,19 @@ function workSavour() {
 			scrub: true,
 			markers: false
 		},
+		y: -100,
+	})
+	gsap.from('.section2 .text p', {
+		scrollTrigger: {
+			trigger: '.section2 .text',
+			start: 'top 80%',
+			toggleActions: "play none none none",
+			markers: false
+		},
 		y: 100,
+		opacity: 0,
+		ease: Power4.easeOut,
+		duration: 3
 	})
 	gsap.to('.section2 .text', {
 		scrollTrigger: {
@@ -135,25 +156,68 @@ function workSavour() {
 		},
 		y: 300,
 	})
+	gsap.from('.section7 p', {
+		scrollTrigger: {
+			trigger: '.section7',
+			start: 'top 80%',
+			toggleActions: "play none none none",
+			markers: false
+		},
+		x: 50,
+		opacity: 0,
+		ease: Power2.easeOut,
+		duration: 3
+	})
 	gsap.to('.section7 p', {
 		scrollTrigger: {
 			trigger: '.section7',
 			start: 'top bottom',
-			end: 'bottom top',
+			end: '500px top',
 			scrub: true,
 			markers: false
 		},
-		y: 300,
+		y: -150,
 	})
 	gsap.to('.section8 .img-container', {
 		scrollTrigger: {
 			trigger: '.section8',
 			start: 'top bottom',
 			end: 'bottom top',
-			scrub: true,
-			markers: true
+			scrub: .5,
+			markers: false
 		},
-		yPercent: -10,
+		yPercent: 15,
+	})
+	gsap.to('.section8 .desktop-frame', {
+		scrollTrigger : {
+			trigger: '.section8',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: .5,
+			markers: false
+		},
+		y: 200
+	})
+	gsap.from('.section9 .container', {
+		scrollTrigger: {
+			trigger: '.section9',
+			start: '200px bottom',
+			toggleActions: "play none none none",
+			markers: false
+		},
+		x: 50,
+		ease: Power2.easeOut,
+		duration: 2
+	})
+	gsap.to('.section9 .container', {
+		scrollTrigger : {
+			trigger: '.section9',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: .5,
+			markers: false
+		},
+		y: -400
 	})
 }
 

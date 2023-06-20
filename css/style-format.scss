@@ -59,7 +59,7 @@ main:not(.page-container) {
 	width: var(--w);
 	height: var(--w);
 	border-radius: 50%;
-	z-index: 99999;
+	z-index: 99999999;
 	pointer-events: none;
 	cursor: none;
 	mix-blend-mode: difference;
@@ -70,18 +70,6 @@ main:not(.page-container) {
 		width: calc(-10px + var(--w));
 		height: calc(-10px + var(--w));
 		background-color: var(--t);
-		border-radius: 50%;
-		transition: all .4s cubic-bezier(.61,1.57,.39,1);
-	}
-
-	.cursor-in {
-		--w-in: 15px;
-
-		position: fixed;
-		translate: -50% -50%;
-		width: var(--w-in);
-		height: var(--w-in);
-		background-color: var(--b);
 		border-radius: 50%;
 		transition: all .4s cubic-bezier(.61,1.57,.39,1);
 	}
@@ -104,7 +92,7 @@ ul#curtain {
 
 
 	& li {
-		transform: scaleY(0);
+		transform: scaleY(2);
 		transform-origin: bottom center;
 		background: var(--gr);
 		width: 20%;
@@ -144,6 +132,7 @@ ul#curtain {
 				left: 39.5px;
 				display: flex;
 				width: 65;
+				text-transform: none !important;
 				// background-color: orangered;
 				overflow: hidden;
 			}
@@ -154,6 +143,7 @@ ul#curtain {
 			}
 			#oka {
 				p {
+					text-transform: none !important;
 					translate: -65px;
 					transition-delay: 0s;
 				}

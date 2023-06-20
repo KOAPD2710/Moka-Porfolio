@@ -1,6 +1,6 @@
 function pageInTransition() {
-	gsap.from('ul#curtain li', {
-		scaleY: 2,
+	gsap.to('ul#curtain li', {
+		scaleY: 0,
 		duration: 1,
 		ease: Power2.Out,
 		stagger: {
@@ -103,8 +103,7 @@ $(document).ready(function(e) {
 	});
 
 	const cursor = document.querySelector('#cursor'),
-		cursorOut = document.querySelector('#cursor .cursor'),
-		cursorIn = document.querySelector('#cursor .cursor-in');
+		cursorOut = document.querySelector('#cursor .cursor');
 
 	document.addEventListener('mousemove', function(event) {
 		var scroll = $(window).scrollTop();
@@ -117,10 +116,8 @@ $(document).ready(function(e) {
 
 		$(hoverItems).hover(function() {
 			cursor.style.setProperty('--w', '100px');
-			cursorIn.style.scale = 0;
 		}, function() {
 			cursor.style.setProperty('--w', '50px');
-			cursorIn.style.scale = 1;
 		})
 		$(hoverLogo).hover(function() {
 			cursor.style.setProperty('--w', '170px');

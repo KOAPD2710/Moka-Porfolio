@@ -25,7 +25,6 @@
 	<body>
 		<nav id="cursor">
 			<div class="cursor"></div>
-			<div class="cursor-in"></div>
 		</nav>
 		<ul id="curtain">
 			<li></li>
@@ -34,7 +33,7 @@
 			<li></li>
 			<li></li>
 		</ul>
-		<header class="layout nav-container">
+		<header class="layout nav-container" id="nav-container">
 			<div class="nav-logo">
 				<a href="index.html" prefetch>
 					<p>M</p>
@@ -89,22 +88,23 @@
 				<div class="section2" id="section2">
 					<div class="container">
 						<div class="image image2" id="image2" data-relative-input="true">
-							<img data-depth="0.03" src="./imgs/work-savour-s2-2.png" alt="work-savour-s2-2">
+							<img data-depth="0.03" src="./imgs/work-savour-s2-2.webp" alt="work-savour-s2-2">
 						</div>
 						<div class="image image3" id="image3" data-relative-input="true">
-							<img data-depth="0.02" src="./imgs/work-savour-s2-3.png" alt="work-savour-s2-3">
+							<img data-depth="0.02" src="./imgs/work-savour-s2-3.webp" alt="work-savour-s2-3">
 						</div>
 						<div class="image image4" id="image4" data-relative-input="true">
-							<img data-depth-x="0.04" src="./imgs/work-savour-s2-4.png" alt="work-savour-s2-4">
+							<img data-depth-x="0.04" src="./imgs/work-savour-s2-4.webp" alt="work-savour-s2-4">
 						</div>
 						<div class="image image5" id="image5" data-relative-input="true">
-							<img data-depth-x="0.05"src="./imgs/work-savour-s2-5.png" alt="work-savour-s2-5">
+							<img data-depth-x="0.05"src="./imgs/work-savour-s2-5.webp" alt="work-savour-s2-5">
 						</div>
 						<div class="image image1" id="image1" data-relative-input="true">
-							<img data-depth-x="0.1" src="./imgs/work-savour-s2-1.png" alt="work-savour-s2-1">
+							<img data-depth-x="0.1" src="./imgs/work-savour-s2-1.webp" alt="work-savour-s2-1">
 						</div>
 					</div>
 					<div class="text">
+						<p class="head">/about gallery/</p>
 						<p><span>Savour®</span> is a worldwide destination for art & culture OF The Renaissance and Baroque periods. THEY were considered the bridge between the Middle Ages and the Modern Ages because of new discoveries in art, culture, and science.</p>
 					</div>
 				</div>
@@ -119,7 +119,7 @@
 				<div class="section5">
 					<div class="phone-clipping">
 						<div class="bgcontainer" id="s5img" data-relative-input="true">
-							<img data-depth="-.01" src="./imgs/work-savour-s5.jpeg" alt="bg">
+							<img data-depth="-.01" src="./imgs/work-savour-s5.webp" alt="bg">
 						</div>
 						<div class="content">
 							<div class="avatar-exit">
@@ -155,17 +155,36 @@
 								<p class="n">Rubens</p>
 								<p class="c">Italy</p>
 							</div>
-							<div class="content"></div>
+							<div class="content">
+								<div class="container">
+									<p class="head">/ABOUT/</p>
+									<div class="text">
+										<p>Sir Peter Paul Rubens (28 June 1577 – 30 May 1640) was a Flemish artist and diplomat from the Duchy of Brabant in the Southern Netherlands (modern-day Belgium). He is considered the most influential artist of the Flemish Baroque tradition. Rubens's highly charged compositions reference erudite aspects of classical and Christian history. His unique and immensely popular Baroque style emphasized movement, color, and sensuality, which followed the immediate, dramatic artistic style promoted in the Counter-Reformation. Rubens was a painter producing altarpieces, portraits, landscapes, and history paintings of mythological and allegorical subjects. He was also a prolific designer of cartoons for the Flemish tapestry workshops and of  frontispieces for the publishers in Antwerp.</p>
+										<p>Rubens was an avid art collector and had one of the largest collections of art and books in Antwerp. He was also an art dealer and is known to have sold an important number of art objects to George Villiers, 1st Duke of Buckingham.</p>
+										<p>He was one of the last major artists to make consistent use of wooden panels as a support medium, even for very large works, but he used canvas as well, especially when the work needed to be sent a long distance. For altarpieces he sometimes painted on  slate to reduce reflection problems.</p>
+									</div>
+									<div class="btn"><p>Explore Artworks</p></div>
+								</div>
+							</div>
 						</div>
 						<div class="right">
+							<div class="exit-btn">
+								<nav></nav>
+								<nav></nav>
+							</div>
 							<div class="img-container">
-								<img src="./imgs/work-savour-s8.png" alt="s8">
+								<img src="./imgs/work-savour-s8.webp" alt="s8">
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="section9">
+					<div class="container">
+						<img src="./imgs/work-savour-s9.webp" alt="Aboutdemo">
+					</div>
+				</div>
 
-				<div class="distance"></div>
+				<!-- <div class="distance"></div> -->
 			</div>
 			<div id="vertical-screen"></div>
 			<!-- <div class="canh"><img src="./imgs/Desktop - 1.png" alt="Desktop"></div> -->
@@ -175,11 +194,12 @@
 
 		<script type="text/javascript" src="./js/lenis.min.js"></script>
 		<script type="text/javascript" src="./js/control_lenis.js"></script>
-		<script type="text/javascript" src="./js/gsap.min-min.js"></script>
-		<script type="text/javascript" src="./js/js-main-min.js"></script>
+		<script type="text/javascript" src="./js/gsap.min.js"></script>
+		<script type="text/javascript" src="./js/parallax.js"></script>
+		<script type="text/javascript" src="./js/js-main-dist.js"></script>
 		<script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
 		<script type="text/javascript" src="./js/MotionPathPlugin.min.js"></script>
-		<script type="text/javascript" src="./js/js-savour.js"></script>
-		<script type="text/javascript" src="./js/parallax.js"></script>
+		<script type="text/javascript" src="./js/js-savour-dist.js"></script>
+		
 	</body>
 </html>
