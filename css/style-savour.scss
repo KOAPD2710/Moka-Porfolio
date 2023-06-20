@@ -156,8 +156,9 @@
 	background-size: cover;
 	background-position: center 0px;
 	background-repeat: no-repeat;
-	margin-top: 200px;
+	margin-top: 300px;
 	overflow: hidden;
+	box-shadow: 0px -20px 20px rgba(0, 0, 0, .5);
 
 	.phone-clipping {
 		position: absolute;
@@ -224,12 +225,26 @@
 				position: relative;
 				display: flex;
 				width: 100%;
-				flex-direction: column;
+				flex-direction: row;
+				justify-content: space-between;
 				// background-color: orangered;
+
+				.avatar {
+					position: relative;
+					align-self: flex-start;
+					--size: 35px;
+					width: var(--size);
+					height: var(--size);
+					background-color: orange;
+					border-radius: 50%;
+					background-image: url(./../imgs/work-savour-s5-avatar.png);
+					background-position: center -5px;
+					background-size: 120%;					
+				}
 
 				.exit {
 					position: relative;
-					align-self: flex-end;
+					align-self: flex-start;
 					--size: 24px;
 					width: var(--size);
 					height: var(--size);
@@ -260,7 +275,27 @@
 }
 
 .section6 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	padding: 250px 17%;
+
+	video {
+		border-radius: var(--radius);
+		outline: solid 5px var(--y);
+		outline-offset: -2px;
+		width: 100%;
+	}
+}
+.section7 {
 	height: 200vh;
+	text-align: center;
+	color: var(--y);
+
+	p {
+		max-width: 550px;
+	}
 }
 
 .canh {
@@ -270,7 +305,7 @@
 	width: 100%;
 	opacity: .5;
 
-	top: -170px;
+	top: -20px;
 
 	img {
 		width: 100%;

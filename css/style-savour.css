@@ -152,8 +152,10 @@
 	background-size: cover;
 	background-position: center 0px;
 	background-repeat: no-repeat;
-	margin-top: 200px;
+	margin-top: 300px;
 	overflow: hidden;
+	-webkit-box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.5);
 }
 .section5 .phone-clipping {
 	position: absolute;
@@ -221,15 +223,31 @@
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	-webkit-box-orient: vertical;
+	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.section5 .phone-clipping .content .avatar-exit .avatar {
+	position: relative;
+	-ms-flex-item-align: start;
+	    align-self: flex-start;
+	--size: 35px;
+	width: var(--size);
+	height: var(--size);
+	background-color: orange;
+	border-radius: 50%;
+	background-image: url(./../imgs/work-savour-s5-avatar.png);
+	background-position: center -5px;
+	background-size: 120%;
 }
 .section5 .phone-clipping .content .avatar-exit .exit {
 	position: relative;
-	-ms-flex-item-align: end;
-	    align-self: flex-end;
+	-ms-flex-item-align: start;
+	    align-self: flex-start;
 	--size: 24px;
 	width: var(--size);
 	height: var(--size);
@@ -254,7 +272,30 @@
 }
 
 .section6 {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin-top: 100px;
+	padding: 250px 17%;
+}
+.section6 video {
+	border-radius: var(--radius);
+	outline: solid 5px var(--y);
+	outline-offset: -2px;
+	width: 100%;
+}
+
+.section7 {
 	height: 200vh;
+	text-align: center;
+	color: var(--y);
+}
+.section7 p {
+	max-width: 550px;
 }
 
 .canh {
@@ -263,7 +304,7 @@
 	z-index: 111111111;
 	width: 100%;
 	opacity: 0.5;
-	top: -170px;
+	top: -20px;
 }
 .canh img {
 	width: 100%;

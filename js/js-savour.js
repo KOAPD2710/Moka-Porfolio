@@ -86,6 +86,7 @@ function workSavour() {
 		scrollTrigger: {
 			trigger: '.section3',
 			start: '-400px top',
+			// scrub: true,
 			toggleActions: "play none none reverse",
             markers: false
 		},
@@ -106,13 +107,13 @@ function workSavour() {
 	gsap.to('.section4 img', {
 		scrollTrigger: {
 			trigger: '.section4',
-			start: '-400px top',
-            endTrigger: '.section5',
+			start: 'top bottom',
+			endTrigger: '.section5',
 			end: 'top top',
 			scrub: true,
-			markers: false
+			markers: true
 		},
-		y: 400,
+		y: 500,
 	})
     gsap.to('.section5 .phone-clipping', {
         scrollTrigger : {
@@ -120,10 +121,20 @@ function workSavour() {
             start: 'top bottom',
             end: 'bottom top',
             scrub: .5,
-            markers: true
+            markers: false
         },
         y: 120
     })
+    gsap.to('.section6 video', {
+		scrollTrigger: {
+			trigger: '.section6',
+			start: '-200px top',
+			end: 'bottom top',
+			scrub: true,
+			markers: false
+		},
+		y: 300,
+	})
 }
 
 
