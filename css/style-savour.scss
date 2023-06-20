@@ -9,8 +9,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face{
+	font-family: FontTextSavour;
+	src: url(../fonts/Futura-Book.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
 * {
-	--radius: 25px;
+	--radius: 20px;
 }
 .section1 {
 	.big-logo {
@@ -54,10 +60,11 @@
 }
 
 .section2 {
+	overflow: hidden;
 	position: relative;
 	width: 100vw;
 	// height: 200vh;
-	// background-color: orange;
+	background-color: orange;
 	padding-top: 400px;
 
 	.container {
@@ -166,7 +173,7 @@
 		translate: -50% -50%;
 		top: 50%;
 		left: 50%;
-		width: 270px;
+		width: 15vw;
 		aspect-ratio: 9/20;
 		border-radius: var(--radius);
 		outline: solid 4px var(--y);
@@ -289,12 +296,100 @@
 	}
 }
 .section7 {
-	height: 200vh;
 	text-align: center;
 	color: var(--y);
 
 	p {
 		max-width: 550px;
+	}
+}
+
+.distance {
+	background-color: whitesmoke;
+	height: 200vh;
+}
+
+.section8 {
+
+	padding: 250px 17%;
+
+	.desktop-frame {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		border-radius: var(--radius);
+		outline: solid 5px var(--y);
+		outline-offset: -2px;
+		aspect-ratio: 16/9;
+		overflow: hidden;
+
+		.left, .right {
+			width: 100%;
+		}
+
+		.left {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			background-color: var(--y);
+			color: #0F0C06;
+
+			.name, .content {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.name {
+				font-family: FontTextSavour;
+				justify-content: flex-end;
+				padding-left: 1vw;
+				padding-bottom: 3.5%;
+				background-color: orange;
+
+				p {
+					margin: 0;
+					line-height: 1;
+					text-transform: none !important;
+				}
+
+				.y {
+					font-size: .5vw;
+					margin-bottom: 4%;
+				}
+				.n {
+					font-family: FontLogoSavour;
+					font-size: 1.6vw;
+					line-height: 1;
+					margin-bottom: 3%;
+				}
+				.c {
+					font-size: .5vw;
+				}
+			}
+
+			.content {
+				background-color: aliceblue;
+			}
+		}
+
+		.right {
+			position: relative;
+			display: block;
+			overflow: hidden;
+
+			.img-container {
+				position: relative;
+				display: block;
+				width: 150%;
+				translate: -15% -10%;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
 	}
 }
 
@@ -305,7 +400,7 @@
 	width: 100%;
 	opacity: .5;
 
-	top: -20px;
+	top: 135px;
 
 	img {
 		width: 100%;

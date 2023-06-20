@@ -88,7 +88,7 @@ function workSavour() {
 			start: '-400px top',
 			// scrub: true,
 			toggleActions: "play none none reverse",
-            markers: false
+			markers: false
 		},
 		scale: .9,
 		ease: Power2.easeInOut,
@@ -97,7 +97,7 @@ function workSavour() {
 	gsap.to('.section3 video', {
 		scrollTrigger: {
 			trigger: '.section3',
-			start: '-200px top',
+			start: 'top center',
 			end: 'bottom top',
 			scrub: true,
 			markers: false
@@ -111,29 +111,49 @@ function workSavour() {
 			endTrigger: '.section5',
 			end: 'top top',
 			scrub: true,
-			markers: true
+			markers: false
 		},
 		y: 500,
 	})
-    gsap.to('.section5 .phone-clipping', {
-        scrollTrigger : {
-            trigger: '.section5',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: .5,
-            markers: false
-        },
-        y: 120
-    })
-    gsap.to('.section6 video', {
+	gsap.to('.section5 .phone-clipping', {
+		scrollTrigger : {
+			trigger: '.section5',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: .5,
+			markers: false
+		},
+		y: 120
+	})
+	gsap.to('.section6 video', {
 		scrollTrigger: {
 			trigger: '.section6',
-			start: '-200px top',
+			start: 'top center',
 			end: 'bottom top',
 			scrub: true,
 			markers: false
 		},
 		y: 300,
+	})
+	gsap.to('.section7 p', {
+		scrollTrigger: {
+			trigger: '.section7',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: true,
+			markers: false
+		},
+		y: 300,
+	})
+	gsap.to('.section8 .img-container', {
+		scrollTrigger: {
+			trigger: '.section8',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: true,
+			markers: true
+		},
+		yPercent: -10,
 	})
 }
 
@@ -161,15 +181,15 @@ window.addEventListener('load', function() {
 	var sec2img5Parallax = new Parallax(sec2img5, {
 		relativeInput: true
 	});
-    var sec5img = document.getElementById('s5img');
-    var sec5imgParallax = new Parallax(sec5img, {
-        relativeInput: true
-    });
+	var sec5img = document.getElementById('s5img');
+	var sec5imgParallax = new Parallax(sec5img, {
+		relativeInput: true
+	});
 	
 	sec2img1Parallax.friction(0.2, 0.2);
 	sec2img2Parallax.friction(0.2, 0.2);
 	sec2img3Parallax.friction(0.2, 0.2);
 	sec2img4Parallax.friction(0.2, 0.2);
 	sec2img5Parallax.friction(0.2, 0.2);
-    sec5imgParallax.friction(0.2, 0.2);
+	sec5imgParallax.friction(0.2, 0.2);
 })
