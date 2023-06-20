@@ -85,33 +85,45 @@ function workSavour() {
 	gsap.from('.section3', {
 		scrollTrigger: {
 			trigger: '.section3',
-			start: '-100px top',
-			toggleActions: "play none none reverse"
+			start: '-400px top',
+			toggleActions: "play none none reverse",
+            markers: false
 		},
 		scale: .9,
-		ease: Power3.easeOut,
-		duration: 2,
+		ease: Power2.easeInOut,
+		duration: 1,
 	})
 	gsap.to('.section3 video', {
 		scrollTrigger: {
 			trigger: '.section3',
-			start: '-100px top',
+			start: '-200px top',
 			end: 'bottom top',
 			scrub: true,
 			markers: false
 		},
-		y: 200,
+		y: 300,
 	})
 	gsap.to('.section4 img', {
 		scrollTrigger: {
 			trigger: '.section4',
-			start: 'top top',
-			end: 'bottom top',
+			start: '-400px top',
+            endTrigger: '.section5',
+			end: 'top top',
 			scrub: true,
 			markers: false
 		},
-		y: 100,
+		y: 400,
 	})
+    gsap.to('.section5 .phone-clipping', {
+        scrollTrigger : {
+            trigger: '.section5',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: .5,
+            markers: true
+        },
+        y: 120
+    })
 }
 
 
@@ -138,10 +150,15 @@ window.addEventListener('load', function() {
 	var sec2img5Parallax = new Parallax(sec2img5, {
 		relativeInput: true
 	});
+    var sec5img = document.getElementById('s5img');
+    var sec5imgParallax = new Parallax(sec5img, {
+        relativeInput: true
+    });
 	
 	sec2img1Parallax.friction(0.2, 0.2);
 	sec2img2Parallax.friction(0.2, 0.2);
 	sec2img3Parallax.friction(0.2, 0.2);
 	sec2img4Parallax.friction(0.2, 0.2);
 	sec2img5Parallax.friction(0.2, 0.2);
+    sec5imgParallax.friction(0.2, 0.2);
 })
