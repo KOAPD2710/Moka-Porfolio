@@ -66,7 +66,7 @@ function work() {
 		},
 		x: () => "+=" + -width
 	})
-	gsap.to('.section1 .ground .head.nav', {
+	gsap.to('.section1 .ground .head.o', {
 		scrollTrigger: {
 			trigger: ".section1",
 			start: "top top",
@@ -126,127 +126,205 @@ function work() {
 		color: "#151515"
 	})
 
-	const sc2head = 180,
-		sc2time = sc2head/2,
-		sc2mq = $(".section2 .sticky-container .marquee-container"),
-		sc2start = "top 50%",
-		sc2end = "bottom 65%",
-		sc2scrub = 1,
-		sc2maker = false,
-		sc2ease = "Power3.inOut";
-
-
-	gsap.timeline().to(sc2mq, {
+	gsap.from('.section2 .sticky-container', {
 		scrollTrigger: {
-			trigger: ".section2 .thumb-container .olipop span",
-			start: sc2start,
-			end: sc2end,
-			scrub: sc2scrub,
+			trigger: ' .section2',
+			start: 'top bottom',
+			end: '200px center',
+			scrub: true,
+			markers: false
 		},
-		y: () => "+=" + -(sc2head),
-		ease : sc2ease,
-	}).fromTo(sc2mq, {
-		y: () => "+=" + -(sc2head),
-	}, {
-		scrollTrigger: {
-			trigger: ".section2 .thumb-container .savour span",
-			start: sc2start,
-			end: sc2end,
-			scrub: sc2scrub,
-		},
-		y: () => "+=" + -(sc2head),
-		ease : sc2ease,
-	}).fromTo(sc2mq, {
-		y: () => "+=" + -(sc2head),
-	}, {
-		scrollTrigger: {
-			trigger: ".section2 .thumb-container .proE span",
-			start: sc2start,
-			end: sc2end,
-			scrub: sc2scrub,
-		},
-		y: () => "+=" + -(sc2head),
-		ease : sc2ease,
+		y: -200,
+		ease: "power1.out",
 	})
+
+	const 	sc2head = 180,
+			sc2time = sc2head/2,
+			sc2mq = document.querySelectorAll(".section2 .sticky-container .marquee-container"),
+			sc2start = "top 45%",
+			sc2end = "bottom 70%",
+			sc2scrub = .8,
+			sc2maker = false;
+
+	gsap.fromTo(sc2mq, {
+		y: 0
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .content1 span",
+			start: sc2start,
+			end: sc2end,
+			scrub: sc2scrub,
+			markers: sc2maker
+		},
+		y: () => -(sc2head),
+	})
+	gsap.fromTo(sc2mq, {
+		y: () => -(sc2head),
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .content2 span",
+			start: sc2start,
+			end: sc2end,
+			scrub: sc2scrub,
+			markers: sc2maker
+		},
+		y: () => -(sc2head)*2,
+	})
+	// gsap.fromTo(sc2mq, {
+	// 	y: () => -(sc2head)*2,
+	// }, {
+	// 	scrollTrigger: {
+	// 		trigger: ".section2 .thumb-container .content3 span",
+	// 		start: sc2start,
+	// 		end: sc2end,
+	// 		scrub: sc2scrub,
+	// 		markers: sc2maker
+	// 	},
+	// 	y: () => -(sc2head)*3,
+	// })
+	// gsap.fromTo(sc2mq, {
+	// 	y: () => -(sc2head)*3,
+	// }, {
+	// 	scrollTrigger: {
+	// 		trigger: ".section2 .thumb-container .content4 span",
+	// 		start: sc2start,
+	// 		end: sc2end,
+	// 		scrub: sc2scrub,
+	// 		markers: sc2maker
+	// 	},
+	// 	y: () => -(sc2head)*4,
+	// })
+
 	gsap.set(sc2mq, {
 		y: 0
 	})
 
-	var sc2textout = .5,
+	var sc2textin = .5,
+		sc2textout = .1,
+		sc2textinEase = "power1.inOut",
 		sc2text1 = $(".section2 .sticky-container .content-container .text1"),
 		sc2text1p = sc2text1.children("p"),
 		sc2text2 = $(".section2 .sticky-container .content-container .text2"),
 		sc2text2p = sc2text2.children("p"),
 		sc2text3 = $(".section2 .sticky-container .content-container .text3"),
 		sc2text3p = sc2text3.children("p"),
-		sc2text4 = $(".section2 .sticky-container .content-container .text4"),
-		sc2text4p = sc2text4.children("p"),
+		// sc2text4 = $(".section2 .sticky-container .content-container .text4"),
+		// sc2text4p = sc2text4.children("p"),
 		sc2textmove = sc2text1.width() + padding,
 		sc2textstart = "bottom 55%",
 		sc2textend = () => "+=" + 20;
-		console.log(sc2text1.width() + padding)
+		// console.log(sc2text1.width() + padding)
 
-	gsap.timeline().fromTo(sc2text3p, {
-		xPercent: 0
+	gsap.fromTo(sc2text1p, {
+		yPercent: 0
 	}, {
 		scrollTrigger: {
-			trigger: ".section2 .thumb-container .proE span",
+			trigger: ".section2 .thumb-container .content1 span",
 			start: sc2textstart,
 			end: sc2textend,
 			scrub: true,
+			// toggleActions: 'play none none reverse',
+			markers: false,
 		},
-		xPercent: -100
-	}).fromTo(sc2text4p, {
-		x: () => "+=" + (-sc2textmove),
+		yPercent: () => 100,
+		duration: sc2textout,
+	}) // Text1 In-Out
+
+	gsap.fromTo(sc2text2p, {
+		yPercent: () => -100,
 	}, {
 		scrollTrigger: {
-			trigger: ".section2 .thumb-container .proE span",
+			trigger: ".section2 .thumb-container .content1 span",
 			start: sc2textstart,
-			end: sc2textend,
-			scrub: 1,
-		},
-		x: 0
-	}).fromTo(sc2text2p, {
-		xPercent: 0,
-	}, {
-		scrollTrigger: {
-			trigger: ".section2 .thumb-container .savour span",
-			start: sc2textstart,
-			end: sc2textend,
+			// end: sc2textend,
 			scrub: true,
+			markers: false
 		},
-		xPercent: 100
-	}).fromTo(sc2text3p, {
-		x: () => "+=" + (sc2textmove),
+		yPercent: 0,
+		duration: sc2textin,
+		ease: sc2textinEase,
+	}) // Text2 In
+	gsap.fromTo(sc2text2p, {
+		yPercent: () => 0,
 	}, {
 		scrollTrigger: {
-			trigger: ".section2 .thumb-container .savour span",
+			trigger: ".section2 .thumb-container .content2 span",
 			start: sc2textstart,
-			end: sc2textend,
-			scrub: 1,
+			// end: sc2textend,
+			scrub: true, 
+			markers: false
 		},
-		x: 0
-	}).fromTo(sc2text1p, {
-		xPercent: 0,
-	}, {
-		scrollTrigger: {
-			trigger: ".section2 .thumb-container .olipop span",
-			start: sc2textstart,
-			end: sc2textend,
-			scrub: true,
-		},
-		xPercent: -100
-	}).fromTo(sc2text2p, {
-		x: () => "+=" + (-sc2textmove),
-	}, {
-		scrollTrigger: {
-			trigger: ".section2 .thumb-container .olipop span",
-			start: sc2textstart,
-			end: sc2textend,
-			scrub: 1,
-		},
-		x: 0
+		yPercent: () => 100,
+		duration: sc2textin,
+		ease: sc2textinEase,
+	}) // Text2 Out
+	gsap.set(sc2text2p, {
+		yPercent: () => -100,
 	})
+
+	gsap.fromTo(sc2text3p, {
+		yPercent: () => -100,
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .content2 span",
+			start: 'bottom bottom',
+			// end: sc2textend,
+			scrub: true, 
+			markers: false
+		},
+		yPercent: 0,
+		duration: sc2textin,
+		ease: sc2textinEase,
+	}) // Text3 In
+	// gsap.fromTo(sc2text3p, {
+	// 	yPercent: () => 0,
+	// }, {
+	// 	scrollTrigger: {
+	// 		trigger: ".section2 .thumb-container .content3 span",
+	// 		start: sc2textstart,
+	// 		// end: sc2textend,
+	// 		scrub: true, 
+	// 		markers: false
+	// 	},
+	// 	yPercent: () => 100,
+	// 	duration: sc2textin,
+	// 	ease: sc2textinEase,
+	// }) // Text3 Out
+	// gsap.set(sc2text3p, {
+	// 	yPercent: () => -100,
+	// })
+
+	// gsap.fromTo(sc2text4p, {
+	// 	yPercent: () => -100,
+	// }, {
+	// 	scrollTrigger: {
+	// 		trigger: ".section2 .thumb-container .content3 span",
+	// 		start: sc2textstart,
+	// 		// end: sc2textend,
+	// 		scrub: true, 
+	// 		markers: false
+	// 	},
+	// 	yPercent: 0,
+	// 	duration: sc2textin,
+	// 	ease: sc2textinEase,
+	// }) // Text4 In
+	// gsap.fromTo(sc2text4p, {
+	// 	yPercent: () => 0,
+	// }, {
+	// 	scrollTrigger: {
+	// 		trigger: ".section2 .thumb-container .content4 span",
+	// 		start: sc2textstart,
+	// 		// end: sc2textend,
+	// 		scrub: true, 
+	// 		markers: false
+	// 	},
+	// 	yPercent: () => 100,
+	// 	duration: sc2textin,
+	// 	ease: sc2textinEase,
+	// }) // Text3 Out
+	// gsap.set(sc2text4p, {
+	// 	yPercent: () => -100,
+	// })
 };
 
 function marquee() {
@@ -255,13 +333,14 @@ function marquee() {
 		width = $(window).innerWidth(),
 		height = $(window).innerHeight();
 
-	var s1 = $(".section2 .olipop .marquee-content").width()+mqless,
-		sf2 = $(".section2 .savour .marquee-content").width()+mqless,
-		sf3 = $(".section2 .proE .marquee-content").width()+mqless,
-		sf4 = $(".section2 .diary .marquee-content").width()+mqless,
-		sst1 = $(".section2 .banner .marquee-content").width()+mqless,
-		sst2 = $(".section2 .website .marquee-content").width()+mqless,
-		sst3 = $(".section2 .app .marquee-content").width()+mqless,
+	var s1 = $(".section2 .marquee1 .marquee-content").width()+mqless,
+		sf2 = $(".section2 .marquee2 .marquee-content").width()+mqless,
+		sf3 = $(".section2 .marquee3 .marquee-content").width()+mqless,
+		sf4 = $(".section2 .marquee4 .marquee-content").width()+mqless,
+		sst1 = $(".section2 .stkmarquee1 .marquee-content").width()+mqless,
+		sst2 = $(".section2 .stkmarquee2 .marquee-content").width()+mqless,
+		sst3 = $(".section2 .stkmarquee3 .marquee-content").width()+mqless,
+		sst4 = $(".section2 .stkmarquee4 .marquee-content").width()+mqless,
 		t1 = 8,
 		tf2 = (sf2*t1)/s1,
 		tf3 = (sf3*t1)/s1,
@@ -269,47 +348,54 @@ function marquee() {
 		tst1 = (sst1*t1)/s1,
 		tst2 = (sst2*t1)/s1,
 		tst3 = (sst3*t1)/s1;
+		tst4 = (sst4*t1)/s1;
 
-	gsap.to(".section2 .olipop .marquee-content", {
+	gsap.to(".section2 .marquee1 .marquee-content", {
 		x: () => "+=" + -(s1),
 		repeat: -1,
 		duration: t1,
 		ease: "none",
 	})
-	gsap.to(".section2 .savour .marquee-content", {
+	gsap.to(".section2 .marquee2 .marquee-content", {
 		x: () => "+=" + -(sf2),
 		repeat: -1,
 		duration: tf2,
 		ease: "none",
 	})
-	gsap.to(".section2 .proE .marquee-content", {
+	gsap.to(".section2 .marquee3 .marquee-content", {
 		x: () => "+=" + -(sf3),
 		repeat: -1,
 		duration: tf3,
 		ease: "none",
 	})
-	gsap.to(".section2 .diary .marquee-content", {
+	gsap.to(".section2 .marquee4 .marquee-content", {
 		x: () => "+=" + -(sf4),
 		repeat: -1,
 		duration: tf4,
 		ease: "none",
 	})
-	gsap.to(".section2 .banner .marquee-content", {
+	gsap.to(".section2 .stkmarquee1 .marquee-content", {
 		x: () => "+=" + (sst1),
 		repeat: -1,
 		duration: tst1,
 		ease: "none",
 	})
-	gsap.to(".section2 .website .marquee-content", {
+	gsap.to(".section2 .stkmarquee2 .marquee-content", {
 		x: () => "+=" + (sst2),
 		repeat: -1,
 		duration: tst2,
 		ease: "none",
 	})
-	gsap.to(".section2 .app .marquee-content", {
+	gsap.to(".section2 .stkmarquee3 .marquee-content", {
 		x: () => "+=" + (sst3),
 		repeat: -1,
 		duration: tst3,
+		ease: "none",
+	})
+	gsap.to(".section2 .stkmarquee4 .marquee-content", {
+		x: () => "+=" + (sst4),
+		repeat: -1,
+		duration: tst4,
 		ease: "none",
 	})
 }

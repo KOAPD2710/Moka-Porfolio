@@ -1,3 +1,6 @@
+*img, *svg *video{
+	vertical-align: middle !important;
+}
 .section1 {
 	position: relative;
 	display: block;
@@ -99,10 +102,12 @@
 			padding-top: 10vh;
 			padding-bottom: 10vh;
 
+
 			.content-container{
 				--h: 180px;
 				height: var(--h);
 				overflow: hidden;
+				// background-color: orangered;
 
 				.marquee-container {
 					position: relative;
@@ -130,6 +135,7 @@
 			
 			.fill-text {
 				color: var(--b);
+				// background-color: skyblue;
 			}
 
 			.stroke-text {
@@ -143,6 +149,7 @@
 					-1px -1px var(--b),
 					0px -1px var(--b),
 					1px -1px var(--b);
+				// background-color: teal;
 
 				.marquee-container {
 					right: 110%;
@@ -202,6 +209,9 @@
 				display: inline-block;
 				padding: 0;
 				margin: 0;
+				width: 100%;
+				aspect-ratio: 4/3;
+				overflow: hidden;
 
 				video, img {
 					position: relative;
@@ -215,12 +225,13 @@
 		.content:nth-of-type(2n) {
 			margin-left: auto;
 		}
-		.content:not(:last-child) {
+		.content{
 
 			span.distance {
 				position: relative;
 				display: block;
-				height: 70vh;
+				height: 600px;
+				// background-color: orangered;
 			}
 		}
 	}

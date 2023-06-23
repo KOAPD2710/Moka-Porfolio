@@ -26,6 +26,33 @@ function index() {
 		},
 		y: () => "+=" + 50*height/100,
 	});
+	let proxy = { skew: 0 },
+		skewSetter = gsap.quickSetter(".section2 .head p", "skewX", "deg"), // fast
+		clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
+
+	ScrollTrigger.create({
+		onUpdate: (self) => {
+			let skew = clamp(self.getVelocity() / -150);
+			// only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+			if (Math.abs(skew) > Math.abs(proxy.skew)) {
+				proxy.skew = skew;
+				gsap.to(proxy, {skew: 0, duration: 1, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+			}
+		}
+	});
+	gsap.set(".section2 .head p", {transformOrigin: "right center", force3D: true});
+
+	gsap.to('.section2 .head p', {
+		scrollTrigger: {
+			trigger: '.section2',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: 2,
+			markers: false
+		},
+		x: () => 300,
+	})
+
 	var section2gap = 5*width/100,
 		sec2marqueewidth = $(".section2 .marquee-content").width()+section2gap*2;
 	$(".section2 .marquee-content").css('gap', ' ' + section2gap +  'px ');
@@ -42,6 +69,17 @@ function index() {
 		repeat: -1,
 		duration: 2.5,
 		ease: "none"
+	})
+
+	gsap.to('.section2 .content .right', {
+		scrollTrigger: {
+			trigger: '.section2',
+			start: 'top top',
+			end: 'bottom top',
+			scrub: true,
+			markers: false,
+		},
+		y: 800
 	})
 
 	var textexploreanimation = Power3.linear;
@@ -153,7 +191,7 @@ function index() {
 			trigger: '.section3',
 			start: () => "+=" + (height + 200),
 			end: 'bottom top',
-			markers: true,
+			markers: false,
 			toggleClass: 'action',
 		}
 	})
@@ -254,13 +292,30 @@ function index() {
 		color: "#151515",
 	})
 
+	gsap.to('.section4 .right p', {
+		scrollTrigger: {
+			trigger: '.section4 .right p',
+			start: 'top bottom',
+			endTrigger: '.section4',
+			end: 'bottom top',
+			scrub: true,
+			markers: false,
+		},
+		y: 600
+	})
+	// gsap.to(".section5", {
+	// 	scrollTrigger: {
+	// 		trigger: '.section5',
+	// 		start: 'top top'
+	// 	}
+	// })
 	gsap.to(".section5 .test-sticky-imgs", {
 		scrollTrigger: {
 			trigger: ".section5",
 			start: "top top",
 			end: "bottom bottom",
 			pin: ".section5 .test-sticky-imgs",
-			markers: false,
+			markers: true,
 		},
 	});
 	gsap.from(".section5 .test-sticky-imgs-move", {
