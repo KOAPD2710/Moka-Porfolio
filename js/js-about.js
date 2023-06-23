@@ -6,7 +6,7 @@ first = $('.first').innerHeight();
 
 document.documentElement.style.setProperty("--r",  "2.5vw");
 
-$('.section1 .move-text').css('marginTop', ' ' + height - (first + movetext + .35*height) + 'px ');
+$('.section1 .move-text').css('marginTop', ' ' + height - (first + movetext + .3*height) + 'px ');
 
 
 function germ() {
@@ -146,6 +146,27 @@ $(window).mousemove(function(event) {
 window.addEventListener('load', function() {
 	germ();
 	footersvg();
+
+	gsap.to('.section1 .move-text', {
+		scrollTrigger: {
+			end: () => + 600,
+			scrub: 1,
+			markers: false,
+		},
+		y: 200,
+		ease: 'none'
+	})
+	gsap.to('.section3 p', {
+		scrollTrigger: {
+			trigger: '.section3',
+			start: 'top top',
+			end: 'bottom top',
+			scrub: 1,
+			markers: false,
+		},
+		y: 350,
+		ease: 'none'
+	})
 })
 
 window.addEventListener('resize', function() {

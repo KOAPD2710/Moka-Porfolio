@@ -41,6 +41,18 @@
       "oAP" : "\/build\/.gitignore",
       "oF" : 0
     },
+    "\/css\/js-savour.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/js-savour-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/css\/style-about.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -321,6 +333,14 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/desktop.ini" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/desktop.ini",
+      "oF" : 0
+    },
     "\/fonts\/Benzin-Bold.otf" : {
       "cB" : 0,
       "ft" : 8192,
@@ -424,17 +444,17 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/imgs\/Aboutdemo.png" : {
-      "ft" : 32768,
-      "iS" : 681481,
+    "\/imgs\/about.jpg" : {
+      "ft" : 16384,
+      "iS" : 3211092,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/imgs\/Aboutdemo.png",
+      "oAP" : "\/imgs\/about.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
-      "q" : 90,
+      "q" : 100,
       "rq" : 75
     },
     "\/imgs\/Aboutdemo.webp" : {
@@ -446,16 +466,6 @@
       "oIPL" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-default",
-      "rq" : 75
-    },
-    "\/imgs\/anie.gif" : {
-      "ft" : 4194304,
-      "iS" : 52019244,
-      "oA" : 0,
-      "oAP" : "\/imgs\/anie.gif",
-      "oF" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-none",
       "rq" : 75
     },
     "\/imgs\/Artist_15Mbps.mp4" : {
@@ -516,19 +526,6 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
-    },
-    "\/imgs\/germs-rolling-eyes_1.png" : {
-      "ft" : 32768,
-      "iS" : 24588,
-      "oA" : 0,
-      "oAP" : "\/imgs\/germs-rolling-eyes_1.png",
-      "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
     },
     "\/imgs\/Olipop.mp4" : {
       "cB" : 0,
@@ -613,6 +610,32 @@
       "oIPL" : 1,
       "opt" : 1,
       "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/imgs\/pethumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 1138831,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/imgs\/pethumb.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/imgs\/professor-e-fall-winter-2019-collection-lookbook-013.jpeg" : {
+      "ft" : 16384,
+      "iS" : 890749,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/imgs\/professor-e-fall-winter-2019-collection-lookbook-013.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
       "rq" : 75
     },
     "\/imgs\/reel1.jpg" : {
@@ -771,79 +794,72 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/imgs\/Webarebear.gif" : {
-      "ft" : 4194304,
-      "iS" : 52164991,
+    "\/imgs\/svthumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 380589,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/imgs\/Webarebear.gif",
-      "oF" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-none",
-      "rq" : 75
-    },
-    "\/imgs\/work-savour-s2-1.png" : {
-      "ft" : 32768,
-      "iS" : 348187,
-      "oA" : 0,
-      "oAP" : "\/imgs\/work-savour-s2-1.png",
+      "oAP" : "\/imgs\/svthumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
-      "q" : 90,
+      "q" : 100,
       "rq" : 75
     },
-    "\/imgs\/work-savour-s2-2.png" : {
-      "ft" : 32768,
-      "iS" : 201529,
+    "\/imgs\/work-savour-s2-1.webp" : {
+      "ft" : 8388608,
+      "iS" : 39668,
       "oA" : 0,
-      "oAP" : "\/imgs\/work-savour-s2-2.png",
+      "oAP" : "\/imgs\/work-savour-s2-1.webp",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
-    "\/imgs\/work-savour-s2-3.png" : {
-      "ft" : 32768,
-      "iS" : 69985,
+    "\/imgs\/work-savour-s2-2.webp" : {
+      "ft" : 8388608,
+      "iS" : 15988,
       "oA" : 0,
-      "oAP" : "\/imgs\/work-savour-s2-3.png",
+      "oAP" : "\/imgs\/work-savour-s2-2.webp",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
-    "\/imgs\/work-savour-s2-4.png" : {
-      "ft" : 32768,
-      "iS" : 130655,
+    "\/imgs\/work-savour-s2-3.webp" : {
+      "ft" : 8388608,
+      "iS" : 3052,
       "oA" : 0,
-      "oAP" : "\/imgs\/work-savour-s2-4.png",
+      "oAP" : "\/imgs\/work-savour-s2-3.webp",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
-    "\/imgs\/work-savour-s2-5.png" : {
-      "ft" : 32768,
-      "iS" : 129865,
+    "\/imgs\/work-savour-s2-4.webp" : {
+      "ft" : 8388608,
+      "iS" : 357452,
       "oA" : 0,
-      "oAP" : "\/imgs\/work-savour-s2-5.png",
+      "oAP" : "\/imgs\/work-savour-s2-4.webp",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/imgs\/work-savour-s2-5.webp" : {
+      "ft" : 8388608,
+      "iS" : 9172,
+      "oA" : 0,
+      "oAP" : "\/imgs\/work-savour-s2-5.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/imgs\/work-savour-s5-avatar.png" : {
@@ -859,6 +875,17 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/imgs\/work-savour-s5-avatar.webp" : {
+      "ft" : 8388608,
+      "iS" : 36724,
+      "oA" : 0,
+      "oAP" : "\/imgs\/work-savour-s5-avatar.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/imgs\/work-savour-s5.jpeg" : {
       "ft" : 16384,
       "iS" : 1646234,
@@ -872,17 +899,37 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/imgs\/work-savour-s8.png" : {
-      "ft" : 32768,
-      "iS" : 1664619,
+    "\/imgs\/work-savour-s5.webp" : {
+      "ft" : 8388608,
+      "iS" : 1132286,
       "oA" : 0,
-      "oAP" : "\/imgs\/work-savour-s8.png",
+      "oAP" : "\/imgs\/work-savour-s5.webp",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/imgs\/work-savour-s8.webp" : {
+      "ft" : 8388608,
+      "iS" : 157790,
+      "oA" : 0,
+      "oAP" : "\/imgs\/work-savour-s8.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/imgs\/work-savour-s9.webp" : {
+      "ft" : 8388608,
+      "iS" : 367190,
+      "oA" : 0,
+      "oAP" : "\/imgs\/work-savour-s9.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/index.html" : {
@@ -981,6 +1028,25 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/js\/js-about-dist.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-about-dist-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/js-about-dist.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/js\/js-about-dist.js.map",
+      "oF" : 0
+    },
     "\/js\/js-about-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1002,6 +1068,25 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/js\/js-index-dist.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-index-dist-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/js-index-dist.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/js\/js-index-dist.js.map",
+      "oF" : 0
     },
     "\/js\/js-index-min.js" : {
       "bF" : 0,
@@ -1025,6 +1110,25 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/js\/js-main-dist.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-main-dist-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/js-main-dist.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/js\/js-main-dist.js.map",
+      "oF" : 0
+    },
     "\/js\/js-main-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1047,6 +1151,25 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/js\/js-savour-dist.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-savour-dist-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/js-savour-dist.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/js\/js-savour-dist.js.map",
+      "oF" : 0
+    },
     "\/js\/js-savour-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1068,6 +1191,25 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/js\/js-work-dist.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/js-work-dist-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/js\/js-work-dist.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/js\/js-work-dist.js.map",
+      "oF" : 0
     },
     "\/js\/js-work-min.js" : {
       "bF" : 0,

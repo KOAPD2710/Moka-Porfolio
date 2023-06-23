@@ -315,7 +315,7 @@ function index() {
 			start: "top top",
 			end: "bottom bottom",
 			pin: ".section5 .test-sticky-imgs",
-			markers: true,
+			markers: false,
 		},
 	});
 	gsap.from(".section5 .test-sticky-imgs-move", {
