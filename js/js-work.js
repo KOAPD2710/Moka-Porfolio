@@ -325,7 +325,7 @@ function work() {
 	// gsap.set(sc2text4p, {
 	// 	yPercent: () => -100,
 	// })
-};
+}
 
 function marquee() {
 	var mqgap = 180,
@@ -333,7 +333,7 @@ function marquee() {
 		width = $(window).innerWidth(),
 		height = $(window).innerHeight();
 
-	var s1 = $(".section2 .marquee1 .marquee-content").width()+mqless,
+	var sf1 = $(".section2 .marquee1 .marquee-content").width()+mqless,
 		sf2 = $(".section2 .marquee2 .marquee-content").width()+mqless,
 		sf3 = $(".section2 .marquee3 .marquee-content").width()+mqless,
 		sf4 = $(".section2 .marquee4 .marquee-content").width()+mqless,
@@ -341,19 +341,21 @@ function marquee() {
 		sst2 = $(".section2 .stkmarquee2 .marquee-content").width()+mqless,
 		sst3 = $(".section2 .stkmarquee3 .marquee-content").width()+mqless,
 		sst4 = $(".section2 .stkmarquee4 .marquee-content").width()+mqless,
-		t1 = 8,
-		tf2 = (sf2*t1)/s1,
-		tf3 = (sf3*t1)/s1,
-		tf4 = (sf4*t1)/s1,
-		tst1 = (sst1*t1)/s1,
-		tst2 = (sst2*t1)/s1,
-		tst3 = (sst3*t1)/s1;
-		tst4 = (sst4*t1)/s1;
+
+		tst1 = 10,
+
+		tf1 = (sf1*tst1)/sst1,
+		tf2 = (sf2*tst1)/sst1,
+		tf3 = (sf3*tst1)/sst1,
+		tf4 = (sf4*tst1)/sst1,
+		tst2 = (sst2*tst1)/sst1,
+		tst3 = (sst3*tst1)/sst1,
+		tst4 = (sst4*tst1)/sst1;
 
 	gsap.to(".section2 .marquee1 .marquee-content", {
-		x: () => "+=" + -(s1),
+		x: () => "+=" + -(sf1),
 		repeat: -1,
-		duration: t1,
+		duration: tf1,
 		ease: "none",
 	})
 	gsap.to(".section2 .marquee2 .marquee-content", {
