@@ -256,4 +256,8 @@ window.addEventListener('load', function() {
 	sec2img4Parallax.friction(0.2, 0.2);
 	sec2img5Parallax.friction(0.2, 0.2);
 	sec5imgParallax.friction(0.2, 0.2);
+
+	var vid = document.getElementById('video');
+	vid.playbackRate = 5;
+	vid.load();
 })

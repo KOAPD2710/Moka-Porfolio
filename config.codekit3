@@ -468,14 +468,6 @@
       "ou" : "lpckwebp-default",
       "rq" : 75
     },
-    "\/imgs\/Artist_15Mbps.mp4" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/imgs\/Artist_15Mbps.mp4",
-      "oF" : 0
-    },
     "\/imgs\/Artist.webm" : {
       "cB" : 0,
       "ft" : 8192,
@@ -846,12 +838,36 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/imgs\/Work-savour-About.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/imgs\/Work-savour-About.mp4",
+      "oF" : 0
+    },
+    "\/imgs\/Work-savour-About.webm" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/imgs\/Work-savour-About.webm",
+      "oF" : 0
+    },
     "\/imgs\/Work-savour-Index.mp4" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/imgs\/Work-savour-Index.mp4",
+      "oF" : 0
+    },
+    "\/imgs\/Work-savour-Index.webm" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/imgs\/Work-savour-Index.webm",
       "oF" : 0
     },
     "\/imgs\/work-savour-s2-1.webp" : {
