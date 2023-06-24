@@ -288,5 +288,26 @@ ul#curtain {
 }
 
 
+#vertical-screen {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0px 20px;
+	font-size: 12px;
+
+	.index-text {
+		position: relative;
+		line-height: 1;
+		p {
+			font-size: 12px;
+		}
+	}
+}
+
 
 

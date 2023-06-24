@@ -198,17 +198,17 @@ function workSavour() {
 		},
 		y: 200
 	})
-	gsap.from('.section9 .container', {
-		scrollTrigger: {
-			trigger: '.section9',
-			start: '200px bottom',
-			toggleActions: "play none none none",
-			markers: false
-		},
-		x: 50,
-		ease: Power2.easeOut,
-		duration: 2
-	})
+	// gsap.from('.section9 .container', {
+	// 	scrollTrigger: {
+	// 		trigger: '.section9',
+	// 		start: '200px bottom',
+	// 		toggleActions: "play none none none",
+	// 		markers: false
+	// 	},
+	// 	x: 50,
+	// 	ease: Power2.easeOut,
+	// 	duration: 2
+	// })
 	gsap.to('.section9 .container', {
 		scrollTrigger : {
 			trigger: '.section9',
@@ -217,7 +217,7 @@ function workSavour() {
 			scrub: .5,
 			markers: false
 		},
-		y: -400
+		y: 400
 	})
 }
 

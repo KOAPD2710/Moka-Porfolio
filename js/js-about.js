@@ -6,7 +6,7 @@ first = $('.first').innerHeight();
 
 document.documentElement.style.setProperty("--r",  "2.5vw");
 
-$('.section1 .move-text').css('marginTop', ' ' + height - (first + movetext + .3*height) + 'px ');
+$('.section1 .move-text').css('marginTop', ' ' + height - (first + movetext + .2*height) + 'px ');
 
 
 function germ() {

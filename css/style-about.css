@@ -5,7 +5,7 @@
 }
 .section1 .move-text {
   margin-left: 50%;
-  margin-bottom: 35vh;
+  margin-bottom: 280px;
   max-width: 610px;
 }
 .section1 .move-text span {
@@ -22,7 +22,6 @@
   margin: 0;
 }
 .section1 .hello .text h1:nth-of-type(2) {
-  margin-top: 100px;
   margin-bottom: 300px;
 }
 
@@ -104,18 +103,6 @@
   background-color: var(--b);
   border-radius: 1000000px;
   transition: width 0.1s ease-in, height 0.1s ease-in, transform 1s ease;
-}
-.section2 .image-container .germ .black-germ:before {
-  content: "";
-  position: absolute;
-  top: 20%;
-  right: 20%;
-  display: block;
-  width: calc(var(--r) / 10);
-  height: calc(var(--r) / 10);
-  background: white;
-  border-radius: 50%;
-  overflow: hidden;
 }
 .section2 .image-container .hoverdiv {
   position: absolute;

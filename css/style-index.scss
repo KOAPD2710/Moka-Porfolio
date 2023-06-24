@@ -193,13 +193,13 @@ body {
 			rotate: 14deg;
 		}/*Graphic-Design*/
 		.sticker6{
-			width: 200px;
+			width: 10vw;
 			top: 10vh;
 			left: 67vw;
 			rotate: -35deg;
 		}/*Hand_Drawing*/
 		.sticker5{
-			width: 300px;
+			width: 15vw;
 			bottom: -10vh;
 			left: 15vw;
 			rotate: 23deg;
@@ -350,6 +350,12 @@ body {
 		.focused {
 			text-align: left;
 			margin-bottom: 40vh;
+			h1 {
+				line-height: 1;
+				span {
+					line-height: 1;
+				}
+			}
 		}
 	}
 

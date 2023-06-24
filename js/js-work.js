@@ -201,7 +201,7 @@ function work() {
 
 	var sc2textin = .5,
 		sc2textout = .1,
-		sc2textinEase = "power1.inOut",
+		sc2textinEase = "power4.out",
 		sc2text1 = $(".section2 .sticky-container .content-container .text1"),
 		sc2text1p = sc2text1.children("p"),
 		sc2text2 = $(".section2 .sticky-container .content-container .text2"),
@@ -267,7 +267,7 @@ function work() {
 	}, {
 		scrollTrigger: {
 			trigger: ".section2 .thumb-container .content2 span",
-			start: 'bottom bottom',
+			start: sc2textstart,
 			// end: sc2textend,
 			scrub: true, 
 			markers: false

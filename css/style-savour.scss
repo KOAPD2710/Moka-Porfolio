@@ -317,15 +317,15 @@
 .section8 {
 	// background-color: orange;
 	padding: 100px 17%;
-	padding-bottom: 500px;
+	padding-bottom: 300px;
 
 	.desktop-frame {
 		position: relative;
 		display: flex;
 		flex-direction: row;
 		border-radius: var(--radius);
-		outline: solid 5px var(--y);
-		outline-offset: -2px;
+		// outline: solid 5px var(--y);
+		// outline-offset: -2px;
 		aspect-ratio: 16/9;
 		overflow: hidden;
 
@@ -506,7 +506,7 @@
 	width: 100%;
 	flex-direction: row;
 	justify-content: flex-end;
-	// overflow: hidden;
+	padding-bottom: 400px;
 
 	.container {
 		width: 60.5vw;
@@ -517,6 +517,31 @@
 		}
 	}
 	
+}
+.footer {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding-bottom: 15px;
+	// background: orange;
+
+
+	.bottom{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+		width: 100%;
+		list-style-type: none;
+
+		p {
+			color: var(--t);
+			// background-color: teal;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 .canh {

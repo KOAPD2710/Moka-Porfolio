@@ -36,7 +36,7 @@ function reSize() {
 		console.log("horizontal-screen");
 	} else {
 		$("#horizontal-screen").css("display", "none");
-		$("#vertical-screen").css("display", "block");
+		$("#vertical-screen").css("display", "flex");
 		console.log("vertical-screen");
 	}
 }

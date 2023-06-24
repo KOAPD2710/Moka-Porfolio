@@ -393,7 +393,15 @@ function index() {
 		duration: 3,
 		ease: "none"
 	})
-
+	gsap.to('.section6', {
+		scrollTrigger: {
+			trigger: '.section6',
+			start: 'top bottom',
+			bottom: 'bottom top',
+			scrub: true,
+		},
+		y: 100
+	})
 	gsap.to('.footer .flower img', {
 		rotate: 360,
 		repeat: -1,
