@@ -27,6 +27,7 @@
 		.play-text {
 			display: inline-flex;
 			justify-content: flex-start;
+
 		}
 
 		.ground {
@@ -46,6 +47,9 @@
 					width: 100%;
 				}
 			}
+			p {
+				line-height: 1;
+			}
 		}
 		.head {
 			font-family: FontHead;
@@ -58,6 +62,7 @@
 		.head.y {
 			margin-left: -15px;
 		}
+
 	}
 
 	.text {

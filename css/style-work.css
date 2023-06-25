@@ -44,6 +44,9 @@
   position: relative;
   width: 100%;
 }
+.section1 .playground-container .ground p {
+  line-height: 1;
+}
 .section1 .playground-container .head {
   font-family: FontHead;
   font-size: 250px;
