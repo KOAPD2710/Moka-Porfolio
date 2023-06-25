@@ -316,10 +316,13 @@ body {
 		z-index: 10;
 		color: var(--t);
 
-		a {
-			color: var(--t);
+		h1 {
+			line-height: 1;
+			a {
+				color: var(--t);
+			}
 		}
-
+		
 		.bla-bla {
 			margin-bottom: 50vh;
 			text-align: center;

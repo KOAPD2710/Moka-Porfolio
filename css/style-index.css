@@ -290,7 +290,10 @@ body {
   z-index: 10;
   color: var(--t);
 }
-.section5 .content a {
+.section5 .content h1 {
+  line-height: 1;
+}
+.section5 .content h1 a {
   color: var(--t);
 }
 .section5 .content .bla-bla {
