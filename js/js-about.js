@@ -9,23 +9,7 @@ document.documentElement.style.setProperty("--r",  "2.5vw");
 $('.section1 .move-text').css('marginTop', ' ' + height - (first + movetext + .2*height) + 'px ');
 
 
-function germ() {
-	var imgw = $(".section2 .img").innerWidth(),
-		imgh = $(".section2 .img").innerHeight(),
-		gleft = $('#germleft'),
-		gright = $('#germright'),
-		cb = $('.chatbox');
-
-	gleft.css('top', ' ' + .5*imgh + 'px ');
-	gleft.css('left', ' ' + .49*imgw + 'px ');
-	gright.css('top', ' ' + .505*imgh + 'px ');
-	gright.css('left', ' ' + .555*imgw + 'px ');
-	
-	gsap.set(cb, {
-		x: .43*imgw,
-		y: .38*imgh,
-	})
-
+function about() {
 	var section4gap = 5*width/100,
 		sec6marqueewidth = $(".section4 .marquee-content").width()+section4gap*2;
 	$(".section4 .marquee-content").css('gap', ' ' + section4gap +  'px ');
@@ -43,33 +27,57 @@ function germ() {
 		duration: 3,
 		ease: "none"
 	})
+
+	gsap.to('.section2', {
+		scrollTrigger: {
+			trigger: '.section2',
+			start: 'top bottom',
+			end: 'bottom top',
+			toggleClass: 'active',
+			markers: true
+		}
+	})
 }
 
 function fun() {
+	var imgw = $(".section2 .img").innerWidth(),
+		imgh = $(".section2 .img").innerHeight(),
+		gleft = $('#germleft'),
+		gright = $('#germright'),
+		cb = $('.chatbox'),
+		plus = gleft.innerWidth()/2,
+		germl = $('#germleft .black-germ'),
+		germr = $('#germright .black-germ');
+
+
 	width = $(window).innerWidth(),
 	height = $(window).innerHeight(),
-	sc = $(window).scrollTop();
 
-var gleft = $('#germleft'),
-	plus = gleft.innerWidth()/2,
-	germl = $('#germleft .black-germ'),
-	germr = $('#germright .black-germ');
+
+	sc = $(window).scrollTop();
+	gleft.css('top', ' ' + .5*imgh + 'px ');
+	gleft.css('left', ' ' + .49*imgw + 'px ');
+	gright.css('top', ' ' + .505*imgh + 'px ');
+	gright.css('left', ' ' + .555*imgw + 'px ');
+	
+	gsap.set(cb, {
+		x: .43*imgw,
+		y: .38*imgh,
+	})
 
 	dx = event.pageX;
-	dy = event.pageY-sc;
+	dy = event.pageY;
 	x0 = (width/2 + .02*width);
-	y0 = $(".section2").offset().top + $(".section2").innerHeight()/2 - sc;
+	y0 = $(".section2").offset().top + $(".section2").innerHeight()/2;
 	minus = (gleft.innerWidth() - germl.innerWidth())/2;
 
-	xgleft = $('#germleft').offset().left + $('#germleft').innerWidth()/2;
-	ygleft = $('#germleft').offset().top + $('#germleft').innerHeight()/2;
-	xgright = $('#germright').offset().left + $('#germright').innerWidth()/2;
-	ygright = $('#germright').offset().top + $('#germright').innerHeight()/2;
-
-	x = (dx - x0)/x0;
-	y = (dy - y0)/y0;
-
-	if (x <= 1 && y <= 1) {
+	// xgleft 	= gleft.offset().left + gleft.innerWidth()/2;
+	// ygleft 	= gleft.offset().top + gleft.innerHeight()/2;
+	// xgright = gright.offset().left + gright.innerWidth()/2;
+	// ygright = gright.offset().top + gright.innerHeight()/2;
+	if ($('.section2').hasClass('active')) {
+		x = Math.min( Math.max((dx - x0)/x0, -1), 1);
+		y = Math.min( Math.max((dy - y0)/(imgh/2), -1), 1);
 		germl.css('top', ' ' + (y*minus+plus) + 'px');
 		germl.css('left', ' ' + (x*minus+plus) + 'px');
 		germr.css('top', ' ' + (y*minus+plus) + 'px');
@@ -144,7 +152,8 @@ $(window).mousemove(function(event) {
 	fun()
 })
 window.addEventListener('load', function() {
-	germ();
+	about();
+	fun();
 	footersvg();
 
 	gsap.to('.section1 .move-text', {
@@ -170,6 +179,6 @@ window.addEventListener('load', function() {
 })
 
 window.addEventListener('resize', function() {
-	germ();
+	about();
 	footersvg();
 })

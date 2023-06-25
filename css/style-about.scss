@@ -126,18 +126,19 @@
 							height .1s ease-in,
 							transform 1s ease;
 			}
-			// .black-germ:before {
-			// 	content: "";
-			// 	position: absolute;
-			// 	top: 20%;
-			// 	right: 20%;
-			// 	display: block;
-			// 	width: calc(var(--r)/10);
-			// 	height: calc(var(--r)/10);;
-			// 	background: white;
-			// 	border-radius: 50%;
-			// 	overflow: hidden;
-			// }
+			.black-germ:before {
+				content: "";
+				position: absolute;
+				top: 20%;
+				right: 20%;
+				scale: 0;
+				display: block;
+				width: calc(var(--r)/10);
+				height: calc(var(--r)/10);;
+				background: white;
+				border-radius: 50%;
+				overflow: hidden;
+			}
 		}
 
 		.hoverdiv {
@@ -155,6 +156,10 @@
 				width: calc(var(--r)/1.2) !important;
 				height: calc(var(--r)/1.2) !important;
 				transition: all .5s ease-in;
+			}
+			.black-germ:before {
+				scale: 1;
+				transition: all .5s ease-out;
 			}
 		}
 	}

@@ -128,9 +128,6 @@
   color: var(--t);
   text-shadow: 1px 0px var(--b), 1px 1px var(--b), 0px 1px var(--b), -1px 1px var(--b), -1px 0px var(--b), -1px -1px var(--b), 0px -1px var(--b), 1px -1px var(--b);
 }
-.section2 .sticky-container .sticky-text .stroke-text .marquee-container {
-  right: 110%;
-}
 .section2 .sticky-container .sticky-text .time-text {
   position: relative;
   --time: calc(var(--h)/2);

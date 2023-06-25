@@ -328,6 +328,7 @@ function work() {
 }
 
 function marquee() {
+	gsap.defaults({ease: "none",duration: 2});
 	var mqgap = 180,
 		mqless = mqgap*2/3,
 		width = $(window).innerWidth(),
@@ -342,6 +343,7 @@ function marquee() {
 		sst3 = $(".section2 .stkmarquee3 .marquee-content").width()+mqless,
 		sst4 = $(".section2 .stkmarquee4 .marquee-content").width()+mqless,
 
+
 		tst1 = 10,
 
 		tf1 = (sf1*tst1)/sst1,
@@ -352,53 +354,47 @@ function marquee() {
 		tst3 = (sst3*tst1)/sst1,
 		tst4 = (sst4*tst1)/sst1;
 
+	$('.section2 .sticky-container .sticky-text .stroke-text .marquee-container').css('right', ' ' + sst1*1.5 + 'px');
+
 	gsap.to(".section2 .marquee1 .marquee-content", {
 		x: () => "+=" + -(sf1),
 		repeat: -1,
 		duration: tf1,
-		ease: "none",
 	})
 	gsap.to(".section2 .marquee2 .marquee-content", {
 		x: () => "+=" + -(sf2),
 		repeat: -1,
 		duration: tf2,
-		ease: "none",
 	})
 	gsap.to(".section2 .marquee3 .marquee-content", {
 		x: () => "+=" + -(sf3),
 		repeat: -1,
 		duration: tf3,
-		ease: "none",
 	})
 	gsap.to(".section2 .marquee4 .marquee-content", {
 		x: () => "+=" + -(sf4),
 		repeat: -1,
 		duration: tf4,
-		ease: "none",
 	})
 	gsap.to(".section2 .stkmarquee1 .marquee-content", {
 		x: () => "+=" + (sst1),
 		repeat: -1,
 		duration: tst1,
-		ease: "none",
 	})
 	gsap.to(".section2 .stkmarquee2 .marquee-content", {
 		x: () => "+=" + (sst2),
 		repeat: -1,
 		duration: tst2,
-		ease: "none",
 	})
 	gsap.to(".section2 .stkmarquee3 .marquee-content", {
 		x: () => "+=" + (sst3),
 		repeat: -1,
 		duration: tst3,
-		ease: "none",
 	})
 	gsap.to(".section2 .stkmarquee4 .marquee-content", {
 		x: () => "+=" + (sst4),
 		repeat: -1,
 		duration: tst4,
-		ease: "none",
 	})
 }
 

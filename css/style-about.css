@@ -104,6 +104,19 @@
   border-radius: 1000000px;
   transition: width 0.1s ease-in, height 0.1s ease-in, transform 1s ease;
 }
+.section2 .image-container .germ .black-germ:before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  scale: 0;
+  display: block;
+  width: calc(var(--r) / 10);
+  height: calc(var(--r) / 10);
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .section2 .image-container .hoverdiv {
   position: absolute;
   display: block;
@@ -115,6 +128,10 @@
   width: calc(var(--r) / 1.2) !important;
   height: calc(var(--r) / 1.2) !important;
   transition: all 0.5s ease-in;
+}
+.section2 .image-container .hoverdiv:hover ~ .germ .black-germ:before, .section2 .image-container .chatbox:hover ~ .germ .black-germ:before {
+  scale: 1;
+  transition: all 0.5s ease-out;
 }
 
 .section3 {
