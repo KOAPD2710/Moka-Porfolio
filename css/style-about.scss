@@ -8,6 +8,7 @@
 		margin-bottom: 280px;
 		margin-top: 350px;
 		max-width: 610px;
+		text-transform: lowercase;
 
 		span {
 			color: var(--gr);
@@ -15,8 +16,18 @@
 	}
 
 	.hello {
+		position: relative;
 		--h: 250px;
 		// background-color: indigo;
+
+		#sticker2k {
+			position: absolute;
+			display: block;
+			width: 200px;
+			top: -60px;
+			left: 200px;
+			rotate: -16deg;
+		}
 
 		.text {
 
@@ -66,7 +77,9 @@
 			// background-color: darkblue;
 
 			.img {
-				position: relative;
+				position: absolute;
+				top: 50%;
+				translate: 0% -40%;
 				width: 100%;
 				z-index: 1;
 
@@ -76,8 +89,7 @@
 				}
 			}
 			.text {
-				position: absolute;
-				top: 0;
+				position: relative;
 				display: flex;
 				flex-direction: column;
 				width: 100%;
@@ -173,6 +185,7 @@
 	p {
 		max-width: 600px;
 		margin-left: 50%;
+		text-transform: lowercase;
 		span {
 			color: var(--gr);
 		}
@@ -247,19 +260,26 @@
 			p {
 				margin-bottom: 100px;
 				max-width: 600px;
+				text-transform: lowercase;
 				span {
 					color:var(--gr);
 				}
 			}
 			h1 {
+				position: relative;
 				font-family: FontHead;
 				font-size: 57px;
 				color: var(--t);
 				margin: 0;
-
-				span {
-					color: var(--gr);
-				}
+			}
+			h1:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 100%;
+				height: 4px;
+				background: var(--t);
 			}
 		} 
 	}

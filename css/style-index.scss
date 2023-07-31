@@ -109,7 +109,11 @@ body {
 			h3 {
 				font-family: FontHead;
 				font-size: 3.5rem;
+				text-transform: uppercase;
 				color: var(--gr);
+			}
+			p {
+				text-transform: lowercase;
 			}
 		} 
 
@@ -467,19 +471,26 @@ body {
 			p {
 				margin-bottom: 100px;
 				max-width: 600px;
+				text-transform: lowercase;
 				span {
 					color:var(--gr);
 				}
 			}
 			h1 {
+				position: relative;
 				font-family: FontHead;
 				font-size: 57px;
 				color: var(--t);
 				margin: 0;
-
-				span {
-					color: var(--gr);
-				}
+			}
+			h1:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 100%;
+				height: 4px;
+				background: var(--t);
 			}
 		} 
 	}

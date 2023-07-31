@@ -1,3 +1,17 @@
+function pageInTransition() {
+	gsap.to('ul#curtain li', {
+		scaleY: 0,
+		// delay: 2,
+		duration: 1,
+		ease: Power2.Out,
+		stagger: {
+			from: "random",
+			amount: .2
+		}
+	})
+	
+}
+
 function index() {
 	var width = $(window).innerWidth(),
 		height = $(window).innerHeight();
@@ -473,6 +487,7 @@ window.addEventListener("resize", () => {
 
 
 window.addEventListener('load', function() {
+	pageInTransition();
 	index();
 	footersvg();
 
