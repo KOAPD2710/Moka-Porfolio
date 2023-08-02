@@ -31,6 +31,7 @@ h2 {
 body {
 	background-color: var(--t);
 }
+
 .section1 {
 	position: relative;
 	display: flex;
@@ -134,6 +135,7 @@ body {
 				position: relative;
 				height: 100px;
 				margin: 1rem 0;
+				filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, .4));
 			}
 
 			.problem2 {
