@@ -1,6 +1,17 @@
 function reLife() {
 	gsap.defaults({ease: "none",duration: 2});
 
+	gsap.to(".section1 .intro video", {
+		scrollTrigger: {
+			trigger: ".section1",
+			start: "top top",
+			end: "bottom top",
+			scrub: 1,
+			markers: true
+		},
+		yPercent: 30,
+	})
+
 	gsap.from(".section3 .problem .problem1", {
 		scrollTrigger: {
 			trigger: ".section3 .problem .problem1",
