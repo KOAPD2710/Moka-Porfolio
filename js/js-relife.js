@@ -7,7 +7,7 @@ function reLife() {
 			start: "top top",
 			end: "bottom top",
 			scrub: 1,
-			markers: true
+			markers: false,
 		},
 		yPercent: 30,
 	})
@@ -53,37 +53,45 @@ function reLife() {
 		},
 		x: -300
 	})
-
-
-	var s3height = $('.section3').innerHeight();
-	gsap.set(".section23Curtain", {
-		height: s3height - 100
-	})
-
-	gsap.to(".section23Curtain", {
+	gsap.from(".section6 .s6-d1", {
 		scrollTrigger: {
-			trigger: ".section23Curtain",
+			trigger: ".section6 .s6-d1",
+			start: "top bottom",
+			// toggleActions: "restart none none none",
 		},
-		height: 3000,
-		duration: 2,
-		ease: "Power2.easeIn"
+		opacity: 0,
+		x: 300,
+		ease: "Power4.easeOut"
 	})
-	gsap.to("#flower", {
+	gsap.from(".section6 .s6-d2", {
 		scrollTrigger: {
-			trigger: ".section23Curtain",
+			trigger: ".section6 .s6-d2",
+			start: "-20px bottom",
+			// toggleActions: "restart none none none",
 		},
-		fill: '#FFF4E6',
-		duration: 2,
-		ease: "Power2.easeIn"
+		opacity: 0,
+		x: 300,
+		ease: "Power2.easeOut"
 	})
-	gsap.to(".section2", {
+	gsap.to(".section6 img", {
 		scrollTrigger: {
-			trigger: ".section23Curtain",
+			trigger: ".section6",
+			start: "top bottom",
+			end: "bottom top",
+			scrub: 2,
 		},
-		color: '#FFF4E6',
-		duration: 2,
-		ease: "Power2.easeIn"
+		x: 300
 	})
+	gsap.to(".section7 img", {
+		scrollTrigger: {
+			trigger: ".section7",
+			start: "top bottom",
+			end: "bottom top",
+			scrub: 1,
+		},
+		yPercent: -20
+	})
+
 }
 
 window.addEventListener("resize", () => {
