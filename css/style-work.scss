@@ -140,6 +140,7 @@
 					margin-top: calc(var(--h)*(-.5/2));
 					margin-bottom: calc(var(--h)*(-.5/2));
 					white-space: nowrap;
+					line-height: 1.5;
 				}
 			}
 			
@@ -188,6 +189,7 @@
 						p {
 							font-size: var(--time);
 							margin: 0;
+							line-height: 1.5;
 						}
 					}
 
