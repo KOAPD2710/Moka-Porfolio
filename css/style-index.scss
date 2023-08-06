@@ -39,8 +39,10 @@ body {
 		width: 100%;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 10px 10vw;
-		translate: -75px 0px;
+
+		p {
+			text-transform: uppercase;
+		}
 	}
 
 	.marquee-container {
