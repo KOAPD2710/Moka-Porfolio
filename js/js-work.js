@@ -170,18 +170,18 @@ function work() {
 		},
 		y: () => -(sc2head)*2,
 	})
-	// gsap.fromTo(sc2mq, {
-	// 	y: () => -(sc2head)*2,
-	// }, {
-	// 	scrollTrigger: {
-	// 		trigger: ".section2 .thumb-container .content3 span",
-	// 		start: sc2start,
-	// 		end: sc2end,
-	// 		scrub: sc2scrub,
-	// 		markers: sc2maker
-	// 	},
-	// 	y: () => -(sc2head)*3,
-	// })
+	gsap.fromTo(sc2mq, {
+		y: () => -(sc2head)*2,
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .content3 span",
+			start: sc2start,
+			end: sc2end,
+			scrub: sc2scrub,
+			markers: sc2maker
+		},
+		y: () => -(sc2head)*3,
+	})
 	// gsap.fromTo(sc2mq, {
 	// 	y: () => -(sc2head)*3,
 	// }, {
@@ -208,8 +208,8 @@ function work() {
 		sc2text2p = sc2text2.children("p"),
 		sc2text3 = $(".section2 .sticky-container .content-container .text3"),
 		sc2text3p = sc2text3.children("p"),
-		// sc2text4 = $(".section2 .sticky-container .content-container .text4"),
-		// sc2text4p = sc2text4.children("p"),
+		sc2text4 = $(".section2 .sticky-container .content-container .text4"),
+		sc2text4p = sc2text4.children("p"),
 		sc2textmove = sc2text1.width() + padding,
 		sc2textstart = "bottom 55%",
 		sc2textend = () => "+=" + 20;
@@ -276,38 +276,38 @@ function work() {
 		duration: sc2textin,
 		ease: sc2textinEase,
 	}) // Text3 In
-	// gsap.fromTo(sc2text3p, {
-	// 	yPercent: () => 0,
-	// }, {
-	// 	scrollTrigger: {
-	// 		trigger: ".section2 .thumb-container .content3 span",
-	// 		start: sc2textstart,
-	// 		// end: sc2textend,
-	// 		scrub: true, 
-	// 		markers: false
-	// 	},
-	// 	yPercent: () => 100,
-	// 	duration: sc2textin,
-	// 	ease: sc2textinEase,
-	// }) // Text3 Out
-	// gsap.set(sc2text3p, {
-	// 	yPercent: () => -100,
-	// })
+	gsap.fromTo(sc2text3p, {
+		yPercent: () => 0,
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .content3 span",
+			start: sc2textstart,
+			// end: sc2textend,
+			scrub: true, 
+			markers: false
+		},
+		yPercent: () => 100,
+		duration: sc2textin,
+		ease: sc2textinEase,
+	}) // Text3 Out
+	gsap.set(sc2text3p, {
+		yPercent: () => -100,
+	})
 
-	// gsap.fromTo(sc2text4p, {
-	// 	yPercent: () => -100,
-	// }, {
-	// 	scrollTrigger: {
-	// 		trigger: ".section2 .thumb-container .content3 span",
-	// 		start: sc2textstart,
-	// 		// end: sc2textend,
-	// 		scrub: true, 
-	// 		markers: false
-	// 	},
-	// 	yPercent: 0,
-	// 	duration: sc2textin,
-	// 	ease: sc2textinEase,
-	// }) // Text4 In
+	gsap.fromTo(sc2text4p, {
+		yPercent: () => -100,
+	}, {
+		scrollTrigger: {
+			trigger: ".section2 .thumb-container .content3 span",
+			start: sc2textstart,
+			// end: sc2textend,
+			scrub: true, 
+			markers: false
+		},
+		yPercent: 0,
+		duration: sc2textin,
+		ease: sc2textinEase,
+	}) // Text4 In
 	// gsap.fromTo(sc2text4p, {
 	// 	yPercent: () => 0,
 	// }, {

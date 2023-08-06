@@ -130,7 +130,7 @@
 						align-items: center;
 						padding-left: calc(var(--h)/3);
 						padding-right: calc(var(--h)/3);
-					}	
+					}
 				}
 				p {
 					position: relative;
@@ -162,8 +162,14 @@
 					1px -1px var(--b);
 				// background-color: teal;
 
-				.marquee-container {
-					// right: 200%;
+				.stkmarquee4 {
+					
+					p:first-of-type {
+						margin-right: calc(var(--h)/3);
+					}
+					p:last-of-type {
+						margin-left: calc(var(--h)/3);
+					}
 				}
 			}
 
