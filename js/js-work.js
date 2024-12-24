@@ -1,9 +1,9 @@
 function work() {
 	var width = $(window).innerWidth(),
 		height = $(window).innerHeight(),
-		padding = 5*width/100;
+		padding = 5 * width / 100;
 
-	gsap.defaults({ease: "none",duration: 2});
+	gsap.defaults({ ease: "none", duration: 2 });
 
 
 	gsap.to('.section1 .play-text .head.p', {
@@ -138,13 +138,13 @@ function work() {
 		ease: "power1.out",
 	})
 
-	const 	sc2head = 180,
-			sc2time = sc2head/2,
-			sc2mq = document.querySelectorAll(".section2 .sticky-container .marquee-container"),
-			sc2start = "top 45%",
-			sc2end = "bottom 70%",
-			sc2scrub = .8,
-			sc2maker = false;
+	const sc2head = 180,
+		sc2time = sc2head / 2,
+		sc2mq = document.querySelectorAll(".section2 .sticky-container .marquee-container"),
+		sc2start = "top 45%",
+		sc2end = "bottom 70%",
+		sc2scrub = .8,
+		sc2maker = false;
 
 	gsap.fromTo(sc2mq, {
 		y: 0
@@ -168,10 +168,10 @@ function work() {
 			scrub: sc2scrub,
 			markers: sc2maker
 		},
-		y: () => -(sc2head)*2,
+		y: () => -(sc2head) * 2,
 	})
 	gsap.fromTo(sc2mq, {
-		y: () => -(sc2head)*2,
+		y: () => -(sc2head) * 2,
 	}, {
 		scrollTrigger: {
 			trigger: ".section2 .thumb-container .content3 span",
@@ -180,7 +180,7 @@ function work() {
 			scrub: sc2scrub,
 			markers: sc2maker
 		},
-		y: () => -(sc2head)*3,
+		y: () => -(sc2head) * 3,
 	})
 	// gsap.fromTo(sc2mq, {
 	// 	y: () => -(sc2head)*3,
@@ -213,7 +213,7 @@ function work() {
 		sc2textmove = sc2text1.width() + padding,
 		sc2textstart = "bottom 55%",
 		sc2textend = () => "+=" + 20;
-		// console.log(sc2text1.width() + padding)
+	// console.log(sc2text1.width() + padding)
 
 	gsap.fromTo(sc2text1p, {
 		yPercent: 0
@@ -251,7 +251,7 @@ function work() {
 			trigger: ".section2 .thumb-container .content2 span",
 			start: sc2textstart,
 			// end: sc2textend,
-			scrub: true, 
+			scrub: true,
 			markers: false
 		},
 		yPercent: () => 100,
@@ -269,7 +269,7 @@ function work() {
 			trigger: ".section2 .thumb-container .content2 span",
 			start: sc2textstart,
 			// end: sc2textend,
-			scrub: true, 
+			scrub: true,
 			markers: false
 		},
 		yPercent: 0,
@@ -283,7 +283,7 @@ function work() {
 			trigger: ".section2 .thumb-container .content3 span",
 			start: sc2textstart,
 			// end: sc2textend,
-			scrub: true, 
+			scrub: true,
 			markers: false
 		},
 		yPercent: () => 100,
@@ -301,7 +301,7 @@ function work() {
 			trigger: ".section2 .thumb-container .content3 span",
 			start: sc2textstart,
 			// end: sc2textend,
-			scrub: true, 
+			scrub: true,
 			markers: false
 		},
 		yPercent: 0,
@@ -328,33 +328,31 @@ function work() {
 }
 
 function marquee() {
-	gsap.defaults({ease: "none",duration: 2});
-	var mqgap = 180,
-		mqless = mqgap*2/3,
-		width = $(window).innerWidth(),
-		height = $(window).innerHeight();
+	gsap.defaults({ ease: "none", duration: 2 });
+	let mqgap = 180,
+		mqless = mqgap * 2 / 3;
 
-	var sf1 = $(".section2 .marquee1 .marquee-content").width()+mqless,
-		sf2 = $(".section2 .marquee2 .marquee-content").width()+mqless,
-		sf3 = $(".section2 .marquee3 .marquee-content").width()+mqless,
-		sf4 = $(".section2 .marquee4 .marquee-content").width()+mqless,
-		sst1 = $(".section2 .stkmarquee1 .marquee-content").width()+mqless,
-		sst2 = $(".section2 .stkmarquee2 .marquee-content").width()+mqless,
-		sst3 = $(".section2 .stkmarquee3 .marquee-content").width()+mqless,
-		sst4 = $(".section2 .stkmarquee4 .marquee-content").width()+mqless,
+	let sf1 = $(".section2 .marquee1 .marquee-content").width() + mqless,
+		sf2 = $(".section2 .marquee2 .marquee-content").width() + mqless,
+		sf3 = $(".section2 .marquee3 .marquee-content").width() + mqless,
+		sf4 = $(".section2 .marquee4 .marquee-content").width() + mqless,
+		sst1 = $(".section2 .stkmarquee1 .marquee-content").width() + mqless,
+		sst2 = $(".section2 .stkmarquee2 .marquee-content").width() + mqless,
+		sst3 = $(".section2 .stkmarquee3 .marquee-content").width() + mqless,
+		sst4 = $(".section2 .stkmarquee4 .marquee-content").width() + mqless,
 
 
 		tst1 = 10,
 
-		tf1 = (sf1*tst1)/sst1,
-		tf2 = (sf2*tst1)/sst1,
-		tf3 = (sf3*tst1)/sst1,
-		tf4 = (sf4*tst1)/sst1,
-		tst2 = (sst2*tst1)/sst1,
-		tst3 = (sst3*tst1)/sst1,
-		tst4 = (sst4*tst1)/sst1;
+		tf1 = (sf1 * tst1) / sst1,
+		tf2 = (sf2 * tst1) / sst1,
+		tf3 = (sf3 * tst1) / sst1,
+		tf4 = (sf4 * tst1) / sst1,
+		tst2 = (sst2 * tst1) / sst1,
+		tst3 = (sst3 * tst1) / sst1,
+		tst4 = (sst4 * tst1) / sst1;
 
-	$('.section2 .sticky-container .sticky-text .stroke-text .marquee-container').css('right', ' ' + sst1*1.5 + 'px');
+	$('.section2 .sticky-container .sticky-text .stroke-text .marquee-container').css('right', ' ' + sst1 * 1.5 + 'px');
 
 	gsap.to(".section2 .marquee1 .marquee-content", {
 		x: () => "+=" + -(sf1),
@@ -398,12 +396,12 @@ function marquee() {
 	})
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
 	work();
-	marquee();
+	// marquee();
 
-	window.addEventListener('resize', function() {
+	window.addEventListener('resize', function () {
 		work();
-		marquee();
+		// marquee();
 	})
 })
